@@ -1,2 +1,4 @@
 # Whatsapp-Clone
- Design and developmenent of Whatsapp UI
+ Design and development of Whatsapp UI.
+
+ Project done with Tailwind CSS!
