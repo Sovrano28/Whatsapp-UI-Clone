@@ -1,0 +1,24 @@
+{
+  "name": "whatsapp-clone",
+  "version": "1.0.0",
+  "description": "Design and development of Whatsapp UI.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o public/styles.css",
+    "watch": "tailwindcss -i src/input.css -o public/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sovrano28/Whatsapp-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sovrano28/Whatsapp-Clone/issues"
+  },
+  "homepage": "https://github.com/Sovrano28/Whatsapp-Clone#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
