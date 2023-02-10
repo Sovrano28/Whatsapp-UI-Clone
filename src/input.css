@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dual {
+  @apply invert-[1] dark:invert-[0.75]
+}

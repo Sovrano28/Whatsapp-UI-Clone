@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="public/imgs/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="public/styles.css">
   <title>Whatsapp</title>
   <script>
@@ -14,8 +15,22 @@
     }
   </script>
 </head>
-<body class="relative bg-gray-50 dark:bg-gray-900">
-  <div id="themeSwitch" class="absolute"></div>
+<body class="relative">
+  <div id="themeSwitch" class="absolute top-4 w-16 h-16 rounded-full bg-yellow-400"></div>
+  <div class="md:flex md:row">
+    <div id="column-1" class="w-full">
+      <nav class="flex flex-col w-full bg-WATeal dark:bg-WADarkTeal text-white dark:text-gray-400 p-6">
+        <div class="flex flex-row items-center">
+          <div class="font-bold text-2xl justify-self-start">WhatsApp</div>
+          <div class="ml-auto flex gap-4">
+            <img class="w-6 dual" src="https://img.icons8.com/ios-glyphs/100/000000/search--v1.png" alt="search">
+            <img class="w-6 dual" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="column-2" class="hidden md:block"></div>
+  </div>
 
   <script src="public/script.js"></script>
 </body>
