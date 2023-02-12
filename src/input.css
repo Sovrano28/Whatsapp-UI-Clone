@@ -1,7 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .dual {
   @apply invert-[1] dark:invert-[0.75]
+}
+
+nav {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  /* filter: drop-shadow(0 4px 3px rgba(0, 0, 0 , 0.2)); */
+}
+.nav-items {
+  @apply 
+  flex text-center items-center px-5 py-4 
+  dark:hover:text-WATeal mb-[-4px]
+  hover:border-b-[4px] hover:border-b-white dark:hover:border-b-WATeal
+  transition-colors hover:ease-in duration-300
+  font-medium
 }

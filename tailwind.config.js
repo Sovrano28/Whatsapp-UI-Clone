@@ -12,6 +12,9 @@ module.exports = {
         WATeal: 'rgb(18, 140, 126)',
         WADarkTeal: '#1F2C34',
         WALightGreen: 'rgb(37, 211, 102)'
+      },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif']
       }
     },
   },
