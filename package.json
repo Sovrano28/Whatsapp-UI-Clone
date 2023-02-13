@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Sovrano28/Whatsapp-Clone#readme",
   "devDependencies": {
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.1.8",
+    "tailwindcss-animate": "^1.0.5"
   }
 }
