@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="public/imgs/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="public/styles.css">
-  <title>Whatsapp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Whatsapp Clone: by Sovrano</title>
   <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
@@ -15,17 +16,26 @@
     }
   </script>
 </head>
-<body class="relative w-full font-roboto">
-  <div id="themeSwitch" class="absolute top-1 left-0 right-0 mx-auto w-10 h-10 rounded-full bg-yellow-400"></div>
-  <div class="md:flex md:row">
-    <div id="column-1" class="w-full">
+<body class="w-full font-roboto">
+  <div class="md:flex md:flex-row">
+    <div id="column-1" class="w-full lg:w-[45%] relative">
+      <div id="themeSwitch" class="absolute top-1 left-0 right-0 mx-auto w-10 h-10 rounded-full bg-yellow-400 flex-center"><span class="animate-wiggle">7</span></div>
+      <div id="settings" class="animate__animated animate__faster absolute top-0 right-0 w-3/5 z-10 bg-white hidden dark:bg-WADarkTeal text-black dark:text-white shadow-md focus:outline-none" tabindex="-1">
+        <ul>
+          <li class="options">New Group</li>
+          <li class="options">New Broadcast</li>
+          <li class="options">Linked Device</li>
+          <li class="options">Starred Messages</li>
+          <li class="options"><a href="">Settings</a></li>
+        </ul>
+      </div>
       <nav class="flex flex-col w-full bg-WATeal dark:bg-WADarkTeal text-white dark:text-gray-400 p-6 pb-0">
         <div class="flex flex-row items-center">
           <div class="text-2xl font-bold justify-self-start">WhatsApp</div>
           <div class="ml-auto flex gap-4">
             <img class="w-6 dual" src="https://img.icons8.com/fluency-systems-regular/100/null/camera.png" alt="camera"/>
             <img class="w-6 dual" src="https://img.icons8.com/ios-glyphs/100/000000/search--v1.png" alt="search">
-            <img class="w-6 dual" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
+            <img class="w-6 dual" id="setting-btn" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
           </div>
         </div>
         <div class="flex flex-row items-center pt-4 justify-between">
@@ -38,6 +48,7 @@
         </div>
       </nav>
     </div>
+
     <div id="column-2" class="hidden md:block"></div>
   </div>
 

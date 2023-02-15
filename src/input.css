@@ -25,3 +25,11 @@ nav {
   transition-colors hover:ease-in duration-300
   font-medium cursor-pointer;
 }
+
+.show {
+  @apply block;
+}
+
+.options {
+  @apply px-3 py-4 text-left;
+}
