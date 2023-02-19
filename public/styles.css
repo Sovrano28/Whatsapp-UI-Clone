@@ -872,16 +872,39 @@ nav {
 }
 
 .options{
+  cursor: pointer;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: left;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+}
+
+.options:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.dark .options:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 32% 8% / var(--tw-bg-opacity));
 }
 
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.dark .dark\:bg-WADarkGreen{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 27 33 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:bg-WADarkTeal{

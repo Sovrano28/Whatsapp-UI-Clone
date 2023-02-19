@@ -31,5 +31,5 @@ nav {
 }
 
 .options {
-  @apply px-3 py-4 text-left;
+  @apply px-3 py-4 text-left cursor-pointer transition duration-300 hover:bg-gray-200 dark:hover:bg-WADarkestGreen;
 }

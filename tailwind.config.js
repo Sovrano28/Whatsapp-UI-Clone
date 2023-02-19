@@ -9,9 +9,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        WALightGreen: 'rgb(37, 211, 102)',
         WATeal: 'rgb(18, 140, 126)',
         WADarkTeal: '#1F2C34',
-        WALightGreen: 'rgb(37, 211, 102)'
+        WADarkGreen: '#111b21',
+        WADarkestGreen: 'hsl(203, 32%, 8%)'
       },
       
       fontFamily: {
@@ -23,7 +25,7 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         },
-        
+
         dropdown: {
           '0%': {top: '-280px'},
           // '50%': {top: '-140px'},
