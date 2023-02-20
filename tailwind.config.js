@@ -9,10 +9,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        WALightGreen: 'rgb(37, 211, 102)',
-        WATeal: 'rgb(18, 140, 126)',
-        WADarkTeal: '#1F2C34',
-        WADarkGreen: '#111b21',
+        WALightGreen: 'hsl(142, 70%, 49%)',
+        WATeal: 'hsl(173, 77%, 31%)',
+        WADarkTeal: 'hsl(203, 25%, 16%)',
+        WADarkGreen: 'hsl(203, 32%, 10%)',
+        WADarkGreen2: 'hsl(167, 100%, 33%)',
         WADarkestGreen: 'hsl(203, 32%, 8%)'
       },
       
@@ -28,7 +29,6 @@ module.exports = {
 
         dropdown: {
           '0%': {top: '-280px'},
-          // '50%': {top: '-140px'},
           '100%': {top: '0px'}
         }
       },
