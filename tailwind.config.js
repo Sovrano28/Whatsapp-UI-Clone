@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        WALightGreen: 'hsl(142, 70%, 49%)',
+        WABrightGreen: 'hsl(142, 70%, 49%)',
         WATeal: 'hsl(173, 77%, 31%)',
         WADarkTeal: 'hsl(203, 25%, 16%)',
         WADarkGreen: 'hsl(203, 32%, 10%)',
