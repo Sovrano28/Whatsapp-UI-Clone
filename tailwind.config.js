@@ -1,7 +1,9 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./*.{html,jsx,js}"
+    "./*.{html,jsx,js}",
+    "./public/pages/*{html,jsx,js}"
   ],
 
   darkMode: 'class',
@@ -36,6 +38,10 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         dropdown: 'dropdown 0.5s ease-out'
+      },
+
+      backgroundImage: {
+        'WAChatBGPattern': "url('imgs/bg-pattern.png'), linear-gradient(rgba(11, 19, 25, 1), rgba(11, 19, 25, 1))"
       }
     }
   },

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../imgs/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Whatsapp UI Clone: by Sovrano</title>
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+<body>
+  <header class="flex flex-col w-full bg-WATeal dark:bg-WADarkTeal text-white dark:text-gray-400 p-3">
+    <div class="flex flex-row items-center">
+      <div class="flex">
+        <a href="/index.html" class="">
+          <img src="" alt="back icon"/>
+        </a>
+        <div class="img-h">
+          <img class="w-9 h-9 object-cover rounded-full" src="../imgs/friends/barber.jpeg" alt="friend">
+        </div>
+        <div class="flex flex-col px-3 py-1">
+          <div class="text-black dark:text-white font-bold text-sm">My Barber</div>
+          <div class="text-gray-900 dark:text-white font-normal text-xs">Online</div>
+        </div>
+      </div>
+      <div class="ml-auto flex gap-4">
+        <img class="w-6 dual" src="https://img.icons8.com/fluency-systems-regular/100/null/camera.png" alt="camera"/>
+        <img class="w-6 dual" src="https://img.icons8.com/ios-glyphs/100/000000/search--v1.png" alt="search">
+        <img class="w-6 dual" id="setting-btn" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
+      </div>
+    </div>
+  </header>
+  <section class="chat-page p-3 h-[100vh] dark:bg-WAChatBGPattern">
+    <div class="text-[8px] dark:text-gray-400 text-center mx-auto my-2 p-1 w-12 dark:bg-WADarkTeal rounded-xl shadow-md">Today</div>
+  </section>
+  
+  <script src="../script.js"></script>
+</body>
+</html>
