@@ -16,7 +16,9 @@ module.exports = {
         WADarkTeal: 'hsl(203, 25%, 16%)',
         WADarkGreen: 'hsl(203, 32%, 10%)',
         WADarkGreen2: 'hsl(167, 100%, 33%)',
-        WADarkestGreen: 'hsl(203, 32%, 8%)'
+        WADarkestGreen: 'hsl(203, 32%, 8%)',
+        WAChatBGLight: 'hsl(37, 29%, 91%)',
+        WAChatBGLDark: 'hsl(206, 39%, 7%)'
       },
       
       fontFamily: {
@@ -41,7 +43,7 @@ module.exports = {
       },
 
       backgroundImage: {
-        'WAChatBGPattern': "url('imgs/bg-pattern.png'), linear-gradient(rgba(11, 19, 25, 1), rgba(11, 19, 25, 1))"
+        'WAChatBGPattern': "url('imgs/bg-pattern.png')"
       }
     }
   },

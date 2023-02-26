@@ -628,10 +628,6 @@ video {
   height: 2.25rem;
 }
 
-.h-\[100vh\]{
-  height: 100vh;
-}
-
 .w-full{
   width: 100%;
 }
@@ -1025,6 +1021,36 @@ nav {
   background-color: hsl(203 32% 8% / var(--tw-bg-opacity));
 }
 
+.chat-page{
+  position: relative;
+  height: 100vh;
+  --tw-bg-opacity: 1;
+  background-color: hsl(37 29% 91% / var(--tw-bg-opacity));
+  padding: 0.75rem;
+}
+
+.chat-page::after{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-image: url('imgs/bg-pattern.png');
+  content: var(--tw-content);
+  opacity: 0.3;
+}
+
+.dark .chat-page{
+  --tw-bg-opacity: 1;
+  background-color: hsl(206 39% 7% / var(--tw-bg-opacity));
+}
+
+.dark .chat-page::after{
+  background-image: url('imgs/bg-pattern.png');
+  content: var(--tw-content);
+  opacity: 0.1;
+}
+
 .hover\:bg-gray-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -1058,10 +1084,6 @@ nav {
 .dark .dark\:bg-WADarkGreen2{
   --tw-bg-opacity: 1;
   background-color: hsl(167 100% 33% / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-WAChatBGPattern{
-  background-image: url('imgs/bg-pattern.png'), linear-gradient(rgba(11, 19, 25, 1), rgba(11, 19, 25, 1));
 }
 
 .dark .dark\:text-white{
