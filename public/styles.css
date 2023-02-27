@@ -581,6 +581,10 @@ video {
   z-index: 10;
 }
 
+.z-\[1\]{
+  z-index: 1;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -602,6 +606,10 @@ video {
 
 .mt-1{
   margin-top: 0.25rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
 }
 
 .flex{
@@ -658,6 +666,10 @@ video {
 
 .w-12{
   width: 3rem;
+}
+
+.w-80{
+  width: 20rem;
 }
 
 .transform{
@@ -751,6 +763,11 @@ video {
   background-color: hsl(142 70% 49% / var(--tw-bg-opacity));
 }
 
+.bg-WALightYellow{
+  --tw-bg-opacity: 1;
+  background-color: hsl(40 100% 90% / var(--tw-bg-opacity));
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -766,6 +783,10 @@ video {
 
 .p-1{
   padding: 0.25rem;
+}
+
+.p-2{
+  padding: 0.5rem;
 }
 
 .px-3{
@@ -870,6 +891,11 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.invert-\[1\]{
+  --tw-invert: invert(1);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition{
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -952,7 +978,6 @@ video {
 
 nav {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  /* filter: drop-shadow(0 4px 3px rgba(0, 0, 0 , 0.2)); */
 }
 
 .nav-items{
@@ -1037,7 +1062,7 @@ nav {
   width: 100%;
   background-image: url('imgs/bg-pattern.png');
   content: var(--tw-content);
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .dark .chat-page{

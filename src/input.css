@@ -14,7 +14,6 @@
 
 nav {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  /* filter: drop-shadow(0 4px 3px rgba(0, 0, 0 , 0.2)); */
 }
 
 .nav-items {
@@ -37,5 +36,5 @@ nav {
 .chat-page {
   @apply p-3 h-[100vh] relative bg-WAChatBGLight dark:bg-WAChatBGLDark 
   after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-WAChatBGPattern 
-  after:dark:bg-WAChatBGPattern after:opacity-30 after:dark:opacity-10;
+  after:dark:bg-WAChatBGPattern after:opacity-25 after:dark:opacity-10;
 }

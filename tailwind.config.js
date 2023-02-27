@@ -18,7 +18,8 @@ module.exports = {
         WADarkGreen2: 'hsl(167, 100%, 33%)',
         WADarkestGreen: 'hsl(203, 32%, 8%)',
         WAChatBGLight: 'hsl(37, 29%, 91%)',
-        WAChatBGLDark: 'hsl(206, 39%, 7%)'
+        WAChatBGLDark: 'hsl(206, 39%, 7%)',
+        WALightYellow: 'hsl(40, 100%, 90%)'
       },
       
       fontFamily: {
@@ -27,8 +28,8 @@ module.exports = {
 
       keyframes: {
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+          '0%, 100%': {transform: 'rotate(-3deg)'},
+        '50%': {transform: 'rotate(3deg)'},
         },
 
         dropdown: {
