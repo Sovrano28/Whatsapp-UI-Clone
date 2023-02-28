@@ -48,6 +48,8 @@
         </div>
       </nav>
       <section id="chats" class="bg-white dark:bg-WADarkGreen">
+
+        <!--? chat-page on small screen -->
         <div class="md:hidden">
           <a href="public/pages/barber.html" class="flex items-center justify-between px-3 py-4 transition duration-100 hover:bg-gray-200 dark:bg-WADarkestGreen">
             <div class="flex">
@@ -66,7 +68,8 @@
           </a>
         </div>
 
-        <div class="hidden lg:block">
+        <!--? chat-page on wide-screen -->
+        <div class="hidden md:block">
           <div id="barber-md" class="flex items-center justify-between px-3 py-4 transition duration-100 hover:bg-gray-200 dark:bg-WADarkestGreen">
             <div class="flex">
               <div>
@@ -86,7 +89,25 @@
       </section>
     </div>
 
-    <div id="column-2" class="hidden md:block"></div>
+    <div id="column-2" class="hidden md:block w-[100%]">
+      <div id="column-2-default-inner" class="flex flex-col w-full h-[100vh] bg-gray-200 dark:bg-WADarkTeal border-b-8 border-b-WADarkGreen2 dark:border-b-WATeal">
+        <div class="mt-[25vh] flex justify-center">
+          <img class="dark:hidden" src="public/imgs/mobile-and-desktop-light.svg" alt="mobile and desktop">
+          <img class="hidden dark:block" src="public/imgs/mobile-and-desktop-dark.svg" alt="mobile and desktop">
+        </div>
+        <div class="mt-7 mx-auto text-center text-2xl font-thin text-gray-600 dark:text-gray-50">WhatsApp Web</div>
+        <div class="mt-4 mx-auto text-center text-xs text-gray-600 dark:text-gray-400">
+          Send and receive messages without keeping your phone online.
+        </div>
+        <div class="mx-auto text-center text-xs text-gray-600 dark:text-gray-400">
+          Use Whatsapp on up to 4 linked devices and 1 phone at the same time.
+        </div>
+        <div class="mt-12 mx-auto text-center text-xs text-gray-600 dark:text-gray-400">
+        <img class="inline-flex w-3 mb-[2px] mr-[1px]" src="public/imgs/lock.svg" alt="lock">
+          End-to-end encrypted
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="public/script.js"></script>
