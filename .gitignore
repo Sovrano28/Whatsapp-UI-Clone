@@ -3,3 +3,4 @@ node_modules
 package-lock.json
 random.html
 random.css
+random.js
