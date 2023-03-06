@@ -41,6 +41,7 @@ if (settingBtn != null) {
 const rightColumn = document.getElementById("column-2");
 const myChats = document.getElementsByClassName('chats');
 const rightColumnContent = document.getElementById('column-2-default-inner');
+var friendChat = document.createElement('div');
 
 var e_2 = document.createElement("div");
 e_2.setAttribute("id", "chat-settings");
@@ -63,13 +64,13 @@ if (myChats != null) {
 
     clickedChat.addEventListener('click', function createNode() {
       console.log('clicked a chat');
-      rightColumnContent.remove()
+      rightColumnContent.remove();
 
-      var container = document.createDocumentFragment();
+      if (friendChat.getAttribute('friend') != friendName){
+        var container = document.createDocumentFragment();
       var e_0 = document.createElement("div");
       var e_1 = document.createElement("div");
       e_1.setAttribute("class", "w-full relative");
-      // e_2 modifications former position
       var e_3 = document.createElement("ul");
       var e_4 = document.createElement("li");
       e_4.setAttribute("class", "options");
@@ -140,7 +141,6 @@ if (myChats != null) {
       e_21.setAttribute("src", "https://img.icons8.com/material-sharp/96/000000/phone.png");
       e_21.setAttribute("alt", "phone");
       e_19.appendChild(e_21);
-      // e_22 modifications former position
       e_19.appendChild(e_22);
       e_12.appendChild(e_19);
       e_11.appendChild(e_12);
@@ -165,9 +165,12 @@ if (myChats != null) {
       e_23.appendChild(e_24);
       e_0.appendChild(e_23);
       container.appendChild(e_0);
-
-      rightColumn.append(e_1, e_11, e_23);
-    })
+        
+        friendChat.setAttribute("friend", `${friendName}`)
+        friendChat.append(e_1, e_11, e_23);
+        rightColumn.append(friendChat);
+      }
+    });
   }
 };
 
