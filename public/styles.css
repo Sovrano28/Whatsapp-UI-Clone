@@ -680,6 +680,10 @@ video {
   width: 60%;
 }
 
+.w-2\/5{
+  width: 40%;
+}
+
 .w-6{
   width: 1.5rem;
 }
