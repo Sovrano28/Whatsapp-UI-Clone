@@ -44,7 +44,7 @@ const rightColumnContent = document.getElementById('column-2-default-inner');
 
 var e_2 = document.createElement("div");
 e_2.setAttribute("id", "chat-settings");
-e_2.setAttribute("class", "animate__animated animate__faster absolute top-0 right-0 w-2/5 z-10 bg-white dark:bg-WADarkGreen text-black dark:text-white shadow-md focus:outline-none");
+e_2.setAttribute("class", "animate__animated animate__faster absolute top-0 right-0 w-2/5 z-10 bg-white dark:bg-WADarkGreen hidden text-black dark:text-white shadow-md focus:outline-none");
 e_2.setAttribute("tabindex", "-1");
 
 var e_22 = document.createElement("img");
