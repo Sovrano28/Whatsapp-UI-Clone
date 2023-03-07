@@ -12,9 +12,9 @@
   @apply invert-[1] dark:invert-[0.75] cursor-pointer;
 }
 
-nav {
+/* nav {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .nav-items {
   @apply 
