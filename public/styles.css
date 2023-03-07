@@ -702,6 +702,10 @@ video {
   height: 2.25rem;
 }
 
+.h-20{
+  height: 5rem;
+}
+
 .w-full{
   width: 100%;
 }
@@ -748,6 +752,26 @@ video {
 
 .w-2{
   width: 0.5rem;
+}
+
+.w-1{
+  width: 0.25rem;
+}
+
+.w-16{
+  width: 4rem;
+}
+
+.w-20{
+  width: 5rem;
+}
+
+.w-7{
+  width: 1.75rem;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .transform{
@@ -864,6 +888,11 @@ video {
   background-color: hsl(40 100% 90% / var(--tw-bg-opacity));
 }
 
+.bg-WADarkGreen2{
+  --tw-bg-opacity: 1;
+  background-color: hsl(167 100% 33% / var(--tw-bg-opacity));
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -885,14 +914,12 @@ video {
   padding: 0.5rem;
 }
 
-.px-3{
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.p-4{
+  padding: 1rem;
 }
 
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.p-5{
+  padding: 1.25rem;
 }
 
 .py-3{
@@ -900,9 +927,29 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .pb-0{
@@ -944,6 +991,11 @@ video {
   font-size: 8px;
 }
 
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -954,6 +1006,10 @@ video {
 
 .font-thin{
   font-weight: 100;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .leading-\[0\]{
@@ -1161,7 +1217,7 @@ video {
   background-color: hsl(203 32% 8% / var(--tw-bg-opacity));
 }
 
-.chats{
+a.chats{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1178,17 +1234,49 @@ video {
           animation-duration: 100ms;
 }
 
-.chats:hover{
+a.chats:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.dark .chats{
+.dark a.chats{
   --tw-bg-opacity: 1;
-  background-color: hsl(203 32% 8% / var(--tw-bg-opacity));
+  background-color: hsl(203 32% 10% / var(--tw-bg-opacity));
 }
 
-.dark .chats:hover{
+.dark a.chats:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
+}
+
+div.chats{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+  -webkit-animation-duration: 100ms;
+          animation-duration: 100ms;
+}
+
+div.chats:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.dark div.chats{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 32% 10% / var(--tw-bg-opacity));
+}
+
+.dark div.chats:hover{
   --tw-bg-opacity: 1;
   background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
 }
@@ -1221,6 +1309,38 @@ video {
   background-image: url('imgs/bg-pattern.png');
   content: var(--tw-content);
   opacity: 0.1;
+}
+
+.in-settings{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+  -webkit-animation-duration: 100ms;
+          animation-duration: 100ms;
+}
+
+.in-settings:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.dark .in-settings{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 32% 10% / var(--tw-bg-opacity));
+}
+
+.dark .in-settings:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-200:hover{
@@ -1259,11 +1379,6 @@ video {
 .dark .dark\:bg-WATeal{
   --tw-bg-opacity: 1;
   background-color: hsl(173 77% 31% / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-WADarkestGreen{
-  --tw-bg-opacity: 1;
-  background-color: hsl(203 32% 8% / var(--tw-bg-opacity));
 }
 
 .dark .dark\:bg-WADarkGreen2{
@@ -1333,6 +1448,16 @@ video {
 
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .md\:px-7{
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 }
 

@@ -33,12 +33,20 @@
   @apply px-3 py-4 text-left cursor-pointer transition duration-300 hover:bg-gray-200 dark:hover:bg-WADarkestGreen;
 }
 
-.chats {
-  @apply flex items-center justify-between px-3 py-4 transition duration-100 hover:bg-gray-200 hover:dark:bg-WADarkTeal dark:bg-WADarkestGreen;
+a.chats {
+  @apply flex items-center justify-between px-3 py-4 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
+}
+
+div.chats {
+  @apply flex items-center justify-between px-3 py-4 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
 }
 
 .chat-page {
-  @apply p-3 h-[100vh] relative bg-WAChatBGLight dark:bg-WAChatBGLDark 
+  @apply p-3 h-screen relative bg-WAChatBGLight dark:bg-WAChatBGLDark 
   after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-WAChatBGPattern 
   after:dark:bg-WAChatBGPattern after:opacity-25 after:dark:opacity-10;
+}
+
+.in-settings {
+  @apply flex items-center justify-start px-3 py-4 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
 }

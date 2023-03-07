@@ -6,9 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WhatsApp settings</title>
   <link rel="stylesheet" href="../styles.css">
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
 </head>
-<body>
+<body class="font-roboto">
+  <header class="bg-WADarkGreen2 dark:bg-WADarkTeal p-4 md:py-6 md:px-7 flex items-center">
+    <a href="/index.html" class="flex-center mr-2 invert-[1]">
+      <img class="w-5" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
+    </a>
+    <div class="text-xl text-white font-medium px-12 py-1">Settings</div>
+  </header>
+  <div class="profile-tab">
+    <div class="flex items-center justify-between py-5 px-6 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal">
+      <div class="flex">
+        <div>
+          <img class="w-20 h-20 object-cover rounded-full" src="../imgs/friends/barber.jpeg" alt="profile pic">
+        </div>
+        <div class="flex flex-col p-3">
+          <div class="text-black dark:text-white font-bold">Ayokanmi</div>
+          <div class="mt-1 text-gray-900 dark:text-gray-400 font-normal text-xs">Only 🙏🏾 by His grace</div>
+        </div>
+      </div>
+      <div class="flex">
+        <img class="w-8" src="../imgs/qr-code.png" alt="qr-code">
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="in-settings">
+      
+    </div>
+  </section>
   
-  
+  <script src="../script.js"></script>
 </body>
 </html>

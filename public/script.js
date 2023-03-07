@@ -39,7 +39,7 @@ if (settingBtn != null) {
 };
 
 const rightColumn = document.getElementById("column-2");
-const myChats = document.getElementsByClassName('chats');
+const myChats = document.querySelectorAll('div.chats');
 const rightColumnContent = document.getElementById('column-2-default-inner');
 var friendChat = document.createElement('div');
 
