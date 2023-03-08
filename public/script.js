@@ -225,3 +225,26 @@ if (chatOptions != null) {
     }, {once: true})
   });
 }
+
+const leftColumn = document.getElementById('column-1');
+const intSettingBtn = document.getElementById('int-setting-btn');
+
+intSettingBtn.addEventListener('click', ()=> {
+//? fetch() statement argument is relative to the root folder not this script.js
+//? the page it loads also has all it files relative to root folder [or the index.html which it we load it from, apparently this index.html file is also located in the root folder].
+  fetch('public/pages/settings.html')
+    .then(response => {
+      if (response.ok) {
+        return response.text();
+      }
+    })
+    .then(htmlFile => {
+      var settingsHtmlFile = new DOMParser();
+      var theThing = settingsHtmlFile.parseFromString(htmlFile, 'text/html');
+      var toBePassed = theThing.getElementById('body-content');
+
+      leftColumn.innerHTML = '';
+      leftColumn.append(toBePassed);
+      console.log(toBePassed)
+    })
+})
