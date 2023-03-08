@@ -16,29 +16,30 @@
     }
   </script>
 </head>
-<body class="w-full font-roboto">
+<body class="font-roboto w-full">
   <div class="md:flex md:flex-row">
     <div id="column-1" class="w-full md:w-[45%] xl:w-2/5 relative">
       <div id="themeSwitch" class="absolute top-1 left-0 right-0 mx-auto w-10 h-10 rounded-full bg-yellow-400 flex-center leading-[0] z-10"><span class="animate-wiggle">7</span></div>
-      <div id="settings" class="animate__animated animate__faster absolute top-0 right-0 w-3/5 z-10 bg-white hidden dark:bg-WADarkGreen text-black dark:text-white shadow-md focus:outline-none" tabindex="-1">
+      <div id="settings" class="animate__animated animate__faster dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-10 hidden w-3/5 text-black bg-white shadow-md" tabindex="-1">
         <ul>
           <li class="options">New Group</li>
           <li class="options">New Broadcast</li>
           <li class="options">Linked Device</li>
           <li class="options">Starred Messages</li>
-          <li class="options"><a href="public/pages/settings.html">Settings</a></li>
+          <!-- <li class="options" id="int-setting-btn"><a href="public/pages/settings.html">Settings</a></li> -->
+          <li class="options" id="int-setting-btn">Settings</li>
         </ul>
       </div>
-      <nav class="flex flex-col w-full bg-WATeal dark:bg-WADarkTeal text-white dark:text-gray-400 p-6 pb-0 drop-shadow-sm">
+      <nav class="bg-WATeal dark:bg-WADarkTeal dark:text-gray-400 drop-shadow-sm flex flex-col w-full p-6 pb-0 text-white">
         <div class="flex flex-row items-center">
-          <div class="text-2xl font-bold justify-self-start">WhatsApp</div>
-          <div class="ml-auto flex gap-4">
-            <img class="w-6 dual" src="https://img.icons8.com/fluency-systems-regular/100/null/camera.png" alt="camera"/>
-            <img class="w-6 dual" src="https://img.icons8.com/ios-glyphs/100/000000/search--v1.png" alt="search">
-            <img class="w-6 dual" id="setting-btn" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
+          <div class="justify-self-start text-2xl font-bold">WhatsApp</div>
+          <div class="flex gap-4 ml-auto">
+            <img class="dual w-6" src="https://img.icons8.com/fluency-systems-regular/100/null/camera.png" alt="camera"/>
+            <img class="dual w-6" src="https://img.icons8.com/ios-glyphs/100/000000/search--v1.png" alt="search">
+            <img class="dual w-6" id="setting-btn" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
           </div>
         </div>
-        <div class="flex flex-row items-center pt-4 justify-between">
+        <div class="flex flex-row items-center justify-between pt-4">
           <div class="nav-items space-x-1">
             <div>Chats</div>
             <div class="bg-white dark:bg-WATeal text-WATeal dark:text-WADarkTeal text-[0.5rem] w-5 h-5 leading-[0] flex-center text-center rounded-full">11</div>
@@ -47,7 +48,7 @@
           <div class="nav-items">Calls</div>
         </div>
       </nav>
-      <section id="chats" class="bg-white dark:bg-WADarkGreen">
+      <section id="chats" class="dark:bg-WADarkGreen bg-white">
 
         <!--? chat-page on small screen -->
         <div class="md:hidden">
@@ -57,8 +58,8 @@
                 <img class="w-14 h-14 object-cover rounded-full" src="public/imgs/friends/barber.jpeg" alt="friend">
               </div>
               <div class="flex flex-col p-3">
-                <div class="text-black dark:text-white font-bold text-sm">My Barber</div>
-                <div class="mt-1 text-gray-900 dark:text-gray-400 font-normal text-xs">When you dey come?</div>
+                <div class="dark:text-white text-sm font-bold text-black">My Barber</div>
+                <div class="dark:text-gray-400 mt-1 text-xs font-normal text-gray-900">When you dey come?</div>
               </div>
             </div>
             <div class="flex flex-col justify-items-center my-1 text-[8px]">
@@ -69,15 +70,15 @@
         </div>
 
         <!--? chat-page on wide-screen -->
-        <div class="hidden md:block">
+        <div class="md:block hidden">
           <div class="chats" friend-name="barber" img-type="jpeg">
             <div class="flex">
               <div>
                 <img class="w-14 h-14 object-cover rounded-full" src="public/imgs/friends/barber.jpeg" alt="friend">
               </div>
               <div class="flex flex-col p-3">
-                <div class="text-black dark:text-white font-bold text-sm">My Barber</div>
-                <div class="mt-1 text-gray-900 dark:text-gray-400 font-normal text-xs">When you dey come?</div>
+                <div class="dark:text-white text-sm font-bold text-black">My Barber</div>
+                <div class="dark:text-gray-400 mt-1 text-xs font-normal text-gray-900">When you dey come?</div>
               </div>
             </div>
             <div class="flex flex-col justify-items-center my-1 text-[8px]">
@@ -90,19 +91,19 @@
     </div>
 
     <div id="column-2" class="hidden md:block md:w-[65%] xl:w-3/5">
-      <div id="column-2-default-inner" class="flex flex-col w-full h-screen bg-gray-200 dark:bg-WADarkTeal border-b-8 border-b-WADarkGreen2 dark:border-b-WATeal">
+      <div id="column-2-default-inner" class="dark:bg-WADarkTeal border-b-WADarkGreen2 dark:border-b-WATeal flex flex-col w-full h-screen bg-gray-200 border-b-8">
         <div class="mt-[25vh] flex justify-center">
           <img class="dark:hidden" src="public/imgs/mobile-and-desktop-light.svg" alt="mobile and desktop">
-          <img class="hidden dark:block" src="public/imgs/mobile-and-desktop-dark.svg" alt="mobile and desktop">
+          <img class="dark:block hidden" src="public/imgs/mobile-and-desktop-dark.svg" alt="mobile and desktop">
         </div>
-        <div class="mt-7 mx-auto text-center text-2xl font-thin text-gray-600 dark:text-gray-50">WhatsApp Web</div>
-        <div class="mt-4 mx-auto text-center text-xs text-gray-600 dark:text-gray-400">
+        <div class="mt-7 dark:text-gray-50 mx-auto text-2xl font-thin text-center text-gray-600">WhatsApp Web</div>
+        <div class="dark:text-gray-400 mx-auto mt-4 text-xs text-center text-gray-600">
           Send and receive messages without keeping your phone online.
         </div>
-        <div class="mx-auto text-center text-xs text-gray-600 dark:text-gray-400">
+        <div class="dark:text-gray-400 mx-auto text-xs text-center text-gray-600">
           Use Whatsapp on up to 4 linked devices and 1 phone at the same time.
         </div>
-        <div class="mt-12 mx-auto text-center text-xs text-gray-600 dark:text-gray-400">
+        <div class="dark:text-gray-400 mx-auto mt-12 text-xs text-center text-gray-600">
         <img class="inline-flex w-3 mb-[2px] mr-[1px]" src="public/imgs/lock.svg" alt="lock">
           End-to-end encrypted
         </div>
