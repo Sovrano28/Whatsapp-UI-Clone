@@ -229,35 +229,37 @@ if (chatOptions != null) {
 const leftColumn = document.getElementById('column-1');
 const intSettingBtn = document.getElementById('int-setting-btn');
 
-intSettingBtn.addEventListener('click', ()=> {
-//* fetch() statement argument is relative to the root folder not this script.js
-//* the page it loads also has all it files relative to root folder [or the index.html which it we load it from, apparently this index.html file is also located in the root folder].
-//* remember that 'public/pages/settings.html#body-content' also worked as an argument for the fetch statement.
-//* I could also use XMLHttpRequest() method by David Reid on youtube.
-  fetch('public/pages/settings.html')
-    .then(response => {
-      if (response.ok) {
-        return response.text();
-      }
+if (intSettingBtn != null) {
+  intSettingBtn.addEventListener('click', ()=> {
+    //* fetch() statement argument is relative to the root folder not this script.js
+    //* the page it loads also has all it files relative to root folder [or the index.html which it we load it from, apparently this index.html file is also located in the root folder].
+    //* remember that 'public/pages/settings.html#body-content' also worked as an argument for the fetch statement.
+    //* I could also use XMLHttpRequest() method by David Reid on youtube.
+      fetch('public/pages/settings.html')
+        .then(response => {
+          if (response.ok) {
+            return response.text();
+          }
+        })
+        .then(htmlFile => {
+          var settingsHtmlFile = new DOMParser();
+          var settingsHtmlFileString = settingsHtmlFile.parseFromString(htmlFile, 'text/html');
+          var neededContent = settingsHtmlFileString.getElementById('body-content');
+    
+          var imagesHere = neededContent.querySelectorAll('img');
+    
+          function correctImgSrc() {
+            for (var i = 1; i < imagesHere.length; i++) {
+              let imageSRC = imagesHere[i].getAttribute('src');
+              let newSRC = imageSRC.replace('..', 'public');
+              imagesHere[i].setAttribute('src', `${newSRC}`);
+              //* notice how I could literally use js to create all of those friends pages without using an html file for each of them. all I've got to do is manipulate those image src that are unique to each friend. in fact I think this is how React/Angular/Vue works!!!
+            }
+          }
+          correctImgSrc()
+    
+          leftColumn.innerHTML = '';
+          leftColumn.append(neededContent);
+        })
     })
-    .then(htmlFile => {
-      var settingsHtmlFile = new DOMParser();
-      var settingsHtmlFileString = settingsHtmlFile.parseFromString(htmlFile, 'text/html');
-      var neededContent = settingsHtmlFileString.getElementById('body-content');
-
-      var imagesHere = neededContent.querySelectorAll('img');
-
-      function correctImgSrc() {
-        for (var i = 1; i < imagesHere.length; i++) {
-          let imageSRC = imagesHere[i].getAttribute('src');
-          let newSRC = imageSRC.replace('..', 'public');
-          imagesHere[i].setAttribute('src', `${newSRC}`);
-          //* notice how I could literally use js to create all of those friends pages without using an html file for each of them. all I've got to do is manipulate those image src that are unique to each friend. in fact I think this is how React/Angular/Vue works!!!
-        }
-      }
-      correctImgSrc()
-
-      leftColumn.innerHTML = '';
-      leftColumn.append(neededContent);
-    })
-})
+}
