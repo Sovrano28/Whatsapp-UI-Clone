@@ -683,6 +683,10 @@ video {
   margin-right: 0.5rem;
 }
 
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
 }
