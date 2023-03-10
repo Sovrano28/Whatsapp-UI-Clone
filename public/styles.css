@@ -587,6 +587,10 @@ video {
   }
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -611,6 +615,10 @@ video {
   top: 0px;
 }
 
+.bottom-2{
+  bottom: 0.5rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -632,6 +640,11 @@ video {
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.mx-3{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .ml-auto{
@@ -678,6 +691,10 @@ video {
   display: inline-flex;
 }
 
+.grid{
+  display: grid;
+}
+
 .hidden{
   display: none;
 }
@@ -700,6 +717,14 @@ video {
 
 .h-9{
   height: 2.25rem;
+}
+
+.h-6{
+  height: 1.5rem;
+}
+
+.h-11{
+  height: 2.75rem;
 }
 
 .h-20{
@@ -754,12 +779,52 @@ video {
   width: 0.5rem;
 }
 
+.w-\[98\%\]{
+  width: 98%;
+}
+
+.w-11\/12{
+  width: 91.666667%;
+}
+
+.w-4\/5{
+  width: 80%;
+}
+
+.w-11{
+  width: 2.75rem;
+}
+
 .w-20{
   width: 5rem;
 }
 
 .w-8{
   width: 2rem;
+}
+
+.w-10\/12{
+  width: 83.333333%;
+}
+
+.w-\[\]{
+  width: ;
+}
+
+.w-\[8\]{
+  width: 8;
+}
+
+.w-\[85\]{
+  width: 85;
+}
+
+.w-\[85\%\]{
+  width: 85%;
+}
+
+.w-\[88\%\]{
+  width: 88%;
 }
 
 .transform{
@@ -797,6 +862,10 @@ video {
 
 .flex-col{
   flex-direction: column;
+}
+
+.place-content-center{
+  place-content: center;
 }
 
 .items-center{
@@ -881,6 +950,10 @@ video {
   background-color: hsl(167 100% 33% / var(--tw-bg-opacity));
 }
 
+.fill-gray-400{
+  fill: #9ca3af;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -919,6 +992,11 @@ video {
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-12{
@@ -1046,12 +1124,13 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.invert-\[1\]{
-  --tw-invert: invert(1);
+.drop-shadow{
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.filter{
+.invert-\[1\]{
+  --tw-invert: invert(1);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -1331,6 +1410,26 @@ div.chats:hover{
   background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
 }
 
+/* .input-img {
+ @apply w-6 grayscale-[100%] dark:invert-[0.45]; 
+} */
+
+.input-img{
+  width: 1.5rem;
+  --tw-brightness: brightness(87%);
+  --tw-contrast: contrast(90%);
+  --tw-hue-rotate: hue-rotate(158deg);
+  --tw-invert: invert(46%);
+  --tw-saturate: saturate(201%);
+  --tw-sepia: sepia(33%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.input-svg{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 .hover\:bg-gray-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -1407,6 +1506,16 @@ div.chats:hover{
 .dark .hover\:dark\:bg-WADarkTeal:hover{
   --tw-bg-opacity: 1;
   background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
+}
+
+@media (min-width: 640px){
+  .sm\:w-10\/12{
+    width: 83.333333%;
+  }
+
+  .sm\:w-11\/12{
+    width: 91.666667%;
+  }
 }
 
 @media (min-width: 768px){
