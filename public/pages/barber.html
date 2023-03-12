@@ -60,8 +60,8 @@
       </div>
     </div>
   </section>
-  <section class="fixed bottom-2 right-0 left-0 w-[98%] mx-auto flex justify-between z-10">
-    <div class="rounded-full flex py-3 px-2 w-[88%] sm:w-11/12 bg-white dark:bg-WADarkTeal drop-shadow">
+  <section class="fixed bottom-2 right-0 left-0 w-[98%] mx-auto flex gap-1 z-10">
+    <div class="rounded-full flex py-3 px-2 grow bg-white dark:bg-WADarkTeal drop-shadow overflow-x-hidden">
       <!-- <img class="input-img" src="https://img.icons8.com/sf-ultralight/100/null/happy.png" alt="smiley face"/> -->
       <!-- <img class="input-img mx-3" src="../imgs/smiley.svg" alt="smiley face" /> -->
       <svg class="w-6 h-6 mx-3" version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -90,31 +90,44 @@
         -368 57 -663 189 -747 335 -30 50 -40 49 139 23z"/>
         </g>
       </svg>
-      <input class="w-4/5 bg-white dark:bg-WADarkTeal" type="text" placeholder="Message">
+      <input class="w-4/5 bg-white dark:bg-WADarkTeal focus:outline-none caret-WATeal dark:text-white animate__animated animate__faster" type="text" placeholder="Message">
       <!-- <img class="input-img ml-auto" src="../imgs/hairpin.svg" alt="hairpin"/> -->
-      <svg class="w-6 h-6 ml-auto" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="42.406mm" height="37.7339mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 86.94 77.36" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
-        <g id="Layer_x0020_1">
-          <metadata id="CorelCorpID_0Corel-Layer"/>
-          <g id="_2099867683792">
-          <path class="fill-gray-400" fill="black" fill-rule="nonzero" d="M-0 53.18l0 0.01c0,6.46 2.51,12.53 7.08,17.09 4.57,4.56 10.64,7.09 17.1,7.09 6.46,0 12.52,-2.51 17.09,-7.08l41.07 -41.08c3.31,-3.3 4.93,-7.6 4.55,-12.12 -0.34,-4.16 -2.36,-8.29 -5.67,-11.61 -6.86,-6.85 -17.5,-7.36 -23.73,-1.13l-34.05 34.05c-3.79,3.79 -3.41,9.68 0.92,14.03 4.13,4.12 10.42,4.53 14.04,0.93 0,0 16.42,-16.43 23.71,-23.71 1.2,-1.2 1.15,-3.11 0.23,-4.03 -0.34,-0.34 -0.71,-0.71 -1.05,-1.05 -0.82,-0.82 -2.44,-1.5 -4.12,0.17 -7.31,7.31 -23.69,23.69 -23.69,23.69 -0.77,0.77 -2.73,0.55 -4.2,-0.92 -0.42,-0.42 -2.48,-2.64 -0.92,-4.19l34.05 -34.06c3.52,-3.52 9.75,-3.01 13.9,1.13 2.15,2.16 3.45,4.73 3.65,7.25 0.22,2.47 -0.67,4.78 -2.53,6.64l-41.07 41.08c-3.25,3.26 -7.58,5.04 -12.17,5.04 -4.6,0 -8.92,-1.79 -12.18,-5.05 -3.25,-3.25 -5.04,-7.57 -5.04,-12.17l0 0c0,-4.61 1.79,-8.93 5.04,-12.18 0,0 22.9,-22.9 31.01,-31.02 0.67,-0.67 1.14,-2.49 0.12,-3.5 -0.59,-0.59 -0.9,-0.9 -1.47,-1.47 -0.86,-0.86 -2.38,-1.13 -3.59,0.08 -8.15,8.15 -31,31.01 -31,31.01 -4.56,4.56 -7.07,10.63 -7.07,17.08z"/>
+      <div class="ml-auto flex">
+        <svg id="input-area-hairpin" class="w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="42.406mm" height="37.7339mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 86.94 77.36" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+          <g id="Layer_x0020_1">
+            <metadata id="CorelCorpID_0Corel-Layer"/>
+            <g id="_2099867683792">
+            <path class="fill-gray-400" fill="black" fill-rule="nonzero" d="M-0 53.18l0 0.01c0,6.46 2.51,12.53 7.08,17.09 4.57,4.56 10.64,7.09 17.1,7.09 6.46,0 12.52,-2.51 17.09,-7.08l41.07 -41.08c3.31,-3.3 4.93,-7.6 4.55,-12.12 -0.34,-4.16 -2.36,-8.29 -5.67,-11.61 -6.86,-6.85 -17.5,-7.36 -23.73,-1.13l-34.05 34.05c-3.79,3.79 -3.41,9.68 0.92,14.03 4.13,4.12 10.42,4.53 14.04,0.93 0,0 16.42,-16.43 23.71,-23.71 1.2,-1.2 1.15,-3.11 0.23,-4.03 -0.34,-0.34 -0.71,-0.71 -1.05,-1.05 -0.82,-0.82 -2.44,-1.5 -4.12,0.17 -7.31,7.31 -23.69,23.69 -23.69,23.69 -0.77,0.77 -2.73,0.55 -4.2,-0.92 -0.42,-0.42 -2.48,-2.64 -0.92,-4.19l34.05 -34.06c3.52,-3.52 9.75,-3.01 13.9,1.13 2.15,2.16 3.45,4.73 3.65,7.25 0.22,2.47 -0.67,4.78 -2.53,6.64l-41.07 41.08c-3.25,3.26 -7.58,5.04 -12.17,5.04 -4.6,0 -8.92,-1.79 -12.18,-5.05 -3.25,-3.25 -5.04,-7.57 -5.04,-12.17l0 0c0,-4.61 1.79,-8.93 5.04,-12.18 0,0 22.9,-22.9 31.01,-31.02 0.67,-0.67 1.14,-2.49 0.12,-3.5 -0.59,-0.59 -0.9,-0.9 -1.47,-1.47 -0.86,-0.86 -2.38,-1.13 -3.59,0.08 -8.15,8.15 -31,31.01 -31,31.01 -4.56,4.56 -7.07,10.63 -7.07,17.08z"/>
+            </g>
           </g>
-        </g>
-      </svg>
-      <svg class="input-svg mx-3" version="1.0" xmlns="http://www.w3.org/2000/svg" width="96.000000pt" height="96.000000pt" viewBox="0 0 96.000000 96.000000" preserveAspectRatio="xMidYMid meet">
-        <g class="fill-gray-400" transform="translate(0.000000,96.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-          <path d="M326 840 c-43 -39 -44 -40 -120 -40 -68 0 -80 -3 -101 -25 l-25 -24 0 -271 0 -271 25 -24 24 -25 351 0 351 0 24 25 25 24 0 271 0 271 -25 24 c-21 22 -33 25 -101 25 -76 0 -77 1 -120 40 l-44 40 -110 0 -110 0 -44 -40z m264 -194 c59 -39 85 -89 85 -166 0 -78 -26 -127 -88 -168 -56 -37 -153 -39 -210 -3 -76 47 -111 140 -88 229 14 51 75 117 123 131 53 16 135 6 178 -23z" />
-          <path d="M435 591 c-45 -20 -70 -60 -70 -112 0 -42 5 -53 33 -81 28 -28 39 -33 82 -33 43 0 54 5 82 33 28 28 33 39 33 82 0 42 -5 54 -31 81 -33 33 -92 46 -129 30z" />
-        </g>
-      </svg>
+        </svg>
+        <svg id="input-area-camera" class="w-6 h-6 mr-3" version="1.0" xmlns="http://www.w3.org/2000/svg" width="96.000000pt" height="96.000000pt" viewBox="0 0 96.000000 96.000000" preserveAspectRatio="xMidYMid meet">
+         <g class="fill-gray-400" transform="translate(0.000000,96.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+            <path d="M326 840 c-43 -39 -44 -40 -120 -40 -68 0 -80 -3 -101 -25 l-25 -24 0 -271 0 -271 25 -24 24 -25 351 0 351 0 24 25 25 24 0 271 0 271 -25 24 c-21 22 -33 25 -101 25 -76 0 -77 1 -120 40 l-44 40 -110 0 -110 0 -44 -40z m264 -194 c59 -39 85 -89 85 -166 0 -78 -26 -127 -88 -168 -56 -37 -153 -39 -210 -3 -76 47 -111 140 -88 229 14 51 75 117 123 131 53 16 135 6 178 -23z" />
+            <path d="M435 591 c-45 -20 -70 -60 -70 -112 0 -42 5 -53 33 -81 28 -28 39 -33 82 -33 43 0 54 5 82 33 28 28 33 39 33 82 0 42 -5 54 -31 81 -33 33 -92 46 -129 30z" />
+          </g>
+        </svg>
+      </div>
       <!-- <img class="input-img mx-3" src="https://img.icons8.com/fluency-systems-filled/96/null/camera.png" alt="camera"/> -->
     </div>
 
-    <div class="rounded-full w-11 h-11 bg-WATeal dark:bg-WADarkTeal grid place-content-center drop-shadow">
-      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.2124mm" height="47.7916mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 56.45 76.62" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+    <div class="rounded-full w-11 h-11 bg-WATeal dark:bg-WADarkTeal relative drop-shadow">
+      <svg id="input-area-mic" class="w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] duration-500 z-[1]" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.2124mm" height="47.7916mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 56.45 76.62" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
         <g id="Layer_x0020_1">
           <metadata id="CorelCorpID_0Corel-Layer"/>
           <g id="_2099912064368">
             <path fill="white" fill-rule="nonzero" d="M28.23 48.39c6.86,0 12.1,-5.24 12.1,-12.1l0 -24.19c0,-6.86 -5.24,-12.1 -12.1,-12.1 -6.86,0 -12.1,5.25 -12.1,12.1l0 24.19c0,6.86 5.24,12.1 12.09,12.1zm21.37 -12.1c0,12.1 -10.08,20.56 -21.37,20.56 -11.29,0 -21.37,-8.47 -21.37,-20.56l-6.86 0c0,13.71 10.89,25 24.19,27.02l0 13.31 8.07 0 0 -13.31c13.31,-2.01 24.19,-13.31 24.19,-27.02l-6.85 -0z"/>
+          </g>
+        </g>
+      </svg>
+      <svg id="input-area-send-btn" class="w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] scale-0 duration-500" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="84.952mm" height="72.8184mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+        viewBox="0 0 331.49 284.14"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+        <g id="Layer_x0020_1">
+          <metadata id="CorelCorpID_0Corel-Layer"/>
+          <g id="_2099917458768">
+          <polygon fill="white" fill-rule="nonzero" points="-0,284.14 331.49,142.07 -0,0 0.16,115.54 199.1,142.07 0.16,168.6 "/>
           </g>
         </g>
       </svg>

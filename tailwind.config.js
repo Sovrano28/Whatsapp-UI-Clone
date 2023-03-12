@@ -36,12 +36,35 @@ module.exports = {
         dropdown: {
           '0%': {top: '-280px'},
           '100%': {top: '0px'}
+        },
+
+        'show-camera': {
+          '0%': {
+           transform: 'translateX(43.58px)'
+          },
+        
+          '100%': {
+            transform: 'translateX(none)'
+          }
+        },
+
+
+        'hide-camera': {
+          '0%': {
+           transform: 'translateX(none)'
+          },
+        
+          '100%': {
+            transform: 'translateX(43.58px)'
+          }
         }
       },
 
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
-        dropdown: 'dropdown 0.5s ease-out'
+        dropdown: 'dropdown 0.5s ease-out',
+        'show-camera': 'show-camera 0.5s forwards ease-out',
+        'hide-camera': 'hide-camera 0.5s forwards ease-out'
       },
 
       backgroundImage: {

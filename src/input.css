@@ -54,10 +54,16 @@ div.chats {
 /* .input-img {
  @apply w-6 grayscale-[100%] dark:invert-[0.45]; 
 } */
-.input-img {
+/* .input-img {
  @apply w-6 invert-[46%] sepia-[33%] saturate-[201%] hue-rotate-[158deg] brightness-[87%] contrast-[90%]; 
-}
+} */
+/* 
+@keyframes move-left {
+  from {
+   transform: translateX(none);
+  }
 
-.input-svg {
-  @apply w-6 h-6;
-}
+  to {
+    transform: translateX(43.58px);
+  }
+} */

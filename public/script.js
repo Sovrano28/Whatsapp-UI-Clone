@@ -263,3 +263,32 @@ if (intSettingBtn != null) {
         })
     })
 }
+
+const messageBar = document.querySelector('input[placeholder="Message"]')
+const animeContainer = document.querySelector('.flex.ml-auto:has(#input-area-camera)')
+const inputAreaMic = document.getElementById('input-area-mic');
+const inputAreaSendBtn = document.getElementById('input-area-send-btn');
+
+if (messageBar != null) {
+  messageBar.addEventListener('input', ()=> {
+    animeContainer.classList.add('animate-hide-camera');
+    animeContainer.classList.remove('animate-show-camera');
+
+    inputAreaMic.classList.remove('z-[1]');
+    inputAreaMic.classList.add('scale-0');
+    inputAreaSendBtn.classList.add('z-[1]');
+    inputAreaSendBtn.classList.remove('scale-0');
+  })
+
+  messageBar.addEventListener('blur', ()=> {
+    if (messageBar.value == '') {
+    animeContainer.classList.remove('animate-hide-camera');
+    animeContainer.classList.add('animate-show-camera');
+
+    inputAreaMic.classList.add('z-[1]');
+    inputAreaMic.classList.remove('scale-0');
+    inputAreaSendBtn.classList.remove('z-[1]');
+    inputAreaSendBtn.classList.add('scale-0');
+    }
+  })
+}
