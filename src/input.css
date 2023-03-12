@@ -12,10 +12,6 @@
   @apply invert-[1] dark:invert-[0.75] cursor-pointer;
 }
 
-/* nav {
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-} */
-
 .nav-items {
   @apply 
   flex text-center items-center px-5 py-4 
@@ -50,20 +46,3 @@ div.chats {
 .in-settings {
   @apply flex items-center justify-start px-3 py-4 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
 }
-
-/* .input-img {
- @apply w-6 grayscale-[100%] dark:invert-[0.45]; 
-} */
-/* .input-img {
- @apply w-6 invert-[46%] sepia-[33%] saturate-[201%] hue-rotate-[158deg] brightness-[87%] contrast-[90%]; 
-} */
-/* 
-@keyframes move-left {
-  from {
-   transform: translateX(none);
-  }
-
-  to {
-    transform: translateX(43.58px);
-  }
-} */
