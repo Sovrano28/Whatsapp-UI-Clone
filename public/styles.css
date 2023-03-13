@@ -623,6 +623,14 @@ video {
   bottom: 0px;
 }
 
+.bottom-12{
+  bottom: 3rem;
+}
+
+.right-\[2\%\]{
+  right: 2%;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -693,6 +701,18 @@ video {
 
 .mr-3{
   margin-right: 0.75rem;
+}
+
+.mr-\[\]{
+  margin-right: ;
+}
+
+.mr-\[2\]{
+  margin-right: 2;
+}
+
+.mr-\[2\%\]{
+  margin-right: 2%;
 }
 
 .block{
@@ -809,6 +829,10 @@ video {
 
 .w-8{
   width: 2rem;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .grow{
@@ -1574,6 +1598,10 @@ div.chats:hover{
 
   .md\:w-2\/5{
     width: 40%;
+  }
+
+  .md\:w-\[55\%\]{
+    width: 55%;
   }
 
   .md\:flex-row{
