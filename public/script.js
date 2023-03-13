@@ -329,7 +329,7 @@ if (myChats != null) {
         e_31.appendChild(e_39);
         e_30.appendChild(e_31);
         var e_49 = document.createElement("div");
-        e_49.setAttribute("class", "rounded-full w-11 h-11 bg-WATeal dark:bg-WADarkTeal relative drop-shadow");
+        e_49.setAttribute("class", "rounded-full w-11 h-11 bg-WATeal relative drop-shadow");
         var e_51 = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         e_51.setAttribute("id", "Layer_x0020_1");
         var e_52 = document.createElementNS('http://www.w3.org/2000/svg', 'metadata');
