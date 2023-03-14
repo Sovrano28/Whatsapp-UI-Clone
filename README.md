@@ -1,4 +1,6 @@
-# Whatsapp-Clone
+# Whatsapp UI Clone
  Design and development of Whatsapp UI.
 
- Project done with Tailwind CSS!
+ Project was done with Tailwind CSS and Vanilla Js!
+
+https://sovrano28.github.io/Whatsapp-Clone/
