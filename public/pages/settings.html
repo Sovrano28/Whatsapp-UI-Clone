@@ -16,13 +16,13 @@
 </head>
 <body class="font-roboto">
   <div id="body-content">
-    <header class="bg-WADarkGreen2 dark:bg-WADarkTeal p-4 md:py-6 md:px-7 flex items-center">
-      <a href="/" class="flex-center mr-2 invert-[1]">
+    <header class="bg-WATeal dark:bg-WADarkTeal p-4 md:py-6 md:px-7 flex items-center">
+      <a href="../../index.html" class="flex-center mr-2 invert-[1]">
         <img class="w-5" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
       </a>
       <div class="text-xl text-white font-medium px-12 py-1">Settings</div>
     </header>
-    <div class="profile-tab">
+    <section class="profile-tab">
       <div class="flex items-center justify-between py-5 px-6 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal">
         <div class="flex">
           <div>
@@ -37,12 +37,106 @@
           <img class="w-8" src="../imgs/qr-code.png" alt="qr-code">
         </div>
       </div>
-    </div>
-    <section>
-      <div class="in-settings">
-    
-      </div>
     </section>
+    <main class="md:hidden">
+        <div class="in-settings">
+          <div class="grid place-items-center pl-3 pr-6">
+            <svg class="w-6 h-6 rotate-90 fill-gray-400" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black dark:text-white">Account</div>
+            <div class="text-gray-400 text-[10px]">Security notifications, change number</div>
+          </div>
+        </div>
+        <div class="in-settings">
+          <div class="grid place-items-center pl-3 pr-6">
+            <svg viewBox="0 0 28 35" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" version="1.1">
+              <path class="fill-gray-400" d="M14,1.10204082 C18.5689011,1.10204082 22.2727273,4.80586698 22.2727273,9.37476809 L22.272,12.1790408 L22.3564837,12.181606 C24.9401306,12.294858 27,14.4253101 27,17.0368705 L27,29.4665309 C27,32.1506346 24.824104,34.3265306 22.1400003,34.3265306 L5.85999974,34.3265306 C3.175896,34.3265306 1,32.1506346 1,29.4665309 L1,17.0368705 C1,14.3970988 3.10461313,12.2488858 5.72742704,12.178644 L5.72727273,9.37476809 C5.72727273,4.80586698 9.43109889,1.10204082 14,1.10204082 Z M14,19.5600907 C12.0418995,19.5600907 10.4545455,21.2128808 10.4545455,23.2517007 C10.4545455,25.2905206 12.0418995,26.9433107 14,26.9433107 C15.9581005,26.9433107 17.5454545,25.2905206 17.5454545,23.2517007 C17.5454545,21.2128808 15.9581005,19.5600907 14,19.5600907 Z M14,4.79365079 C11.4617216,4.79365079 9.39069048,6.79417418 9.27759175,9.30453585 L9.27272727,9.52092352 L9.272,12.1760408 L18.727,12.1760408 L18.7272727,9.52092352 C18.7272727,6.91012289 16.6108006,4.79365079 14,4.79365079 Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black dark:text-white">Privacy</div>
+            <div class="text-gray-400 text-[10px]">Block contact, disappearing messages</div>
+          </div>
+        </div>
+        <div class="in-settings">
+          <div class="grid place-items-center pl-3 pr-6">
+            <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24" xml:space="preserve">
+              <path class="fill-gray-400" fill="currentColor" enable-background="new    " d="M19.005,3.175H4.674C3.642,3.175,3,3.789,3,4.821V21.02 l3.544-3.514h12.461c1.033,0,2.064-1.06,2.064-2.093V4.821C21.068,3.789,20.037,3.175,19.005,3.175z M14.016,13.044H7.041V11.1 h6.975V13.044z M17.016,9.044H7.041V7.1h9.975V9.044z"></path>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black dark:text-white">Chats</div>
+            <div class="text-gray-400 text-[10px]">Theme, wallpapers, chat history</div>
+          </div>
+        </div>
+        <div class="in-settings">
+          <div class="grid place-items-center pl-3 pr-6">
+            <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24" xml:space="preserve">
+              <path class="fill-gray-400" fill="currentColor" d="M12,21.7c0.9,0,1.7-0.8,1.7-1.7h-3.4C10.3,20.9,11.1,21.7,12,21.7z M17.6,16.5v-4.7 c0-2.7-1.8-4.8-4.3-5.4V5.8c0-0.7-0.6-1.3-1.3-1.3s-1.3,0.6-1.3,1.3v0.6C8.2,7,6.4,9.1,6.4,11.8v4.7l-1.7,1.7v0.9h14.6v-0.9 L17.6,16.5z"></path>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black dark:text-white">Notifications</div>
+            <div class="text-gray-400 text-[10px]">Message, group & call tones</div>
+          </div>
+        </div>
+        <div class="in-settings">
+          <div class="grid place-items-center pl-3 pr-6">
+            <svg class="w-6 h-6" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                  <path fill="none" d="M0 0H24V24H0z"/>
+                  <path class="fill-gray-400" d="M11 2.05v3.02C7.608 5.557 5 8.475 5 12c0 3.866 3.134 7 7 7 1.572 0 3.024-.518 4.192-1.394l2.137 2.137C16.605 21.153 14.4 22 12 22 6.477 22 2 17.523 2 12c0-5.185 3.947-9.449 9-9.95zM21.95 13c-.2 2.011-.994 3.847-2.207 5.328l-2.137-2.136c.687-.916 1.153-2.006 1.323-3.192h3.022zM13.002 2.05c4.724.469 8.48 4.226 8.95 8.95h-3.022c-.438-3.065-2.863-5.49-5.928-5.929V2.049z"/>
+              </g>
+           </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black dark:text-white">Storage and data</div>
+            <div class="text-gray-400 text-[10px]">Network usage, auto-download</div>
+          </div>
+        </div>
+        <div class="in-settings">
+          <div class="grid place-items-center pl-3 pr-6">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="13.4088mm" height="13.4088mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 3.24 3.24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+              <g id="Layer_x0020_1">
+               <metadata id="CorelCorpID_0Corel-Layer"/>
+               <path fill="none" stroke="#9ca3af" stroke-width="0.13" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" d="M1.62 0.06c0.39,0.43 0.61,0.98 0.62,1.55 -0.01,0.58 -0.23,1.13 -0.62,1.55m0 -3.11c-0.39,0.43 -0.61,0.98 -0.62,1.55 0.01,0.58 0.23,1.13 0.62,1.55m0 -3.11c-0.86,0 -1.55,0.7 -1.55,1.55 0,0.86 0.7,1.55 1.55,1.55m0 -3.11c0.86,0 1.55,0.7 1.55,1.55 0,0.86 -0.7,1.55 -1.55,1.55m-1.48 -2.02l2.95 0m-2.95 0.93l2.95 0"/>
+              </g>
+             </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black dark:text-white">App language</div>
+            <div class="text-gray-400 text-[10px]">English (phone's language)</div>
+          </div>
+        </div>
+        <div class="in-settings">
+          <div class="grid place-items-center pl-3 pr-6">
+            <svg class="w-6 h-6" fill="#9ca3af" width="800px" height="800px" viewBox="0 0 31.925 31.925" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(-673.321 -514.099)">
+              <path d="M689.284,516.1a13.962,13.962,0,1,1-13.963,13.962A13.977,13.977,0,0,1,689.284,516.1m0-2a15.962,15.962,0,1,0,15.962,15.962A15.962,15.962,0,0,0,689.284,514.1Z"/>
+              <path d="M687.65,531.612a2.374,2.374,0,0,1,.49-1.433,9.248,9.248,0,0,1,1.443-1.483,10.084,10.084,0,0,0,1.321-1.371,1.993,1.993,0,0,0,.367-1.2,1.953,1.953,0,0,0-1.982-2,2.073,2.073,0,0,0-1.419.543,3.56,3.56,0,0,0-.954,1.582l-2.152-.939a5.027,5.027,0,0,1,1.724-2.657,4.632,4.632,0,0,1,2.9-.926,4.959,4.959,0,0,1,2.287.531,4.154,4.154,0,0,1,1.651,1.5,3.979,3.979,0,0,1,.611,2.175,3.681,3.681,0,0,1-.538,1.965,8.76,8.76,0,0,1-1.638,1.865,13.792,13.792,0,0,0-1.359,1.322,1.536,1.536,0,0,0-.379,1,2.868,2.868,0,0,0,.1.667h-2.2A2.74,2.74,0,0,1,687.65,531.612Zm1.468,6.969a1.855,1.855,0,0,1-1.357-.543,1.831,1.831,0,0,1-.551-1.359,1.875,1.875,0,0,1,.551-1.372,1.835,1.835,0,0,1,1.357-.556,1.868,1.868,0,0,1,1.908,1.928,1.833,1.833,0,0,1-.549,1.359A1.863,1.863,0,0,1,689.118,538.581Z"/>
+              </g>
+              </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black dark:text-white">Help</div>
+            <div class="text-gray-400 text-[10px]">Help centre, contact us, privacy policy</div>
+          </div>
+        </div>
+        <div class="in-settings">
+          <div class="grid place-items-center pl-3 pr-6">
+            <svg class="fill-gray-400" fill="#000000" width="24px" height="24px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <title>friend</title>
+              <path d="M17.25 20.5c1.281 0.719 2 1.906 1.875 3.125-0.063 0.75-0.031 0.75-1 0.875-0.594 0.063-4.375 0.094-8.219 0.094-4.375 0-8.938-0.031-9.281-0.125-1.281-0.344-0.531-2.719 1.156-3.844 1.344-0.844 4.063-2.156 4.813-2.313 1.031-0.219 1.156-0.875 0-2.844-0.25-0.469-0.531-1.813-0.563-3.25-0.031-2.313 0.375-3.875 2.406-4.656 0.375-0.125 0.813-0.188 1.219-0.188 1.344 0 2.594 0.75 3.125 1.844 0.719 1.469 0.375 5.313-0.375 6.719-0.906 1.594-0.813 2.094 0.188 2.344 0.625 0.156 2.688 1.125 4.656 2.219zM24.094 18.531c1 0.531 1.563 1.5 1.469 2.438-0.031 0.563-0.031 0.594-0.781 0.688-0.375 0.063-2.344 0.094-4.656 0.094-0.406-0.969-1.188-1.844-2.25-2.406-1.219-0.688-2.656-1.406-3.75-1.875 0.719-0.344 1.344-0.625 1.625-0.688 0.781-0.188 0.875-0.625 0-2.188-0.219-0.375-0.469-1.438-0.5-2.563-0.031-1.813 0.375-3.063 1.938-3.656 0.313-0.094 0.656-0.156 0.969-0.156 1.031 0 2 0.563 2.406 1.438 0.531 1.156 0.281 4.156-0.281 5.281-0.688 1.25-0.625 1.625 0.156 1.813 0.5 0.125 2.094 0.906 3.656 1.781z"></path>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black dark:text-white">Invite friend</div>
+          </div>
+        </div>
+    </main>
   </div>
   
   <script src="../script.js"></script>
