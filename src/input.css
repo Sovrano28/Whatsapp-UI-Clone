@@ -13,8 +13,8 @@
 }
 
 .nav-items {
-  @apply 
-  flex text-center items-center px-5 py-4 
+  @apply
+  flex text-center items-center px-5 py-4
   dark:hover:text-WATeal mb-[-4px]
   hover:border-b-[4px] hover:border-b-white dark:hover:border-b-WATeal
   transition-colors hover:ease-in duration-300
@@ -38,11 +38,16 @@ div.chats {
 }
 
 .chat-page {
-  @apply p-3 h-screen relative bg-WAChatBGLight dark:bg-WAChatBGLDark 
-  after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-WAChatBGPattern 
+  @apply p-3 h-screen relative bg-WAChatBGLight dark:bg-WAChatBGLDark
+  after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-WAChatBGPattern
   after:dark:bg-WAChatBGPattern after:opacity-25 after:dark:opacity-10;
 }
 
 .in-settings {
   @apply flex items-center justify-start px-3 py-4 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
+}
+
+.theme {
+  @apply mr-3 w-4 h-4 appearance-none border-gray-500 border rounded-[50%] grid place-items-center transition ease-in-out duration-300
+  before:w-2 before:h-2 before:rounded-[50%] before:scale-0 before:bg-WATeal checked:border-WATeal checked:before:scale-100;
 }

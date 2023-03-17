@@ -503,3 +503,31 @@ if (messageBar != null) {
     }
   })
 }
+
+const themeSetting = document.querySelector('#theme-setting');
+const themeModalBg = document.querySelector('#theme-modal-bg');
+const themeSetBtn = document.querySelectorAll('.theme-select-btn');
+
+function showModal() {
+  themeModalBg.classList.remove('invisible');
+  themeModalBg.classList.remove('opacity-0');
+}
+
+function hideModal() {
+  themeModalBg.classList.add('invisible');
+  themeModalBg.classList.add('opacity-0');
+}
+
+themeSetting.addEventListener('click', showModal);
+
+themeSetBtn.forEach(btn =>
+  btn.addEventListener('click', (Event)=> {
+    Event.stopPropagation();
+    hideModal();
+}));
+
+themeModalBg.addEventListener('click', (Event)=> {
+    if (Event.target.id == Event.currentTarget.id) {
+    hideModal();
+  }
+});

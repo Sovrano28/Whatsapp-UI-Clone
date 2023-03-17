@@ -15,7 +15,28 @@
   </script>
 </head>
 <body class="font-roboto">
-  <div id="body-content">
+  <div id="body-content" class="relative">
+    <div id="theme-modal-bg" class="fixed invisible opacity-0 transition-opacity duration-500 w-full h-screen top-0 left-0 bg-black bg-opacity-30 grid place-items-center">
+      <div id="theme-modal" class="p-4 w-9/12 bg-white dark:bg-WADarkTeal">
+        <div class="text-black dark:text-white py-2 text-lg font-medium">Choose theme</div>
+        <div class="flex items-center">
+          <input class="theme" type="radio" name="theme" id="default" value="default">
+          <label class="text-black dark:text-white" for="default">System default</label>
+        </div>
+        <div class="flex items-center mt-2">
+          <input class="theme" type="radio" name="theme" id="light" value="light">
+          <label class="text-black dark:text-white" for="light">Light</label>
+        </div>
+        <div class="flex items-center mt-2">
+          <input class="theme" type="radio" name="theme" id="dark" value="dark">
+          <label class="text-black dark:text-white" for="dark">Dark</label>
+        </div>
+        <div class="flex justify-end">
+          <div class="theme-select-btn flex text-WATeal p-2 hover:bg-gray-200 mr-3">Cancel</div>
+          <div class="theme-select-btn flex text-WATeal p-2 hover:bg-gray-200">Ok</div>
+        </div>
+      </div>
+    </div>
     <header class="bg-WATeal dark:bg-WADarkTeal p-4 md:py-6 md:px-7 flex items-center">
       <a href="../../index.html" class="flex-center mr-2 invert-[1]">
         <img class="w-5" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
@@ -61,7 +82,7 @@
             <div class="text-gray-400 text-[10px]">Block contact, disappearing messages</div>
           </div>
         </div>
-        <div class="in-settings">
+        <div class="in-settings" id="theme-setting">
           <div class="grid place-items-center pl-3 pr-6">
             <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24" xml:space="preserve">
               <path class="fill-gray-400" fill="currentColor" enable-background="new    " d="M19.005,3.175H4.674C3.642,3.175,3,3.789,3,4.821V21.02 l3.544-3.514h12.461c1.033,0,2.064-1.06,2.064-2.093V4.821C21.068,3.789,20.037,3.175,19.005,3.175z M14.016,13.044H7.041V11.1 h6.975V13.044z M17.016,9.044H7.041V7.1h9.975V9.044z"></path>
