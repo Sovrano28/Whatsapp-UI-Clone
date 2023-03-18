@@ -504,7 +504,7 @@ if (messageBar != null) {
   })
 }
 
-const themeSetting = document.querySelector('#theme-setting');
+const themeSetting = document.querySelectorAll('.theme-setting');
 const themeModalBg = document.querySelector('#theme-modal-bg');
 const themeSetBtn = document.querySelectorAll('.theme-select-btn');
 
@@ -514,11 +514,24 @@ function showModal() {
 }
 
 function hideModal() {
-  themeModalBg.classList.add('invisible');
   themeModalBg.classList.add('opacity-0');
+
+  themeModalBg.addEventListener('transitionend', ()=> {
+    themeModalBg.classList.add('invisible');
+  }, {once: true})
 }
 
-themeSetting.addEventListener('click', showModal);
+themeSetting.forEach(btn =>
+  btn.addEventListener('click', (Event)=> {
+    Event.stopPropagation();
+    showModal();
+}));
+
+document.addEventListener('keydown', (e)=> {
+  if (e.key === 'Escape' && !themeModalBg.classList.contains('invisible')) {
+    hideModal();
+  }
+})
 
 themeSetBtn.forEach(btn =>
   btn.addEventListener('click', (Event)=> {

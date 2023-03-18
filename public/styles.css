@@ -727,6 +727,10 @@ video {
   display: none;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .h-10{
   height: 2.5rem;
 }
@@ -737,10 +741,6 @@ video {
 
 .h-14{
   height: 3.5rem;
-}
-
-.h-screen{
-  height: 100vh;
 }
 
 .h-6{
@@ -975,6 +975,10 @@ video {
   overflow-x: hidden;
 }
 
+.overflow-y-scroll{
+  overflow-y: scroll;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
@@ -983,13 +987,26 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-\[50\%\]{
+  border-radius: 50%;
+}
+
 .border-b-8{
   border-bottom-width: 8px;
+}
+
+.border-b{
+  border-bottom-width: 1px;
 }
 
 .border-b-WADarkGreen2{
   --tw-border-opacity: 1;
   border-bottom-color: hsl(167 100% 33% / var(--tw-border-opacity));
+}
+
+.border-b-gray-300{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
 .bg-yellow-400{
@@ -1159,6 +1176,11 @@ video {
 
 .text-\[10px\]{
   font-size: 10px;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold{
@@ -1543,6 +1565,35 @@ div.chats:hover{
   background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
 }
 
+.in-settings-md{
+  display: flex;
+  align-items: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+  -webkit-animation-duration: 100ms;
+          animation-duration: 100ms;
+}
+
+.in-settings-md:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.dark .in-settings-md{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 32% 10% / var(--tw-bg-opacity));
+}
+
+.dark .in-settings-md:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
+}
+
 .theme{
   margin-right: 0.75rem;
   display: grid;
@@ -1612,6 +1663,11 @@ div.chats:hover{
 .dark .dark\:border-b-WATeal{
   --tw-border-opacity: 1;
   border-bottom-color: hsl(173 77% 31% / var(--tw-border-opacity));
+}
+
+.dark .dark\:border-b-gray-800{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
 .dark .dark\:bg-WADarkGreen{
