@@ -55,3 +55,8 @@ div.chats {
   @apply mr-3 w-4 h-4 appearance-none border-gray-500 border rounded-[50%] grid place-items-center transition ease-in-out duration-300
   before:w-2 before:h-2 before:rounded-[50%] before:scale-0 before:bg-WATeal checked:border-WATeal checked:before:scale-100;
 }
+
+.theme-modal-bg {
+  @apply fixed transition-opacity duration-300 w-full h-screen top-0 left-0 grid place-items-center bg-black bg-opacity-10 backdrop-brightness-50
+md:bg-white md:dark:bg-WADarkTeal md:dark:bg-opacity-50 md:bg-opacity-70 md:backdrop-filter-none md:dark:backdrop-brightness-[30%];
+}
