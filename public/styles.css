@@ -557,6 +557,12 @@ video {
   width: 100%;
 }
 
+@media (min-width: 0px){
+  .container{
+    max-width: 0px;
+  }
+}
+
 @media (min-width: 640px){
   .container{
     max-width: 640px;
@@ -813,6 +819,10 @@ video {
 
 .w-\[98\%\]{
   width: 98%;
+}
+
+.w-\[80\%\]{
+  width: 80%;
 }
 
 .w-9\/12{
@@ -1745,6 +1755,34 @@ div.chats:hover{
 .dark .hover\:dark\:bg-WADarkTeal:hover{
   --tw-bg-opacity: 1;
   background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
+}
+
+@media (min-width: 0px) and (max-width: 360px){
+  .xs\:w-1{
+    width: 0.25rem;
+  }
+
+  .xs\:w-10{
+    width: 2.5rem;
+  }
+
+  .xs\:w-10\/12{
+    width: 83.333333%;
+  }
+
+  .xs\:grow-0{
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 640px){
+  .sm\:grow{
+    flex-grow: 1;
+  }
+
+  .sm\:grow-0{
+    flex-grow: 0;
+  }
 }
 
 @media (min-width: 768px){
