@@ -437,6 +437,12 @@ if (chatOptions != null) {
   });
 }
 
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+};
+
 const leftColumn = document.getElementById('column-1');
 const intSettingBtn = document.getElementById('int-setting-btn');
 
@@ -469,7 +475,7 @@ if (intSettingBtn != null) {
           }
           correctImgSrc()
     
-          leftColumn.innerHTML = '';
+          removeAllChildNodes(leftColumn);
           leftColumn.append(neededContent);
         })
     })
