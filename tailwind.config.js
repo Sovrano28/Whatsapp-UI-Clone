@@ -2,8 +2,9 @@
 /** @type {import('tailwindcss').Config} */
 
 const defaultTheme = require('tailwindcss/defaultTheme');
+const { withAnimations } = require('animated-tailwindcss');
 
-module.exports = {
+module.exports = withAnimations({
   content: [
     "./*.{html,js}",
     "./public/*.{html,js}",
@@ -82,6 +83,5 @@ module.exports = {
   },
 
   plugins: [
-    require("tailwindcss-animate")
   ],
-}
+});
