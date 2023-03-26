@@ -817,10 +817,6 @@ video {
   width: 2.75rem;
 }
 
-.w-\[98\%\]{
-  width: 98%;
-}
-
 .w-9\/12{
   width: 75%;
 }
@@ -831,6 +827,10 @@ video {
 
 .w-8{
   width: 2rem;
+}
+
+.w-\[98\%\]{
+  width: 98%;
 }
 
 .grow{
@@ -875,31 +875,6 @@ video {
 .animate-wiggle{
   -webkit-animation: wiggle 1s ease-in-out infinite;
           animation: wiggle 1s ease-in-out infinite;
-}
-
-@-webkit-keyframes flash{
-  25%, 75%{
-    opacity: 0;
-  }
-
-  50%{
-    opacity: 1;
-  }
-}
-
-@keyframes flash{
-  25%, 75%{
-    opacity: 0;
-  }
-
-  50%{
-    opacity: 1;
-  }
-}
-
-.animate-flash{
-  -webkit-animation: 1s both flash;
-          animation: 1s both flash;
 }
 
 @-webkit-keyframes hide-camera{
@@ -950,6 +925,42 @@ video {
 .animate-show-camera{
   -webkit-animation: show-camera 0.5s forwards ease-out;
           animation: show-camera 0.5s forwards ease-out;
+}
+
+@-webkit-keyframes slideInDown{
+  from{
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes slideInDown{
+  from{
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.animate-slideInDown{
+  -webkit-animation: 1s both slideInDown;
+          animation: 1s both slideInDown;
+}
+
+@-webkit-keyframes fadeOut{
+  to{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut{
+  to{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.animate-fadeOut{
+  -webkit-animation: 1s both fadeOut;
+          animation: 1s both fadeOut;
 }
 
 .flex-row{
@@ -1322,6 +1333,11 @@ video {
 
 .ease-out{
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.animate-faster{
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .flex-center{
