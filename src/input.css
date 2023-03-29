@@ -44,11 +44,11 @@ div.chats {
 }
 
 .in-settings {
-  @apply flex items-center justify-start px-3 py-4 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
+  @apply flex items-center justify-start px-3 py-4 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal cursor-pointer;
 }
 
 .in-settings-md {
-  @apply flex items-center px-3 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
+  @apply flex items-center px-3 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal cursor-pointer;
 }
 
 .theme {

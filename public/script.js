@@ -2,7 +2,7 @@ const themeBtn = document.getElementById('themeSwitch');
 const settingBtn = document.getElementById('setting-btn');
 const appOptions = document.getElementById('settings');
 
-if (settingBtn != null) {
+if (settingBtn !== null) {
   themeBtn.addEventListener('click', ()=> {
 
     if (document.documentElement.classList.contains('dark')) {
@@ -107,7 +107,7 @@ e_59.setAttribute("fill", "white");
 e_59.setAttribute("fill-rule", "nonzero");
 e_59.setAttribute("points", "-0,284.14 331.49,142.07 -0,0 0.16,115.54 199.1,142.07 0.16,168.6 ");
 
-if (myChats != null) {
+if (myChats !== null) {
 
   for (var i = 0; i < myChats.length; i++) {
 
@@ -162,15 +162,6 @@ if (myChats != null) {
         e_12.setAttribute("class", "flex flex-row items-center");
         var e_13 = document.createElement("div");
         e_13.setAttribute("class", "flex");
-        // var e_14 = document.createElement("a"); //! I don't need the a-tag (back button) for chats in md and larger screens.
-        // e_14.setAttribute("href", "/index.html");
-        // e_14.setAttribute("class", "flex-center mr-2 invert-[1]");
-        // var e_15 = document.createElement("img");
-        // e_15.setAttribute("class", "w-5");
-        // e_15.setAttribute("src", "https://img.icons8.com/android/96/null/left.png");
-        // e_15.setAttribute("alt", "back icon");
-        // e_14.appendChild(e_15); 
-        // e_13.appendChild(e_14);
         var e_16 = document.createElement("div");
         e_16.setAttribute("class", "flex-center");
         var e_17 = document.createElement("img");
@@ -230,7 +221,7 @@ if (myChats != null) {
         e_30.setAttribute("class", "fixed bottom-2 md:w-[55%] right-[2%] flex gap-1 z-10"); //? how this worked, I just don't know. Lol
         var e_31 = document.createElement("div");
         e_31.setAttribute("class", "rounded-full flex py-3 px-2 grow bg-white dark:bg-WADarkTeal drop-shadow overflow-x-hidden");
-        var e_32 = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); //! I only used the createElementNS() method for svg, path, g, and metadata tags. Just in case something breaks I know where to start.
+        var e_32 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         e_32.setAttribute("class", "w-6 h-6 mx-3");
         e_32.setAttribute("version", "1.0");
         e_32.setAttribute("xmlns", "http://www.w3.org/2000/svg");
@@ -412,7 +403,7 @@ e_38.addEventListener('blur', ()=> {
 const chatSettingBtn = document.getElementById('chat-setting-btn');
 const chatOptions = document.getElementById('chat-settings');
 
-if (chatOptions != null) {
+if (chatOptions !== null) {
 
   chatSettingBtn.addEventListener('click', ()=> {
     chatOptions.classList.toggle('hidden');
@@ -529,77 +520,6 @@ if (intSettingBtn !== null) {
   intSettingBtn.addEventListener('click', ()=> {
 
         function createSettingsPage() {
-          // var e_0 = document.createElement("div");
-          // e_0.setAttribute("id", "body-content");
-          // e_0.setAttribute("class", "relative");
-          // var e_1 = document.createElement("div");
-          // e_1.setAttribute("id", "theme-modal-bg");
-          // e_1.setAttribute("class", "theme-modal-bg invisible opacity-0");
-          // var e_2 = document.createElement("div");
-          // e_2.setAttribute("id", "theme-modal");
-          // e_2.setAttribute("class", "p-4 w-9/12 md:max-w-[40%] lg:max-w-[30%] bg-white dark:bg-WADarkTeal md:drop-shadow-xl");
-          // var e_3 = document.createElement("div");
-          // e_3.setAttribute("class", "text-black dark:text-white py-2 text-lg font-medium");
-          // e_3.appendChild(document.createTextNode("Choose theme"));
-          // e_2.appendChild(e_3);
-          // var e_4 = document.createElement("div");
-          // e_4.setAttribute("class", "flex items-center");
-          // var e_5 = document.createElement("input");
-          // e_5.setAttribute("class", "theme");
-          // e_5.setAttribute("type", "radio");
-          // e_5.setAttribute("name", "theme");
-          // e_5.setAttribute("id", "default");
-          // e_5.setAttribute("value", "default");
-          // e_4.appendChild(e_5);
-          // var e_6 = document.createElement("label");
-          // e_6.setAttribute("class", "text-black dark:text-white");
-          // e_6.setAttribute("for", "default");
-          // e_6.appendChild(document.createTextNode("System default"));
-          // e_4.appendChild(e_6);
-          // e_2.appendChild(e_4);
-          // var e_7 = document.createElement("div");
-          // e_7.setAttribute("class", "flex items-center mt-2");
-          // var e_8 = document.createElement("input");
-          // e_8.setAttribute("class", "theme");
-          // e_8.setAttribute("type", "radio");
-          // e_8.setAttribute("name", "theme");
-          // e_8.setAttribute("id", "light");
-          // e_8.setAttribute("value", "light");
-          // e_7.appendChild(e_8);
-          // var e_9 = document.createElement("label");
-          // e_9.setAttribute("class", "text-black dark:text-white");
-          // e_9.setAttribute("for", "light");
-          // e_9.appendChild(document.createTextNode("Light"));
-          // e_7.appendChild(e_9);
-          // e_2.appendChild(e_7);
-          // var e_10 = document.createElement("div");
-          // e_10.setAttribute("class", "flex items-center mt-2");
-          // var e_11 = document.createElement("input");
-          // e_11.setAttribute("class", "theme");
-          // e_11.setAttribute("type", "radio");
-          // e_11.setAttribute("name", "theme");
-          // e_11.setAttribute("id", "dark");
-          // e_11.setAttribute("value", "dark");
-          // e_10.appendChild(e_11);
-          // var e_12 = document.createElement("label");
-          // e_12.setAttribute("class", "text-black dark:text-white");
-          // e_12.setAttribute("for", "dark");
-          // e_12.appendChild(document.createTextNode("Dark"));
-          // e_10.appendChild(e_12);
-          // e_2.appendChild(e_10);
-          // var e_13 = document.createElement("div");
-          // e_13.setAttribute("class", "flex justify-end");
-          // var e_14 = document.createElement("div");
-          // e_14.setAttribute("class", "theme-select-btn flex text-WATeal p-2 hover:bg-gray-200 mr-3");
-          // e_14.appendChild(document.createTextNode("Cancel"));
-          // e_13.appendChild(e_14);
-          // var e_15 = document.createElement("div");
-          // e_15.setAttribute("class", "theme-select-btn flex text-WATeal p-2 hover:bg-gray-200");
-          // e_15.appendChild(document.createTextNode("Ok"));
-          // e_13.appendChild(e_15);
-          // e_2.appendChild(e_13);
-          // e_1.appendChild(e_2);
-          // e_0.appendChild(e_1);
           var e_16 = document.createElement("header");
           e_16.setAttribute("class", "bg-WATeal dark:bg-WADarkTeal p-4 md:py-6 md:px-7 flex items-center");
           var e_17 = document.createElement("a");
@@ -711,8 +631,6 @@ if (intSettingBtn !== null) {
           e_42.appendChild(e_44);
           e_38.appendChild(e_42);
           e_30.appendChild(e_38);
-          // var neWe_45 = document.createElement("div");
-          // neWe_45.setAttribute("class", "in-settings theme-setting");
           var e_46 = document.createElement("div");
           e_46.setAttribute("class", "grid place-items-center pl-3 pr-6");
           var e_47 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -1010,8 +928,6 @@ if (intSettingBtn !== null) {
           e_110.appendChild(e_111);
           e_106.appendChild(e_110);
           e_93.appendChild(e_106);
-          // var neWe_112 = document.createElement("div");
-          // neWe_112.setAttribute("class", "in-settings-md theme-setting");
           var e_113 = document.createElement("div");
           e_113.setAttribute("class", "grid place-items-center pl-3 pr-6 py-5");
           var e_114 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -1193,24 +1109,10 @@ function hideModal() {
 // showing the modal
 themeSetting.forEach(btns => 
   btns.addEventListener('click', (event)=> {
-    console.log('i clicked this in forEach statement!');
     event.stopPropagation();
     showModal();
   })
 )
-
-// if (themeSetting !== null) {
-//   for (var i = 0; i < themeSetting.length; i++) {
-
-//     var clickedOne = themeSetting[i];
-
-//     clickedOne.addEventListener('click', (event)=> {
-//       console.log('i clicked this!');
-//       event.stopPropagation();
-//       showModal();
-//     });
-//   }
-// }
 
 // hiding the modal
 document.addEventListener('keydown', (e)=> {
@@ -1226,18 +1128,6 @@ themeSetBtns.filter(setBtn => setBtn !== null).forEach(btn => {
   })
 })
 
-// if (themeSetBtns !== null) {
-//   for (var i = 0; i < themeSetBtns.length; i++) {
-
-//     var clickedOne = themeSetBtns[i];
-
-//     clickedOne.addEventListener('click', (event)=> {
-//       event.stopPropagation();
-//       hideModal();
-//     });
-//   }
-// }
-
 bgExist.forEach(clickedOne => {
   clickedOne.addEventListener('click', (event) => {
     if (event.target.id == event.currentTarget.id) {
@@ -1245,16 +1135,3 @@ bgExist.forEach(clickedOne => {
     }
   })
 })
-
-// if (themeModalBg != null) {
-//     for (var i = 0; i < themeModalBg.length; i++) {
-
-//       var clickedOne = themeModalBg[i];
-  
-//       clickedOne.addEventListener('click', (Event)=> {
-//         if (Event.target.id == Event.currentTarget.id) {
-//           hideModal();
-//         }
-//       });
-//     }
-// }
