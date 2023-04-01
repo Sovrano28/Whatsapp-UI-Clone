@@ -1,6 +1,20 @@
 const themeBtn = document.getElementById('themeSwitch');
 const settingBtn = document.getElementById('setting-btn');
 const appOptions = document.getElementById('settings');
+const searchBtn = document.querySelector('#search-btn');
+const searchDropdown = document.querySelector('#search-dropdown');
+const searchBackBtn = document.querySelector('#search-back-btn');
+
+// dropping down the search bar
+if (searchBtn !== null) {
+  searchBtn.addEventListener('click', ()=> {
+    searchDropdown.classList.remove('-translate-y-full');
+  });
+
+  searchBackBtn.addEventListener('click', ()=> {
+    searchDropdown.classList.add('-translate-y-full');
+  });
+};
 
 if (settingBtn !== null) {
   themeBtn.addEventListener('click', ()=> {

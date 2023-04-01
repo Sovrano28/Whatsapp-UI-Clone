@@ -18,6 +18,22 @@
 <body class="font-roboto w-full">
   <div class="md:flex md:flex-row">
     <div id="column-1" class="w-full md:w-[45%] xl:w-2/5 relative h-screen overflow-y-scroll">
+      <div id="search-dropdown" class="absolute bg-white dark:bg-WADarkTeal p-4 w-full z-20 -translate-y-full transition-transform duration-500">
+        <div class="flex py-3 border-b-2 dark:border-b-0 border-b-gray-200">
+          <div class="grid place-content-center">
+            <img id="search-back-btn" class="w-5 dark:invert-[1] mr-4" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
+          </div>
+          <input class="grow bg-inherit focus:outline-none dark:text-white caret-WATeal" type="text" placeholder="Search...">
+        </div>
+        <div class="flex py-2">
+          <div class="w-[85px] h-9 m-2 p-2 grid place-items-center rounded-3xl bg-[#f5f5f5] dark:bg-gray-600">
+            <div class="flex items-center space-x-1">
+              <div class="w-2 h-2"><img src="https://img.icons8.com/material-sharp/96/null/image-gallery.png"/></div>
+              <div class="text-[10px]">Photos</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="themeSwitch" class="absolute top-1 left-0 right-0 mx-auto w-10 h-10 rounded-full bg-yellow-400 flex-center leading-[0] z-10"><span class="animate-wiggle">7</span></div>
       <div id="settings" class="animate-faster dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-10 hidden w-3/5 text-black bg-white shadow-md" tabindex="-1">
         <ul>
@@ -34,7 +50,7 @@
           <div class="justify-self-start text-2xl font-bold">WhatsApp</div>
           <div class="flex gap-4 ml-auto">
             <img class="dual w-6" src="https://img.icons8.com/fluency-systems-regular/100/null/camera.png" alt="camera"/>
-            <img class="dual w-6" src="https://img.icons8.com/ios-glyphs/100/000000/search--v1.png" alt="search">
+            <img class="dual w-6" id="search-btn" src="https://img.icons8.com/ios-glyphs/100/000000/search--v1.png" alt="search">
             <img class="dual w-6" id="setting-btn" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
           </div>
         </div>
