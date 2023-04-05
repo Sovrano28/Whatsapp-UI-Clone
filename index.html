@@ -21,20 +21,50 @@
       <div id="search-dropdown" class="absolute bg-white dark:bg-WADarkTeal p-4 w-full z-20 -translate-y-full transition-transform duration-500">
         <div class="flex py-3 border-b-2 dark:border-b-0 border-b-gray-200">
           <div class="grid place-content-center">
-            <img id="search-back-btn" class="w-5 dark:invert-[1] mr-4" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
+            <img id="search-back-btn" class="w-5 mr-4" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
           </div>
           <input class="grow bg-inherit focus:outline-none dark:text-white caret-WATeal" type="text" placeholder="Search...">
         </div>
-        <div class="flex py-2">
-          <div class="w-[85px] h-9 m-2 p-2 grid place-items-center rounded-3xl bg-[#f5f5f5] dark:bg-gray-600">
+        <div class="flex flex-wrap whitespace-nowrap py-2">
+          <div class="search-item">
+            <div class="flex items-center space-x-1.5">
+              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/material-sharp/96/null/image-gallery.png" alt="photos"/></div>
+              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Photos</div>
+            </div>
+          </div>
+          <div class="search-item">
+            <div class="flex items-center space-x-1.5">
+              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/64/null/external-video-ui-essentials-kmg-design-glyph-kmg-design.png" alt="video"/></div>
+              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Video</div>
+            </div>
+          </div>
+          <div class="search-item">
+            <div class="flex items-center space-x-1.5">
+              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/material-rounded/96/null/link--v1.png" alt="links"/></div>
+              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Links</div>
+            </div>
+          </div>
+          <div class="search-item">
+            <div class="flex items-center space-x-1.5">
+              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/ios-glyphs/90/null/attach-gif.png" alt="gifs"/></div>
+              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Gifs</div>
+            </div>
+          </div>
+          <div class="search-item">
+            <div class="flex items-center space-x-1.5">
+              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/100/null/external-headphone-network-and-communication-smashingstocks-glyph-smashing-stocks.png" alt="audio"/></div>
+              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Audio</div>
+            </div>
+          </div>
+          <div class="search-item">
             <div class="flex items-center space-x-1">
-              <div class="w-2 h-2"><img src="https://img.icons8.com/material-sharp/96/null/image-gallery.png"/></div>
-              <div class="text-[10px]">Photos</div>
+              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/96/null/external-documents-design-thinking-tanah-basah-glyph-tanah-basah.png" alt="documents"/></div>
+              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Documents</div>
             </div>
           </div>
         </div>
       </div>
-      <div id="themeSwitch" class="absolute top-1 left-0 right-0 mx-auto w-10 h-10 rounded-full bg-yellow-400 flex-center leading-[0] z-10"><span class="animate-wiggle">7</span></div>
+      <div id="themeSwitch" class="absolute top-1 left-0 cursor-pointer right-0 mx-auto w-10 h-10 rounded-full bg-yellow-400 flex-center leading-[0] z-10"><span class="animate-wiggle">7</span></div>
       <div id="settings" class="animate-faster dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-10 hidden w-3/5 text-black bg-white shadow-md" tabindex="-1">
         <ul>
           <li class="options">New Group</li>

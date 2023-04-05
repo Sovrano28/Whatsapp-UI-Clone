@@ -12,6 +12,15 @@
   @apply invert-[1] dark:invert-[0.75] cursor-pointer;
 }
 
+#search-back-btn, .search-item-img {
+  @apply invert-[31%] sepia-[8%] saturate-[819%] hue-rotate-[158deg] brightness-[92%] contrast-[95%];
+  @apply dark:invert-[92%] dark:sepia-[11%] dark:saturate-[296%] dark:hue-rotate-[164deg] dark:brightness-[89%] dark:contrast-[93%];
+}
+
+.search-item {
+  @apply w-[85px] h-9 m-2 p-2 grid place-items-center rounded-3xl cursor-pointer bg-[#f5f5f5] dark:bg-[#313f47] transition-all duration-300 hover:opacity-80 hover:scale-95;
+}
+
 .nav-items {
   @apply
   flex text-center items-center px-5 py-4
