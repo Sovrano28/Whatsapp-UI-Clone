@@ -4,4 +4,6 @@ This project is a clone of the WhatsApp user interface built with HTML, CSS, and
 Acknowledgments
 This project was inspired by the WhatsApp application. I would like to thank the creators of WhatsApp for their excellent work.
 
-https://sovrano28.github.io/Whatsapp-Clone/
+project link;
+
+https://sovrano28.github.io/Whatsapp-UI-Clone/
