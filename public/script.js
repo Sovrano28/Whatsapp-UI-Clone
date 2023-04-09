@@ -1,3 +1,5 @@
+// import {selectedTheme} from '/public/pages/pages.js';
+
 const themeBtn = document.getElementById('themeSwitch');
 const settingBtn = document.getElementById('setting-btn');
 const appOptions = document.getElementById('settings');
@@ -474,6 +476,8 @@ neWe_5.setAttribute("type", "radio");
 neWe_5.setAttribute("name", "theme");
 neWe_5.setAttribute("id", "default");
 neWe_5.setAttribute("value", "default");
+neWe_5.setAttribute("checked", "");
+// neWe_5.checked = true;
 neWe_4.appendChild(neWe_5);
 var neWe_6 = document.createElement("label");
 neWe_6.setAttribute("class", "text-black dark:text-white");
@@ -1102,6 +1106,90 @@ const bgExist = themeModalBg.filter(bg => bg !== null);
 const themeSetBtnsMarkUp = document.getElementsByClassName('theme-select-btn');
 const themeSetBtnsJs = [neWe_14, neWe_15];
 const themeSetBtns = [...themeSetBtnsMarkUp, ...themeSetBtnsJs];
+
+const defaultRadioMarkUp = document.querySelector('input[value="default"]');
+const lightRadioMarkUp = document.querySelector('input[value="light"]');
+const darkRadioMarkUp = document.querySelector('input[value="dark"]');
+const okBtnMarkUp = document.querySelector('.ok-btn');
+
+const jsRadios = [neWe_5, neWe_8, neWe_11];
+const markUpRadios = [defaultRadioMarkUp, lightRadioMarkUp, darkRadioMarkUp];
+
+const defaultRadios = [defaultRadioMarkUp, neWe_5];
+const lightRadios = [lightRadioMarkUp, neWe_8];
+const darkRadios = [darkRadioMarkUp, neWe_11];
+const okBtns = [okBtnMarkUp, neWe_15];
+
+// var checkedJsRadio = jsRadios.filter(radio => radio.hasAttribute('checked'));
+
+if (markUpRadios !== null) {
+  markUpRadios.forEach(radio => {
+    if (radio !== null) {
+      radio.addEventListener('click', ()=> {
+        var selectedTheme = document.querySelector('input[name="theme"][checked]');
+        
+        if (radio.id === selectedTheme.id) {
+        }
+        else {
+          selectedTheme.removeAttribute('checked');
+          radio.setAttribute('checked', '');
+        }
+      })
+    }
+  })
+}
+
+if (jsRadios !== null) {
+  jsRadios.forEach(radio => {
+    if (radio !== null) {
+      radio.addEventListener('click', ()=> {
+        // var selectedTheme = document.querySelector('input[name="theme"][checked]');
+        var checkedJsRadio = jsRadios.filter(theRadio => theRadio.hasAttribute('checked'));
+        console.log(checkedJsRadio);
+        
+        if (radio.id === checkedJsRadio.id) {
+        }
+        else {
+          checkedJsRadio.removeAttribute('checked');
+          radio.setAttribute('checked', '');
+        }
+      })
+    }
+  })
+}
+
+okBtns.filter(okBtn => okBtn !== null).forEach(okBtnExist => {
+  
+  okBtnExist.addEventListener('click', ()=> {
+    var selectedTheme = document.querySelector('input[name="theme"][checked]');
+    var checkedJsRadio = jsRadios.filter(theRadio => theRadio.hasAttribute('checked'));
+    
+    if (checkedJsRadio == neWe_5 || (selectedTheme !== null && selectedTheme.value == 'default')) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+      else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+
+    }
+    else if (checkedJsRadio == neWe_8 || (selectedTheme !== null && selectedTheme.value == 'light')) {
+      // document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.classList.remove('dark');
+      // document.documentElement.classList.add('light');
+      localStorage.setItem('theme', 'light');
+    }
+    else if (checkedJsRadio == neWe_11 || (selectedTheme !== null && selectedTheme.value == 'dark')) {
+      // document.documentElement.setAttribute('data-theme', 'dark');
+      // document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+
+  })
+}); 
 
 function showModal() {
   bgExist.forEach(modalBg => {

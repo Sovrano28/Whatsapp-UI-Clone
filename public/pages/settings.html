@@ -8,11 +8,15 @@
   <link rel="shortcut icon" href="../imgs/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="../styles.css">
   <script>
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
+    function setUserTheme() {
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
     }
+
+    setUserTheme();
   </script>
 </head>
 <body class="font-roboto">
@@ -21,7 +25,7 @@
       <div id="theme-modal" class="p-4 w-9/12 md:max-w-[40%] lg:max-w-[30%] bg-white dark:bg-WADarkTeal md:drop-shadow-xl">
         <div class="text-black dark:text-white py-2 text-lg font-medium">Choose theme</div>
         <div class="flex items-center">
-          <input class="theme" type="radio" name="theme" id="default" value="default">
+          <input class="theme" type="radio" name="theme" id="default" value="default" autocomplete="off" checked>
           <label class="text-black dark:text-white" for="default">System default</label>
         </div>
         <div class="flex items-center mt-2">
@@ -33,8 +37,8 @@
           <label class="text-black dark:text-white" for="dark">Dark</label>
         </div>
         <div class="flex justify-end">
-          <div class="theme-select-btn flex text-WATeal p-2 hover:bg-gray-200 mr-3">Cancel</div>
-          <div class="theme-select-btn flex text-WATeal p-2 hover:bg-gray-200">Ok</div>
+          <div class="theme-select-btn flex text-WATeal p-2 hover:bg-gray-200 cursor-pointer mr-3">Cancel</div>
+          <div class="theme-select-btn ok-btn flex text-WATeal p-2 hover:bg-gray-200 cursor-pointer">Ok</div>
         </div>
       </div>
     </div>
