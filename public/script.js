@@ -1155,9 +1155,8 @@ okBtns.filter(okBtn => okBtn !== null).forEach(okBtnExist => {
   
   okBtnExist.addEventListener('click', ()=> {
     var selectedTheme = document.querySelector('input[name="theme"][checked]');
-    var checkedJsRadio = jsRadios.filter(theRadio => theRadio.hasAttribute('checked'));
     
-    if (checkedJsRadio == neWe_5 || (selectedTheme !== null && selectedTheme.value == 'default')) {
+    if (selectedTheme.value === 'default') {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'dark');
@@ -1168,13 +1167,13 @@ okBtns.filter(okBtn => okBtn !== null).forEach(okBtnExist => {
       }
 
     }
-    else if (checkedJsRadio == neWe_8 || (selectedTheme !== null && selectedTheme.value == 'light')) {
+    else if (selectedTheme.value === 'light') {
       // document.documentElement.setAttribute('data-theme', 'light');
       document.documentElement.classList.remove('dark');
       // document.documentElement.classList.add('light');
       localStorage.setItem('theme', 'light');
     }
-    else if (checkedJsRadio == neWe_11 || (selectedTheme !== null && selectedTheme.value == 'dark')) {
+    else if (selectedTheme.value === 'dark') {
       // document.documentElement.setAttribute('data-theme', 'dark');
       // document.documentElement.classList.remove('light');
       document.documentElement.classList.add('dark');
