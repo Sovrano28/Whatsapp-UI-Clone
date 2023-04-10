@@ -1095,6 +1095,7 @@ if (messageBar !== null) {
   })
 }
 
+// Everything theme!!!
 const themeSettingJs = [neWe_45, neWe_112];
 const themeSettingMarkUp = document.getElementsByClassName('theme-setting');
 const themeSetting = [...themeSettingMarkUp, ...themeSettingJs];
@@ -1120,17 +1121,13 @@ const lightRadios = [lightRadioMarkUp, neWe_8];
 const darkRadios = [darkRadioMarkUp, neWe_11];
 const okBtns = [okBtnMarkUp, neWe_15];
 
-// var checkedJsRadio = jsRadios.filter(radio => radio.hasAttribute('checked'));
-
 if (markUpRadios !== null) {
   markUpRadios.forEach(radio => {
     if (radio !== null) {
       radio.addEventListener('click', ()=> {
         var selectedTheme = document.querySelector('input[name="theme"][checked]');
         
-        if (radio.id === selectedTheme.id) {
-        }
-        else {
+        if (radio.id !== selectedTheme.id) {
           selectedTheme.removeAttribute('checked');
           radio.setAttribute('checked', '');
         }
@@ -1143,14 +1140,10 @@ if (jsRadios !== null) {
   jsRadios.forEach(radio => {
     if (radio !== null) {
       radio.addEventListener('click', ()=> {
-        // var selectedTheme = document.querySelector('input[name="theme"][checked]');
-        var checkedJsRadio = jsRadios.filter(theRadio => theRadio.hasAttribute('checked'));
-        console.log(checkedJsRadio);
+        var selectedTheme = document.querySelector('input[name="theme"][checked]');
         
-        if (radio.id === checkedJsRadio.id) {
-        }
-        else {
-          checkedJsRadio.removeAttribute('checked');
+        if (radio.id !== selectedTheme.id) {
+          selectedTheme.removeAttribute('checked');
           radio.setAttribute('checked', '');
         }
       })
