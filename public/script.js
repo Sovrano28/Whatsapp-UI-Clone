@@ -1,5 +1,3 @@
-// import {selectedTheme} from '/public/pages/pages.js';
-
 const themeBtn = document.getElementById('themeSwitch');
 const settingBtn = document.getElementById('setting-btn');
 const appOptions = document.getElementById('settings');
@@ -18,19 +16,8 @@ if (searchBtn !== null) {
   });
 };
 
+// dropping down the settings options
 if (settingBtn !== null) {
-  themeBtn.addEventListener('click', ()=> {
-
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } 
-    else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-
   settingBtn.addEventListener('click', ()=> {
     appOptions.classList.toggle('hidden');
     appOptions.classList.add('animate-slideInDown');
@@ -54,6 +41,7 @@ if (settingBtn !== null) {
   });
 };
 
+// loading the friendsChats
 const rightColumn = document.getElementById("column-2");
 const myChats = document.querySelectorAll('div.chats');
 const rightColumnContent = document.getElementById('column-2-default-inner');
@@ -477,7 +465,6 @@ neWe_5.setAttribute("name", "theme");
 neWe_5.setAttribute("id", "default");
 neWe_5.setAttribute("value", "default");
 neWe_5.setAttribute("checked", "");
-// neWe_5.checked = true;
 neWe_4.appendChild(neWe_5);
 var neWe_6 = document.createElement("label");
 neWe_6.setAttribute("class", "text-black dark:text-white");
@@ -1095,7 +1082,7 @@ if (messageBar !== null) {
   })
 }
 
-// Everything theme!!!
+// Everything on application themes!!!
 const themeSettingJs = [neWe_45, neWe_112];
 const themeSettingMarkUp = document.getElementsByClassName('theme-setting');
 const themeSetting = [...themeSettingMarkUp, ...themeSettingJs];
@@ -1160,22 +1147,16 @@ okBtns.filter(okBtn => okBtn !== null).forEach(okBtnExist => {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'dark');
-      }
-      else {
+      } else {
         document.documentElement.classList.remove('dark');
         localStorage.setItem('theme', 'light');
       }
 
-    }
-    else if (selectedTheme.value === 'light') {
-      // document.documentElement.setAttribute('data-theme', 'light');
+    } else if (selectedTheme.value === 'light') {
       document.documentElement.classList.remove('dark');
-      // document.documentElement.classList.add('light');
       localStorage.setItem('theme', 'light');
-    }
-    else if (selectedTheme.value === 'dark') {
-      // document.documentElement.setAttribute('data-theme', 'dark');
-      // document.documentElement.classList.remove('light');
+
+    } else if (selectedTheme.value === 'dark') {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     }
