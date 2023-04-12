@@ -5,6 +5,16 @@ const searchBtn = document.querySelector('#search-btn');
 const searchDropdown = document.querySelector('#search-dropdown');
 const searchBackBtn = document.querySelector('#search-back-btn');
 
+function setUserTheme() {
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}
+
+window.addEventListener('popstate', setUserTheme);
+
 // dropping down the search bar
 if (searchBtn !== null) {
   searchBtn.addEventListener('click', ()=> {
