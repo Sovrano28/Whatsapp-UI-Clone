@@ -13,7 +13,17 @@ function setUserTheme() {
   }
 }
 
-window.addEventListener('popstate', setUserTheme);
+// document.addEventListener('DOMContentLoaded', function() {
+// });
+
+window.addEventListener("pageshow", function (event) {
+  var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+  
+  if (historyTraversal) {
+    setUserTheme();
+  }
+});
+
 
 // dropping down the search bar
 if (searchBtn !== null) {
