@@ -5,6 +5,7 @@ const searchBtn = document.querySelector('#search-btn');
 const searchDropdown = document.querySelector('#search-dropdown');
 const searchBackBtn = document.querySelector('#search-back-btn');
 
+// setting the on popstate event
 function setUserTheme() {
   if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark')
@@ -12,9 +13,6 @@ function setUserTheme() {
     document.documentElement.classList.remove('dark')
   }
 }
-
-// document.addEventListener('DOMContentLoaded', function() {
-// });
 
 window.addEventListener("pageshow", function (event) {
   var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
