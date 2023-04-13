@@ -1170,17 +1170,40 @@ okBtns.filter(okBtn => okBtn !== null).forEach(okBtnExist => {
         localStorage.setItem('theme', 'light');
       }
 
+      localStorage.setItem('theme-option', 'default');
+
     } else if (selectedTheme.value === 'light') {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
 
+      localStorage.removeItem('theme-option');
+      
     } else if (selectedTheme.value === 'dark') {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
+
+      localStorage.removeItem('theme-option');
     }
 
   })
 }); 
+
+// ticking the last selected theme
+function tickLastSelectedTheme() {
+  var selectedTheme = document.querySelector('input[name="theme"][checked]');
+  selectedTheme.removeAttribute('checked');
+  
+  if (localStorage.getItem('theme-option') === 'default') {
+    defaultRadios.filter(defaultRadio => defaultRadio !== null).forEach(defaultRadioExist => {defaultRadioExist.setAttribute('checked', '')})
+    
+  } else if (localStorage.getItem('theme') === 'light') {
+    lightRadios.filter(lightRadio => lightRadio !== null).forEach(lightRadioExist => {lightRadioExist.setAttribute('checked', '')})
+    
+  } else if (localStorage.getItem('theme') === 'dark') {
+    darkRadios.filter(darkRadio => darkRadio !== null).forEach(darkRadioExist => {darkRadioExist.setAttribute('checked', '')})
+
+  }
+}  
 
 function showModal() {
   bgExist.forEach(modalBg => {
@@ -1203,6 +1226,7 @@ function hideModal() {
 themeSetting.forEach(btns => 
   btns.addEventListener('click', (event)=> {
     event.stopPropagation();
+    tickLastSelectedTheme();
     showModal();
   })
 )
