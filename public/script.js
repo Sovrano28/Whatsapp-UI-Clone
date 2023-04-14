@@ -7,9 +7,30 @@ const searchBackBtn = document.querySelector('#search-back-btn');
 
 // setting the on popstate event
 function setUserTheme() {
-  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  if (!('theme' in localStorage)) {
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    
+    localStorage.setItem('theme', 'default');
+  }
+
+  else if (localStorage.theme === 'default') {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
+
+  else if (localStorage.theme === 'dark') {
     document.documentElement.classList.add('dark')
-  } else {
+  }
+
+  else {
     document.documentElement.classList.remove('dark')
   }
 }
@@ -1164,25 +1185,20 @@ okBtns.filter(okBtn => okBtn !== null).forEach(okBtnExist => {
     if (selectedTheme.value === 'default') {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
       } else {
         document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
       }
 
-      localStorage.setItem('theme-option', 'default');
+      localStorage.setItem('theme', 'default');
 
     } else if (selectedTheme.value === 'light') {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
 
-      localStorage.removeItem('theme-option');
-      
     } else if (selectedTheme.value === 'dark') {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
 
-      localStorage.removeItem('theme-option');
     }
 
   })
@@ -1193,7 +1209,7 @@ function tickLastSelectedTheme() {
   var selectedTheme = document.querySelector('input[name="theme"][checked]');
   selectedTheme.removeAttribute('checked');
   
-  if (localStorage.getItem('theme-option') === 'default') {
+  if (localStorage.getItem('theme') === 'default') {
     defaultRadios.filter(defaultRadio => defaultRadio !== null).forEach(defaultRadioExist => {defaultRadioExist.setAttribute('checked', '')})
     
   } else if (localStorage.getItem('theme') === 'light') {
