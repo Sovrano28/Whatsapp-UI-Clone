@@ -1,11 +1,10 @@
-const themeBtn = document.getElementById('themeSwitch');
 const settingBtn = document.getElementById('setting-btn');
 const appOptions = document.getElementById('settings');
 const searchBtn = document.querySelector('#search-btn');
 const searchDropdown = document.querySelector('#search-dropdown');
 const searchBackBtn = document.querySelector('#search-back-btn');
 
-// setting the on popstate event
+// setting the page theme on popstate event.
 function setUserTheme() {
   if (!('theme' in localStorage)) {
 
@@ -428,13 +427,16 @@ e_38.addEventListener('input', ()=> {
   e_50.classList.add('scale-0');
   e_55.classList.add('z-[1]');
   e_55.classList.remove('scale-0');
+
 })
 
-e_38.addEventListener('blur', ()=> {
+e_38.addEventListener('input', ()=> {
+  console.log('blur');
+
   if (e_38.value == '') {
   e_39.classList.remove('animate-hide-camera');
   e_39.classList.add('animate-show-camera');
-
+  
   e_50.classList.add('z-[1]');
   e_50.classList.remove('scale-0');
   e_55.classList.remove('z-[1]');
