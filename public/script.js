@@ -591,7 +591,7 @@ if (intSettingBtn !== null) {
           var e_23 = document.createElement("div");
           var e_24 = document.createElement("img");
           e_24.setAttribute("class", "w-20 h-20 object-cover rounded-full");
-          e_24.setAttribute("src", "public/imgs/friends/barber.jpeg");
+          e_24.setAttribute("src", "public/imgs/my-profile-pic.jpg");
           e_24.setAttribute("alt", "profile pic");
           e_23.appendChild(e_24);
           e_22.appendChild(e_23);
