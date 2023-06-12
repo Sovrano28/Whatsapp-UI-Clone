@@ -38,12 +38,12 @@
   @apply px-3 py-4 text-left cursor-pointer transition duration-300 hover:bg-gray-200 dark:hover:bg-WADarkestGreen;
 }
 
-a.chats {
-  @apply flex items-center justify-between px-3 py-4 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
+a.chats, div.chats {
+  @apply flex items-center justify-between px-3 py-4 transition duration-100 bg-white dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
 }
 
-div.chats {
-  @apply flex items-center justify-between px-3 py-4 transition duration-100 dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
+/* status-element */ .st-el {
+  @apply hover:bg-gray-200 hover:dark:bg-WADarkTeal;
 }
 
 .chat-page {

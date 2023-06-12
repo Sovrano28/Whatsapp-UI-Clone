@@ -79,6 +79,16 @@ if (settingBtn !== null) {
   });
 };
 
+// sliding to pages on click
+const customButtons = document.querySelectorAll('.go-to-slide-btn');
+
+customButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const slideIndex = button.dataset.slideIndex;
+    swiper.slideTo(slideIndex);
+  });
+});
+
 // loading the friendsChats
 const rightColumn = document.getElementById("column-2");
 const myChats = document.querySelectorAll('div.chats');
