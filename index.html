@@ -105,30 +105,25 @@
         </ul>
       </div>
 
-      <!--? navigation bar -->
-      <nav id="main-nav" class="relative z-[5] bg-WATeal dark:bg-WADarkTeal dark:text-gray-400 shadow-md flex flex-col w-full p-6 pb-0 text-white">
-
-        <!--? top nav -->
-        <div class="flex flex-row items-center">
-          <div class="justify-self-start text-2xl font-bold">WhatsApp</div>
-          <div class="flex gap-4 ml-auto">
-            <img class="dual w-6" src="https://img.icons8.com/fluency-systems-regular/100/null/camera.png" alt="camera"/>
-            <img class="dual w-6" id="search-btn" src="https://img.icons8.com/ios-glyphs/100/000000/search--v1.png" alt="search">
-            <img class="dual w-6" id="setting-btn" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
-          </div>
+      <!--? top nav -->
+      <div class="flex flex-row items-center pt-6 px-6 w-full relative md:sticky md:top-0 z-[5] bg-WATeal dark:bg-WADarkTeal text-white dark:text-gray-400">
+        <div class="justify-self-start text-2xl font-bold">WhatsApp</div>
+        <div class="flex gap-4 ml-auto">
+          <img class="dual w-6" src="https://img.icons8.com/fluency-systems-regular/100/null/camera.png" alt="camera"/>
+          <img class="dual w-6" id="search-btn" src="https://img.icons8.com/ios-glyphs/100/000000/search--v1.png" alt="search">
+          <img class="dual w-6" id="setting-btn" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
         </div>
+      </div>
 
-        <!--? bottom nav -->
-        <div class="flex flex-row items-center justify-between pt-4">
-          <div class="nav-items active space-x-1">
-            <div class="text-gray-100 hover:text-white dark:hover:text-WATeal transition-colors duration-300" data-slide-index="0">Chats</div>
-            <div class="bg-white dark:bg-WATeal text-WATeal dark:text-WADarkTeal text-[0.5rem] w-5 h-5 leading-[0] flex-center text-center rounded-full">11</div>
-          </div>
-          <div class="nav-items text-gray-100 hover:text-white dark:hover:text-WATeal transition-colors duration-300" data-slide-index="1">Status</div>
-          <div class="nav-items text-gray-100 hover:text-white dark:hover:text-WATeal transition-colors duration-300" data-slide-index="2">Calls</div>
+      <!--? bottom nav -->
+      <div class="flex flex-row items-center justify-between pt-4 px-6 w-full z-[5] sticky top-0 md:top-[55px] bg-WATeal dark:bg-WADarkTeal dark:text-gray-400 shadow-md">
+        <div class="nav-items active space-x-1">
+          <div class="text-gray-100 hover:text-white dark:hover:text-WATeal transition-colors duration-300" data-slide-index="0">Chats</div>
+          <div class="bg-white dark:bg-WATeal text-WATeal dark:text-WADarkTeal text-[0.5rem] w-5 h-5 leading-[0] flex-center text-center rounded-full">11</div>
         </div>
-
-      </nav>
+        <div class="nav-items text-gray-100 hover:text-white dark:hover:text-WATeal transition-colors duration-300" data-slide-index="1">Status</div>
+        <div class="nav-items text-gray-100 hover:text-white dark:hover:text-WATeal transition-colors duration-300" data-slide-index="2">Calls</div>
+      </div>
 
       <!--? main -->
       <div id="slides-container" class="bg-white dark:bg-WADarkGreen">
@@ -176,7 +171,7 @@
 
             <section id="status" class="swiper-slide">
               <div class="">
-                <div class="st-el flex justify-between p-3">
+                <div class="flex justify-between p-3 hover:bg-gray-200 hover:dark:bg-WADarkTeal">
                   <div class="flex">
                     <div>
                       <img class="w-14 h-14 object-cover rounded-full border-4 border-dashed border-green-500" src="public/imgs/my-profile-pic.jpg" alt="my profile pic">

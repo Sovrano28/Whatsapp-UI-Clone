@@ -609,6 +609,11 @@ video {
   position: relative;
 }
 
+.sticky{
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .top-0{
   top: 0px;
 }
@@ -1163,10 +1168,6 @@ video {
   padding: 1rem;
 }
 
-.p-6{
-  padding: 1.5rem;
-}
-
 .p-3{
   padding: 0.75rem;
 }
@@ -1187,6 +1188,11 @@ video {
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-4{
@@ -1219,13 +1225,8 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.px-6{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.pb-0{
-  padding-bottom: 0px;
+.pt-6{
+  padding-top: 1.5rem;
 }
 
 .pt-4{
@@ -1654,7 +1655,7 @@ a.chats,  div.chats{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 100ms;
+  transition-duration: 150ms;
 }
 
 a.chats:hover,  div.chats:hover{
@@ -1672,14 +1673,20 @@ a.chats:hover,  div.chats:hover{
   background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
 }
 
-/* status-element */
+.statuses{
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 
-.st-el:hover{
+.statuses:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.dark .st-el:hover{
+.dark .statuses:hover{
   --tw-bg-opacity: 1;
   background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
 }
@@ -1965,6 +1972,19 @@ a.chats:hover,  div.chats:hover{
 }
 
 @media (min-width: 768px){
+  .md\:sticky{
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
+  .md\:top-0{
+    top: 0px;
+  }
+
+  .md\:top-\[55px\]{
+    top: 55px;
+  }
+
   .md\:block{
     display: block;
   }

@@ -39,11 +39,11 @@
 }
 
 a.chats, div.chats {
-  @apply flex items-center justify-between px-3 py-4 transition duration-100 bg-white dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
+  @apply flex items-center justify-between px-3 py-4 transition bg-white dark:bg-WADarkGreen hover:bg-gray-200 hover:dark:bg-WADarkTeal;
 }
 
-/* status-element */ .st-el {
-  @apply hover:bg-gray-200 hover:dark:bg-WADarkTeal;
+.statuses {
+  @apply hover:bg-gray-200 hover:dark:bg-WADarkTeal transition;
 }
 
 .chat-page {
