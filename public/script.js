@@ -42,7 +42,6 @@ window.addEventListener("pageshow", function (event) {
   }
 });
 
-
 // dropping down the search bar
 if (searchBtn !== null) {
   searchBtn.addEventListener('click', ()=> {
@@ -79,14 +78,46 @@ if (settingBtn !== null) {
   });
 };
 
-// sliding to pages on click
-const customButtons = document.querySelectorAll('.go-to-slide-btn');
+// swiping functionalities
+const navItems = document.querySelectorAll('.nav-items');
 
-customButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const slideIndex = button.dataset.slideIndex;
-    swiper.slideTo(slideIndex);
+// initialising swiper.js externally
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.swiper', {
+
+    on: {
+      slideChange: function () {
+        const activeSlideIndex = this.activeIndex;
+        
+        navItems.forEach((navItem) => {
+          navItem.classList.remove('active');
+        });
+        
+        const activeElement = document.querySelector(`.nav-items:nth-child(${activeSlideIndex + 1})`);
+        activeElement.classList.add('active');
+      },
+    },
   });
+  
+  // sliding to pages on click
+  navItems.forEach(nav => {
+    nav.addEventListener('click', () => {
+      const slideIndex = nav.dataset.slideIndex;
+      swiper.slideTo(slideIndex);
+    });
+  });
+});
+
+// adding the `active` class to a nav-item
+navItems.forEach(nav => {
+  nav.addEventListener('click', ()=> {
+    
+    navItems.forEach((navItem) => {
+      navItem.classList.remove('active');
+    });
+
+    nav.classList.add('active');
+  })
 });
 
 // loading the friendsChats

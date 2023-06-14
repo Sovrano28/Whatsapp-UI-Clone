@@ -22,12 +22,12 @@
 }
 
 .nav-items {
-  @apply
-  flex text-center items-center px-5 py-4
-  dark:hover:text-WATeal mb-[-4px]
-  hover:border-b-[4px] hover:border-b-white dark:hover:border-b-WATeal
-  transition-colors hover:ease-in duration-300
-  font-medium cursor-pointer;
+  @apply relative flex text-center items-center px-5 py-4 font-medium cursor-pointer
+  after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white after:dark:bg-WATeal after:opacity-0 after:transition-opacity after:duration-300 after:pointer-events-none;
+}
+
+.nav-items.active {
+  @apply text-white dark:text-WATeal after:opacity-100;
 }
 
 .show {

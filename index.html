@@ -45,8 +45,8 @@
   <div class="md:flex md:flex-row">
     <div id="column-1" class="w-full md:w-[45%] xl:w-2/5 relative h-screen overflow-y-scroll overflow-x-hidden">
 
-      <!--? dropdown -->
-      <div id="search-dropdown" class="absolute bg-white dark:bg-WADarkTeal p-4 w-full z-20 -translate-y-full transition-transform duration-500">
+      <!--? search dropdown -->
+      <div id="search-dropdown" class="absolute bg-white shadow-md dark:bg-WADarkTeal p-4 w-full z-20 -translate-y-full transition-transform duration-500">
         <div class="flex py-3 border-b-2 dark:border-b-0 border-b-gray-200">
           <div class="grid place-content-center">
             <img id="search-back-btn" class="w-5 mr-4" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
@@ -106,7 +106,9 @@
       </div>
 
       <!--? navigation bar -->
-      <nav id="main-nav" class="bg-WATeal dark:bg-WADarkTeal dark:text-gray-400 drop-shadow-sm flex flex-col w-full p-6 pb-0 text-white">
+      <nav id="main-nav" class="relative z-[5] bg-WATeal dark:bg-WADarkTeal dark:text-gray-400 shadow-md flex flex-col w-full p-6 pb-0 text-white">
+
+        <!--? top nav -->
         <div class="flex flex-row items-center">
           <div class="justify-self-start text-2xl font-bold">WhatsApp</div>
           <div class="flex gap-4 ml-auto">
@@ -115,14 +117,17 @@
             <img class="dual w-6" id="setting-btn" src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png" alt="kebab">
           </div>
         </div>
+
+        <!--? bottom nav -->
         <div class="flex flex-row items-center justify-between pt-4">
-          <div class="nav-items space-x-1">
-            <div class="go-to-slide-btn" data-slide-index="0">Chats</div>
+          <div class="nav-items active space-x-1">
+            <div class="text-gray-100 hover:text-white dark:hover:text-WATeal transition-colors duration-300" data-slide-index="0">Chats</div>
             <div class="bg-white dark:bg-WATeal text-WATeal dark:text-WADarkTeal text-[0.5rem] w-5 h-5 leading-[0] flex-center text-center rounded-full">11</div>
           </div>
-          <div class="nav-items go-to-slide-btn" data-slide-index="1">Status</div>
-          <div class="nav-items go-to-slide-btn" data-slide-index="2">Calls</div>
+          <div class="nav-items text-gray-100 hover:text-white dark:hover:text-WATeal transition-colors duration-300" data-slide-index="1">Status</div>
+          <div class="nav-items text-gray-100 hover:text-white dark:hover:text-WATeal transition-colors duration-300" data-slide-index="2">Calls</div>
         </div>
+
       </nav>
 
       <!--? main -->
@@ -365,12 +370,9 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
     // swiper.js initialisation
-    const swiper = new Swiper('.swiper', {
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
+    // const swiper = new Swiper('.swiper', {
+      
+    // });
   </script>
   <script src="public/script.js"></script>
 </body>
