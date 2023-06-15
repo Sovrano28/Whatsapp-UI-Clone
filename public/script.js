@@ -144,10 +144,11 @@ const chatFilePath = 'public/pages/chat.html';
 const rightColumn = document.getElementById("column-2");
 const rightColumnContent = document.getElementById('column-2-default-inner');
 var friendChat = document.createElement('div');
+friendChat.setAttribute('class', 'relative');
 
 var e_2 = document.createElement("div");
 e_2.setAttribute("id", "chat-settings");
-e_2.setAttribute("class", "animate__animated animate__faster md:w-2/5 dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-10 hidden w-3/5 text-black bg-white shadow-md");
+e_2.setAttribute("class", "animate__animated animate__faster md:w-2/5 dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-20 hidden w-3/5 text-black bg-white shadow-md");
 e_2.setAttribute("tabindex", "-1");
 
 var e_24 = document.createElement("img");
@@ -274,7 +275,7 @@ myChats.forEach(chat => {
           e_1.appendChild(e_2);
           e_0.appendChild(e_1);
           var e_11 = document.createElement("header");
-          e_11.setAttribute("class", "bg-WATeal dark:bg-WADarkTeal dark:text-gray-400 flex flex-col w-full p-3 text-white");
+          e_11.setAttribute("class", "sticky top-0 z-10 bg-WATeal dark:bg-WADarkTeal dark:text-gray-400 flex flex-col w-full p-3 text-white");
           var e_12 = document.createElement("div");
           e_12.setAttribute("class", "flex flex-row items-center");
           var e_13 = document.createElement("div");
