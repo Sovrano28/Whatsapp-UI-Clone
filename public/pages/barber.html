@@ -38,6 +38,16 @@
     }
 
     setUserTheme();
+    
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const profileImage = document.getElementById('chat-profile-img');
+      const profileName = document.getElementById('profile-name');
+      const profileStatus = document.getElementById('profile-status');
+
+      profileImage.setAttribute('src', localStorage.getItem('chatProfileImageSrc'));
+      profileName.innerText = localStorage.getItem('friendName');
+      profileStatus.innerText = localStorage.getItem('friendStatus');
+    });
   </script>
 </head>
 <body class="font-roboto">
@@ -61,11 +71,11 @@
           <img class="w-5" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
         </a>
         <div class="flex-center">
-          <img class="w-9 h-9 object-cover rounded-full" src="../imgs/friends/barber.jpeg" alt="friend">
+          <img id="chat-profile-img" class="w-9 h-9 object-cover rounded-full" src="" alt="friend">
         </div>
         <div class="flex flex-col px-3 py-1">
-          <div class="text-sm font-bold text-white">My Barber</div>
-          <div class="text-xs font-normal text-white">Online</div>
+          <div class="text-sm font-bold text-white" id="profile-name"></div>
+          <div class="text-xs font-normal text-white" id="profile-status"></div>
         </div>
       </div>
       <div class="flex gap-4 ml-auto">

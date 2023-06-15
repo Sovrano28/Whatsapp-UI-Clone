@@ -138,6 +138,28 @@ navItems.forEach(nav => {
   })
 });
 
+// loading chatLink on <md devices
+const chatLinks = document.querySelectorAll('a.chats');
+const chatFilePath = 'public/pages/barber.html';
+
+chatLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+  
+    const friendName = link.getAttribute('friend-name');
+    const friendStatus = link.getAttribute('friend-status');
+    const imageName = link.getAttribute('img-name');
+    const imageFormat = link.getAttribute('img-format');
+
+    const chatProfileImageSrc = `../imgs/friends/${imageName}.${imageFormat}`;
+    window.localStorage.setItem('chatProfileImageSrc', chatProfileImageSrc);
+    window.localStorage.setItem('friendName', friendName);
+    window.localStorage.setItem('friendStatus', friendStatus);
+
+    window.location.href = chatFilePath;
+  })
+});
+
 // loading the friendsChats
 const rightColumn = document.getElementById("column-2");
 const myChats = document.querySelectorAll('div.chats');

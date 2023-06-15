@@ -1633,7 +1633,7 @@ video {
   display: block;
 }
 
-.options,  #int-setting-btn{
+.options,  .options-setting{
   cursor: pointer;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1647,12 +1647,12 @@ video {
   transition-duration: 300ms;
 }
 
-.options:hover,  #int-setting-btn:hover{
+.options:hover,  .options-setting:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.dark .options:hover, .dark  #int-setting-btn:hover{
+.dark .options:hover, .dark  .options-setting:hover{
   --tw-bg-opacity: 1;
   background-color: hsl(203 32% 8% / var(--tw-bg-opacity));
 }
