@@ -1563,6 +1563,22 @@ video {
   background-color: rgb(49 63 71 / var(--tw-bg-opacity));
 }
 
+.status-active .options,  .call-active .options{
+  display: none;
+}
+
+.status-option,  .call-option{
+  display: none;
+}
+
+.status-active .call-option,  .call-active .status-option{
+  display: none;
+}
+
+.status-active .status-option,  .call-active .call-option{
+  display: block;
+}
+
 .nav-items{
   position: relative;
   display: flex;
@@ -1617,7 +1633,7 @@ video {
   display: block;
 }
 
-.options{
+.options,  #int-setting-btn{
   cursor: pointer;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1631,12 +1647,12 @@ video {
   transition-duration: 300ms;
 }
 
-.options:hover{
+.options:hover,  #int-setting-btn:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.dark .options:hover{
+.dark .options:hover, .dark  #int-setting-btn:hover{
   --tw-bg-opacity: 1;
   background-color: hsl(203 32% 8% / var(--tw-bg-opacity));
 }

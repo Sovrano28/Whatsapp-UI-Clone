@@ -56,6 +56,24 @@ if (searchBtn !== null) {
 // dropping down the settings options
 if (settingBtn !== null) {
   settingBtn.addEventListener('click', ()=> {
+
+    // changing the options of the settings dropdown base on the active nav-item
+    const chatNav = document.querySelector('.nav-items:nth-child(1)');
+    const statusNav = document.querySelector('.nav-items:nth-child(2)');
+    const callNav = document.querySelector('.nav-items:nth-child(3)');
+
+    if (statusNav.classList.contains('active')) {
+      appOptions.classList.remove('call-active');
+      appOptions.classList.add('status-active');
+    } else if (callNav.classList.contains('active')) {
+      appOptions.classList.remove('status-active');
+      appOptions.classList.add('call-active');
+    } else if (chatNav.classList.contains('active')) {
+      appOptions.classList.remove('status-active');
+      appOptions.classList.remove('call-active');
+    } else {}
+    // end
+    
     appOptions.classList.toggle('hidden');
     appOptions.classList.add('animate-slideInDown');
   

@@ -21,6 +21,22 @@
   @apply w-[85px] h-9 m-2 p-2 grid place-items-center rounded-3xl cursor-pointer bg-[#f5f5f5] dark:bg-[#313f47] transition-all duration-300 hover:opacity-80 hover:scale-95;
 }
 
+.status-active .options, .call-active .options {
+  @apply hidden;
+}
+
+.status-option, .call-option {
+  @apply hidden;
+}
+
+.status-active .call-option, .call-active .status-option {
+  @apply hidden;
+}
+
+.status-active .status-option, .call-active .call-option {
+  @apply block;
+}
+
 .nav-items {
   @apply relative flex text-center items-center px-5 py-4 font-medium cursor-pointer
   after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white after:dark:bg-WATeal after:opacity-0 after:transition-opacity after:duration-300 after:pointer-events-none;
@@ -34,7 +50,7 @@
   @apply block;
 }
 
-.options {
+.options, #int-setting-btn {
   @apply px-3 py-4 text-left cursor-pointer transition duration-300 hover:bg-gray-200 dark:hover:bg-WADarkestGreen;
 }
 
