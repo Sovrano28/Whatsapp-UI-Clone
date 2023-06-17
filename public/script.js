@@ -1,9 +1,3 @@
-const settingBtn = document.getElementById('setting-btn');
-const appOptions = document.getElementById('settings');
-const searchBtn = document.querySelector('#search-btn');
-const searchDropdown = document.querySelector('#search-dropdown');
-const searchBackBtn = document.querySelector('#search-back-btn');
-
 // setting the page theme on popstate event.
 function setUserTheme() {
   if (!('theme' in localStorage)) {
@@ -42,13 +36,41 @@ window.addEventListener("pageshow", function (event) {
   }
 });
 
+const leftColumn = document.getElementById('column-1');
+const settingBtn = document.getElementById('setting-btn');
+const appOptions = document.getElementById('settings');
+
+const searchBtn = document.querySelector('#search-btn');
+const searchDropdown = document.querySelector('#search-dropdown');
+const searchBox = document.querySelector('#search-dropdown div:nth-child(1)');
+const searchOptions = document.querySelector('#search-dropdown div:nth-child(2)');
+const searchBackBtn = document.querySelector('#search-back-btn');
+
+const navItems = document.querySelectorAll('.nav-items');
+const chatNav = document.querySelector('.nav-items:nth-child(1)');
+const statusNav = document.querySelector('.nav-items:nth-child(2)');
+const callNav = document.querySelector('.nav-items:nth-child(3)');
+
 // dropping down the search bar
 if (searchBtn !== null) {
   searchBtn.addEventListener('click', ()=> {
+    chatNav.classList.contains('active') ? (
+      searchBox.classList.add('border-b-2'),
+      searchOptions.classList.remove('hidden') 
+    ) : (
+      searchBox.classList.remove('border-b-2'),
+      searchOptions.classList.add('hidden')
+    );
+
     searchDropdown.classList.remove('-translate-y-full');
   });
 
   searchBackBtn.addEventListener('click', ()=> {
+    searchDropdown.classList.add('-translate-y-full');
+  });
+
+  //! this is still problematic.
+  leftColumn.addEventListener('scroll', ()=> {
     searchDropdown.classList.add('-translate-y-full');
   });
 };
@@ -58,10 +80,6 @@ if (settingBtn !== null) {
   settingBtn.addEventListener('click', ()=> {
 
     // changing the options of the settings dropdown base on the active nav-item
-    const chatNav = document.querySelector('.nav-items:nth-child(1)');
-    const statusNav = document.querySelector('.nav-items:nth-child(2)');
-    const callNav = document.querySelector('.nav-items:nth-child(3)');
-
     if (statusNav.classList.contains('active')) {
       appOptions.classList.remove('call-active');
       appOptions.classList.add('status-active');
@@ -84,21 +102,26 @@ if (settingBtn !== null) {
     appOptions.classList.toggle('show');
     appOptions.focus({focusVisible: false});
   })
-  
-  appOptions.addEventListener('blur', ()=> {
+
+  function hideAppOptions() {
     appOptions.classList.add('animate-fadeOut');
-  
+
     appOptions.addEventListener('animationend', ()=> {
       appOptions.classList.remove('animate-fadeOut');
       appOptions.classList.remove('show');
       appOptions.classList.add('hidden');
     }, {once: true})
-  });
+  }
+
+  appOptions.addEventListener('blur', hideAppOptions);
+  //! this down is giving me serious bug, will come back to it.
+  // leftColumn.addEventListener('scroll', ()=> {
+  //   appOptions.classList.remove('show');
+  //   appOptions.classList.add('hidden');
+  // });
 };
 
 // swiping functionalities
-const navItems = document.querySelectorAll('.nav-items');
-
 // initialising swiper.js externally
 document.addEventListener('DOMContentLoaded', function() {
   const swiper = new Swiper('.swiper', {
@@ -514,6 +537,14 @@ e_2.addEventListener('blur', ()=> {
   }, {once: true})
 });
 
+// clearing call logs
+const clearCallLogsBtn = document.querySelector('.options.call-option');
+const callLogs = document.querySelector('[aria-labelledby="calls"]');
+
+clearCallLogsBtn.addEventListener('click', ()=> {
+  callLogs.remove();
+});
+
 // event listeners for animations of the icons in the input section at md-and-above screens.
 e_38.addEventListener('input', ()=> {
   e_39.classList.add('animate-hide-camera');
@@ -570,14 +601,7 @@ if (chatOptions !== null) {
 }
 
 // settings page on md:screens
-const leftColumn = document.getElementById('column-1');
 const intSettingBtn = document.getElementById('int-setting-btn');
-
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-};
 
 // settings page Js elements for md:screens
 var neWe_0 = document.createElement("div");
@@ -1185,7 +1209,7 @@ if (intSettingBtn !== null) {
           
           createSettingsPage();
 
-          removeAllChildNodes(leftColumn);
+          removeAllChildElements(leftColumn);
           leftColumn.append(neWe_0);
     })
 }

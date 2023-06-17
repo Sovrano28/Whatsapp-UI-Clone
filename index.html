@@ -43,16 +43,18 @@
 </head>
 <body class="font-roboto w-full">
   <div class="md:flex md:flex-row">
-    <div id="column-1" class="w-full md:w-[45%] xl:w-2/5 relative h-screen overflow-y-scroll overflow-x-hidden">
+    <div id="column-1" class="relative w-full md:w-[45%] xl:w-2/5 h-screen overflow-y-scroll overflow-x-hidden">
 
       <!--? search dropdown -->
-      <div id="search-dropdown" class="absolute bg-white shadow-md dark:bg-WADarkTeal p-4 w-full z-20 -translate-y-full transition-transform duration-500">
+      <div id="search-dropdown" class="absolute bg-white shadow-md dark:bg-WADarkTeal px-4 py-2 w-full z-20 -translate-y-full transition-transform duration-500">
+
         <div class="flex py-3 border-b-2 dark:border-b-0 border-b-gray-200">
           <div class="grid place-content-center">
             <img id="search-back-btn" class="w-5 mr-4" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
           </div>
           <input class="grow bg-inherit focus:outline-none dark:text-white caret-WATeal" type="text" placeholder="Search...">
         </div>
+        
         <div class="flex flex-wrap whitespace-nowrap py-2">
           <div class="search-item">
             <div class="flex items-center space-x-1.5">
@@ -91,10 +93,11 @@
             </div>
           </div>
         </div>
+
       </div>
 
       <!--? settings dropdown -->
-      <div id="settings" class="animate-faster dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-10 hidden w-3/5 text-black bg-white shadow-md" tabindex="-1">
+      <div id="settings" class="absolute top-0 right-0 animate-faster dark:bg-WADarkGreen dark:text-white focus:outline-none z-10 hidden w-3/5 text-black bg-white shadow-md" tabindex="-1">
         <ul>
           <li class="options">New Group</li>
           <li class="options">New Broadcast</li>
@@ -108,7 +111,7 @@
       </div>
 
       <!--? top nav -->
-      <div class="flex flex-row items-center pt-6 px-6 w-full relative md:sticky md:top-0 z-[5] bg-WATeal dark:bg-WADarkTeal text-white dark:text-gray-400">
+      <div class="relative flex flex-row items-center pt-6 px-6 w-full md:sticky md:top-0 z-[5] bg-WATeal dark:bg-WADarkTeal text-white dark:text-gray-400">
         <div class="justify-self-start text-2xl font-bold">WhatsApp</div>
         <div class="flex gap-4 ml-auto">
           <img class="dual w-6" src="https://img.icons8.com/fluency-systems-regular/100/null/camera.png" alt="camera"/>
