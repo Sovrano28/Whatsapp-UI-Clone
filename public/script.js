@@ -138,80 +138,32 @@ navItems.forEach(nav => {
   })
 });
 
-// loading chats
+// LOADING CHATS
 const myChats = document.querySelectorAll('div.chats');
 const chatFilePath = 'public/pages/chat.html';
 const rightColumn = document.getElementById("column-2");
-var friendChat = document.createElement('div');
-friendChat.setAttribute('class', 'relative');
+const friendChat = document.createElement('div');
 
+// declaring would-be-interacted-with elements of the chat-column in md and > screens
 var e_2 = document.createElement("div");
-// e_2.setAttribute("id", "chat-settings");
-// e_2.setAttribute("class", "animate__animated animate__faster md:w-2/5 dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-20 hidden w-3/5 text-black bg-white shadow-md");
-// e_2.setAttribute("tabindex", "-1");
-
 var e_17 = document.createElement("img");
 var e_19 = document.createElement("div")       
 var e_20 = document.createElement("div")
-
 var e_24 = document.createElement("img");
-// e_24.setAttribute("class", "dual w-6");
-// e_24.setAttribute("id", "chat-setting-btn");
-// e_24.setAttribute("src", "https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png");
-// e_24.setAttribute("alt", "kebab");
-
 var e_38 = document.createElement("input");
-// e_38.setAttribute("class", "w-4/5 bg-white dark:bg-WADarkTeal focus:outline-none caret-WATeal dark:text-white animate__animated animate__faster");
-// e_38.setAttribute("type", "text");
-// e_38.setAttribute("placeholder", "Message");
-
 var e_39 = document.createElement("div");
-// e_39.setAttribute("class", "ml-auto flex");
-
 var e_50 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-// e_50.setAttribute("id", "input-area-mic");
-// e_50.setAttribute("class", "w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] duration-500 z-[1]");
-// e_50.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-// e_50.setAttribute("xml:space", "preserve");
-// e_50.setAttribute("width", "35.2124mm");
-// e_50.setAttribute("height", "47.7916mm");
-// e_50.setAttribute("version", "1.1");
-// e_50.setAttribute("shape-rendering", "geometricPrecision");
-// e_50.setAttribute("text-rendering", "geometricPrecision");
-// e_50.setAttribute("image-rendering", "optimizeQuality");
-// e_50.setAttribute("fill-rule", "evenodd");
-// e_50.setAttribute("clip-rule", "evenodd");
-// e_50.setAttribute("viewBox", "0 0 56.45 76.62");
-// e_50.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
-// e_50.setAttribute("xmlns:xodm", "http://www.corel.com/coreldraw/odm/2003");
-
 var e_55 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-// e_55.setAttribute("id", "input-area-send-btn");
-// e_55.setAttribute("class", "w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] scale-0 duration-500");
-// e_55.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-// e_55.setAttribute("xml:space", "preserve");
-// e_55.setAttribute("width", "84.952mm");
-// e_55.setAttribute("height", "72.8184mm");
-// e_55.setAttribute("version", "1.1");
-// e_55.setAttribute("shape-rendering", "geometricPrecision");
-// e_55.setAttribute("text-rendering", "geometricPrecision");
-// e_55.setAttribute("image-rendering", "optimizeQuality");
-// e_55.setAttribute("fill-rule", "evenodd");
-// e_55.setAttribute("clip-rule", "evenodd");
-// e_55.setAttribute("viewBox", "0 0 331.49 284.14");
-// e_55.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
-// e_55.setAttribute("xmlns:xodm", "http://www.corel.com/coreldraw/odm/2003");
 var e_56 = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 var e_57 = document.createElementNS('http://www.w3.org/2000/svg', 'metadata');
 var e_58 = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 var e_59 = document.createElementNS('http://www.w3.org/2000/svg', 'polygon'); //* just like I guessed, I needed to use createElementNS() method for polygon tag too.
-// e_56.setAttribute("id", "Layer_x0020_1");
-// e_57.setAttribute("id", "CorelCorpID_0Corel-Layer");
-// e_56.appendChild(e_57);
-// e_58.setAttribute("id", "_2099917458768");
-// e_59.setAttribute("fill", "white");
-// e_59.setAttribute("fill-rule", "nonzero");
-// e_59.setAttribute("points", "-0,284.14 331.49,142.07 -0,0 0.16,115.54 199.1,142.07 0.16,168.6 ");
+
+function removeAllChildElements(parentElement) {
+  while (parentElement.firstChild) {
+    parentElement.removeChild(parentElement.firstChild);
+  }
+};
 
 myChats.forEach(chat => {
   chat.addEventListener('click', () => {
@@ -226,8 +178,6 @@ myChats.forEach(chat => {
 
     if (screenWidth < 768) {
       // loading on mobile/smaller screens
-      console.log('clicked a chat when screen < 768px')
-
       window.localStorage.setItem('chatProfileImageSrc', chatProfileImageSrc);
       window.localStorage.setItem('friendName', friendName);
       window.localStorage.setItem('friendStatus', friendStatus);
@@ -235,13 +185,6 @@ myChats.forEach(chat => {
       window.location.href = chatFilePath;
     } else {
       // loading on desktop/larger screens
-      console.log('clicked a chat when screen >/= 768px')
-
-      function removeAllChildElements(parentElement) {
-        while (parentElement.firstChild) {
-          parentElement.removeChild(parentElement.firstChild);
-        }
-      };      
 
       function createNode() {
           
@@ -524,6 +467,7 @@ myChats.forEach(chat => {
         e_0.appendChild(e_30);
         container.appendChild(e_0);
         
+        friendChat.setAttribute('class', 'relative');
         friendChat.setAttribute("friend", `${friendName}`)
         removeAllChildElements(friendChat);
         friendChat.append(e_1, e_11, e_25, e_30);
@@ -545,7 +489,7 @@ myChats.forEach(chat => {
     };
   });
 });
-// end
+// END
 
 // event listeners for chat-option btn and chat-option at md-and-above screens.
 e_24.addEventListener('click', ()=> {
