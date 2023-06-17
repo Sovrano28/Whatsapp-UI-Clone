@@ -142,77 +142,76 @@ navItems.forEach(nav => {
 const myChats = document.querySelectorAll('div.chats');
 const chatFilePath = 'public/pages/chat.html';
 const rightColumn = document.getElementById("column-2");
-const rightColumnContent = document.getElementById('column-2-default-inner');
 var friendChat = document.createElement('div');
 friendChat.setAttribute('class', 'relative');
 
 var e_2 = document.createElement("div");
-e_2.setAttribute("id", "chat-settings");
-e_2.setAttribute("class", "animate__animated animate__faster md:w-2/5 dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-20 hidden w-3/5 text-black bg-white shadow-md");
-e_2.setAttribute("tabindex", "-1");
+// e_2.setAttribute("id", "chat-settings");
+// e_2.setAttribute("class", "animate__animated animate__faster md:w-2/5 dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-20 hidden w-3/5 text-black bg-white shadow-md");
+// e_2.setAttribute("tabindex", "-1");
 
 var e_17 = document.createElement("img");
 var e_19 = document.createElement("div")       
 var e_20 = document.createElement("div")
 
 var e_24 = document.createElement("img");
-e_24.setAttribute("class", "dual w-6");
-e_24.setAttribute("id", "chat-setting-btn");
-e_24.setAttribute("src", "https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png");
-e_24.setAttribute("alt", "kebab");
+// e_24.setAttribute("class", "dual w-6");
+// e_24.setAttribute("id", "chat-setting-btn");
+// e_24.setAttribute("src", "https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png");
+// e_24.setAttribute("alt", "kebab");
 
 var e_38 = document.createElement("input");
-e_38.setAttribute("class", "w-4/5 bg-white dark:bg-WADarkTeal focus:outline-none caret-WATeal dark:text-white animate__animated animate__faster");
-e_38.setAttribute("type", "text");
-e_38.setAttribute("placeholder", "Message");
+// e_38.setAttribute("class", "w-4/5 bg-white dark:bg-WADarkTeal focus:outline-none caret-WATeal dark:text-white animate__animated animate__faster");
+// e_38.setAttribute("type", "text");
+// e_38.setAttribute("placeholder", "Message");
 
 var e_39 = document.createElement("div");
-e_39.setAttribute("class", "ml-auto flex");
+// e_39.setAttribute("class", "ml-auto flex");
 
 var e_50 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-e_50.setAttribute("id", "input-area-mic");
-e_50.setAttribute("class", "w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] duration-500 z-[1]");
-e_50.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-e_50.setAttribute("xml:space", "preserve");
-e_50.setAttribute("width", "35.2124mm");
-e_50.setAttribute("height", "47.7916mm");
-e_50.setAttribute("version", "1.1");
-e_50.setAttribute("shape-rendering", "geometricPrecision");
-e_50.setAttribute("text-rendering", "geometricPrecision");
-e_50.setAttribute("image-rendering", "optimizeQuality");
-e_50.setAttribute("fill-rule", "evenodd");
-e_50.setAttribute("clip-rule", "evenodd");
-e_50.setAttribute("viewBox", "0 0 56.45 76.62");
-e_50.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
-e_50.setAttribute("xmlns:xodm", "http://www.corel.com/coreldraw/odm/2003");
+// e_50.setAttribute("id", "input-area-mic");
+// e_50.setAttribute("class", "w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] duration-500 z-[1]");
+// e_50.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+// e_50.setAttribute("xml:space", "preserve");
+// e_50.setAttribute("width", "35.2124mm");
+// e_50.setAttribute("height", "47.7916mm");
+// e_50.setAttribute("version", "1.1");
+// e_50.setAttribute("shape-rendering", "geometricPrecision");
+// e_50.setAttribute("text-rendering", "geometricPrecision");
+// e_50.setAttribute("image-rendering", "optimizeQuality");
+// e_50.setAttribute("fill-rule", "evenodd");
+// e_50.setAttribute("clip-rule", "evenodd");
+// e_50.setAttribute("viewBox", "0 0 56.45 76.62");
+// e_50.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+// e_50.setAttribute("xmlns:xodm", "http://www.corel.com/coreldraw/odm/2003");
 
 var e_55 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-e_55.setAttribute("id", "input-area-send-btn");
-e_55.setAttribute("class", "w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] scale-0 duration-500");
-e_55.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-e_55.setAttribute("xml:space", "preserve");
-e_55.setAttribute("width", "84.952mm");
-e_55.setAttribute("height", "72.8184mm");
-e_55.setAttribute("version", "1.1");
-e_55.setAttribute("shape-rendering", "geometricPrecision");
-e_55.setAttribute("text-rendering", "geometricPrecision");
-e_55.setAttribute("image-rendering", "optimizeQuality");
-e_55.setAttribute("fill-rule", "evenodd");
-e_55.setAttribute("clip-rule", "evenodd");
-e_55.setAttribute("viewBox", "0 0 331.49 284.14");
-e_55.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
-e_55.setAttribute("xmlns:xodm", "http://www.corel.com/coreldraw/odm/2003");
+// e_55.setAttribute("id", "input-area-send-btn");
+// e_55.setAttribute("class", "w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] scale-0 duration-500");
+// e_55.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+// e_55.setAttribute("xml:space", "preserve");
+// e_55.setAttribute("width", "84.952mm");
+// e_55.setAttribute("height", "72.8184mm");
+// e_55.setAttribute("version", "1.1");
+// e_55.setAttribute("shape-rendering", "geometricPrecision");
+// e_55.setAttribute("text-rendering", "geometricPrecision");
+// e_55.setAttribute("image-rendering", "optimizeQuality");
+// e_55.setAttribute("fill-rule", "evenodd");
+// e_55.setAttribute("clip-rule", "evenodd");
+// e_55.setAttribute("viewBox", "0 0 331.49 284.14");
+// e_55.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+// e_55.setAttribute("xmlns:xodm", "http://www.corel.com/coreldraw/odm/2003");
 var e_56 = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-e_56.setAttribute("id", "Layer_x0020_1");
 var e_57 = document.createElementNS('http://www.w3.org/2000/svg', 'metadata');
-e_57.setAttribute("id", "CorelCorpID_0Corel-Layer");
-e_56.appendChild(e_57);
 var e_58 = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-e_58.setAttribute("id", "_2099917458768");
 var e_59 = document.createElementNS('http://www.w3.org/2000/svg', 'polygon'); //* just like I guessed, I needed to use createElementNS() method for polygon tag too.
-e_59.setAttribute("fill", "white");
-e_59.setAttribute("fill-rule", "nonzero");
-e_59.setAttribute("points", "-0,284.14 331.49,142.07 -0,0 0.16,115.54 199.1,142.07 0.16,168.6 ");
+// e_56.setAttribute("id", "Layer_x0020_1");
+// e_57.setAttribute("id", "CorelCorpID_0Corel-Layer");
+// e_56.appendChild(e_57);
+// e_58.setAttribute("id", "_2099917458768");
+// e_59.setAttribute("fill", "white");
+// e_59.setAttribute("fill-rule", "nonzero");
+// e_59.setAttribute("points", "-0,284.14 331.49,142.07 -0,0 0.16,115.54 199.1,142.07 0.16,168.6 ");
 
 myChats.forEach(chat => {
   chat.addEventListener('click', () => {
@@ -250,6 +249,10 @@ myChats.forEach(chat => {
         var e_0 = document.createElement("div");
         var e_1 = document.createElement("div");
         e_1.setAttribute("class", "font-roboto relative w-full");
+        // e_2 created above
+        e_2.setAttribute("id", "chat-settings");
+        e_2.setAttribute("class", "animate__animated animate__faster md:w-2/5 dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-20 hidden w-3/5 text-black bg-white shadow-md");
+        e_2.setAttribute("tabindex", "-1");
         var e_3 = document.createElement("ul");
         var e_4 = document.createElement("li");
         e_4.setAttribute("class", "options");
@@ -290,7 +293,7 @@ myChats.forEach(chat => {
         e_13.setAttribute("class", "flex");
         var e_16 = document.createElement("div");
         e_16.setAttribute("class", "flex-center");
-        // var e_17 = document.createElement("img");
+        // e_17 is created above
         e_17.setAttribute("class", "w-9 h-9 object-cover rounded-full");
         e_17.setAttribute("src", `public/imgs/friends/${imageName}.${imageFormat}`);
         e_17.setAttribute("alt", "friend");
@@ -298,11 +301,11 @@ myChats.forEach(chat => {
         e_13.appendChild(e_16);
         var e_18 = document.createElement("div");
         e_18.setAttribute("class", "flex flex-col px-3 py-1");
-        // var e_19 = document.createElement("div");
+        // e_19 is created above
         e_19.setAttribute("class", "text-sm font-bold text-white");
         e_19.appendChild(document.createTextNode(`${friendName}`));
         e_18.appendChild(e_19);
-        // var e_20 = document.createElement("div");
+        // e_20 is created above
         e_20.setAttribute("class", "text-xs font-normal text-white");
         e_20.appendChild(document.createTextNode(`${friendStatus}`));
         e_18.appendChild(e_20);
@@ -319,6 +322,11 @@ myChats.forEach(chat => {
         e_23.setAttribute("class", "dual w-6");
         e_23.setAttribute("src", "https://img.icons8.com/material-sharp/96/000000/phone.png");
         e_23.setAttribute("alt", "phone");
+        // e_24 created above
+        e_24.setAttribute("class", "dual w-6");
+        e_24.setAttribute("id", "chat-setting-btn");
+        e_24.setAttribute("src", "https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/100/null/external-Menu-interface-glyph-silhouettes-icons-papa-vector-3.png");
+        e_24.setAttribute("alt", "kebab");
         e_21.appendChild(e_23);
         e_21.appendChild(e_24);
         e_12.appendChild(e_21);
@@ -385,10 +393,16 @@ myChats.forEach(chat => {
           -192 c324 -47 673 -71 1038 -71 363 0 628 21 894 71 59 11 110 18 113 15 8 -8
           -53 -90 -101 -134 -127 -117 -315 -195 -571 -239 -155 -26 -598 -26 -765 0
           -368 57 -663 189 -747 335 -30 50 -40 49 139 23z`);
+        // e_38 is created above
+        e_38.setAttribute("class", "w-4/5 bg-white dark:bg-WADarkTeal focus:outline-none caret-WATeal dark:text-white animate__animated animate__faster");
+        e_38.setAttribute("type", "text");
+        e_38.setAttribute("placeholder", "Message");
         e_33.appendChild(e_37);
         e_32.appendChild(e_33);
         e_31.appendChild(e_32);
         e_31.appendChild(e_38);
+        // e_39 is created above
+        e_39.setAttribute("class", "mkl-auto flex");
         var e_40 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         e_40.setAttribute("id", "input-area-hairpin");
         e_40.setAttribute("class", "w-6 h-6 mr-3");
@@ -447,6 +461,22 @@ myChats.forEach(chat => {
         e_30.appendChild(e_31);
         var e_49 = document.createElement("div");
         e_49.setAttribute("class", "rounded-full w-11 h-11 bg-WATeal relative drop-shadow");
+        // e_50 is created above
+        e_50.setAttribute("id", "input-area-mic");
+        e_50.setAttribute("class", "w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] duration-500 z-[1]");
+        e_50.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+        e_50.setAttribute("xml:space", "preserve");
+        e_50.setAttribute("width", "35.2124mm");
+        e_50.setAttribute("height", "47.7916mm");
+        e_50.setAttribute("version", "1.1");
+        e_50.setAttribute("shape-rendering", "geometricPrecision");
+        e_50.setAttribute("text-rendering", "geometricPrecision");
+        e_50.setAttribute("image-rendering", "optimizeQuality");
+        e_50.setAttribute("fill-rule", "evenodd");
+        e_50.setAttribute("clip-rule", "evenodd");
+        e_50.setAttribute("viewBox", "0 0 56.45 76.62");
+        e_50.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+        e_50.setAttribute("xmlns:xodm", "http://www.corel.com/coreldraw/odm/2003");
         var e_51 = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         e_51.setAttribute("id", "Layer_x0020_1");
         var e_52 = document.createElementNS('http://www.w3.org/2000/svg', 'metadata');
@@ -458,6 +488,30 @@ myChats.forEach(chat => {
         e_54.setAttribute("fill", "white");
         e_54.setAttribute("fill-rule", "nonzero");
         e_54.setAttribute("d", "M28.23 48.39c6.86,0 12.1,-5.24 12.1,-12.1l0 -24.19c0,-6.86 -5.24,-12.1 -12.1,-12.1 -6.86,0 -12.1,5.25 -12.1,12.1l0 24.19c0,6.86 5.24,12.1 12.09,12.1zm21.37 -12.1c0,12.1 -10.08,20.56 -21.37,20.56 -11.29,0 -21.37,-8.47 -21.37,-20.56l-6.86 0c0,13.71 10.89,25 24.19,27.02l0 13.31 8.07 0 0 -13.31c13.31,-2.01 24.19,-13.31 24.19,-27.02l-6.85 -0z");
+        // e_55 is created above
+        e_55.setAttribute("id", "input-area-send-btn");
+        e_55.setAttribute("class", "w-6 h-6 absolute top-0 left-0 right-0 bottom-0 m-auto transition-[scale] scale-0 duration-500");
+        e_55.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+        e_55.setAttribute("xml:space", "preserve");
+        e_55.setAttribute("width", "84.952mm");
+        e_55.setAttribute("height", "72.8184mm");
+        e_55.setAttribute("version", "1.1");
+        e_55.setAttribute("shape-rendering", "geometricPrecision");
+        e_55.setAttribute("text-rendering", "geometricPrecision");
+        e_55.setAttribute("image-rendering", "optimizeQuality");
+        e_55.setAttribute("fill-rule", "evenodd");
+        e_55.setAttribute("clip-rule", "evenodd");
+        e_55.setAttribute("viewBox", "0 0 331.49 284.14");
+        e_55.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+        e_55.setAttribute("xmlns:xodm", "http://www.corel.com/coreldraw/odm/2003");
+        // e_56, e_57, e_58, e_59 created above
+        e_56.setAttribute("id", "Layer_x0020_1");
+        e_57.setAttribute("id", "CorelCorpID_0Corel-Layer");
+        e_56.appendChild(e_57);
+        e_58.setAttribute("id", "_2099917458768");
+        e_59.setAttribute("fill", "white");
+        e_59.setAttribute("fill-rule", "nonzero");
+        e_59.setAttribute("points", "-0,284.14 331.49,142.07 -0,0 0.16,115.54 199.1,142.07 0.16,168.6 ");
         e_53.appendChild(e_54);
         e_51.appendChild(e_53);
         e_50.appendChild(e_51);
