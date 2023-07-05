@@ -43,11 +43,11 @@
 </head>
 <body class="font-roboto w-full">
   <div class="md:flex md:flex-row">
-    <div id="column-1" class="relative w-full md:w-[45%] xl:w-2/5 h-screen overflow-y-scroll">
+    <div id="column-1" class="relative w-full md:w-[45%] xl:w-2/5 h-screen overflow-y-auto">
 
       <!--? search dropdown -->
-      <div class="relative md:fixed w-full md:w-2/5">
-        <div id="search-dropdown" class="fixed md:absolute top-0 bg-white shadow-md dark:bg-WADarkTeal px-4 py-2 w-full z-20 -translate-y-full transition-transform duration-500">
+      <div class="relative md:fixed w-full md:w-2/5 z-10">
+        <div id="search-dropdown" class="fixed md:absolute top-0 bg-white shadow-md dark:bg-WADarkTeal px-4 py-2 w-full -translate-y-full transition-transform duration-500">
 
           <div class="flex py-3 border-b-2 dark:border-b-0 border-b-gray-200">
             <div class="grid place-content-center">
@@ -99,8 +99,8 @@
       </div>
 
       <!--? settings dropdown -->
-      <div class="relative md:fixed w-full md:w-2/5">
-        <div id="settings" class="fixed md:absolute top-0 right-0 animate-faster dark:bg-WADarkGreen dark:text-white focus:outline-none z-10 hidden w-3/5 text-black bg-white shadow-md" tabindex="-1">
+      <div class="relative md:fixed w-full md:w-2/5 z-10">
+        <div id="settings" class="fixed md:absolute top-0 right-0 animate-faster dark:bg-WADarkGreen dark:text-white focus:outline-none hidden w-3/5 text-black bg-white shadow-md" tabindex="-1">
           <ul>
             <li class="options">New Group</li>
             <li class="options">New Broadcast</li>
@@ -347,7 +347,7 @@
       </div>
     </div>
     
-    <div id="column-2" class="hidden md:block md:w-[65%] xl:w-3/5">
+    <div id="column-2" class="hidden md:block md:w-[65%] xl:w-3/5 h-screen overflow-y-auto ">
       <div id="column-2-default-inner" class="dark:bg-WADarkTeal border-b-WADarkGreen2 dark:border-b-WATeal flex flex-col w-full h-screen bg-gray-200 border-b-8">
         <div class="mt-[25vh] flex justify-center">
           <img class="dark:hidden" src="public/imgs/mobile-and-desktop-light.svg" alt="mobile and desktop">

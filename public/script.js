@@ -182,6 +182,8 @@ const chatFilePath = 'public/pages/chat.html';
 const rightColumn = document.getElementById("column-2");
 const friendChat = document.createElement('div');
 
+friendChat.setAttribute("id", "friend-chat")
+
 // declaring would-be-interacted-with elements of the chat-column in md and > screens
 var e_2 = document.createElement("div");
 var e_17 = document.createElement("img");
@@ -229,10 +231,10 @@ myChats.forEach(chat => {
         var container = document.createDocumentFragment();
         var e_0 = document.createElement("div");
         var e_1 = document.createElement("div");
-        e_1.setAttribute("class", "font-roboto relative w-full");
+        e_1.setAttribute("class", "font-roboto fixed right-0 w-3/5 z-20");
         // e_2 created above
         e_2.setAttribute("id", "chat-settings");
-        e_2.setAttribute("class", "animate__animated animate__faster md:w-2/5 dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 z-20 hidden w-3/5 text-black bg-white shadow-md");
+        e_2.setAttribute("class", "animate__animated animate__faster md:w-2/5 dark:bg-WADarkGreen dark:text-white focus:outline-none absolute top-0 right-0 hidden w-3/5 text-black bg-white shadow-md");
         e_2.setAttribute("tabindex", "-1");
         var e_3 = document.createElement("ul");
         var e_4 = document.createElement("li");
@@ -531,26 +533,74 @@ myChats.forEach(chat => {
 // END
 
 // event listeners for chat-option btn and chat-option at md-and-above screens.
-e_24.addEventListener('click', ()=> {
-  e_2.classList.toggle('hidden');
-  e_2.classList.add('animate-slideInDown');
+e_24Clicked = false;
 
-  e_2.addEventListener('animationend', ()=> {
-    e_2.classList.remove('animate-slideInDown');
-  })
+function showThis(element) {
+  element.classList.remove('hidden');
+  element.classList.add('animate-slideInDown');
+
+  setTimeout(() => {
+    element.classList.remove('animate-slideInDown');
+  }, 500);
   
-  e_2.classList.toggle('show');
-  e_2.focus({focusVisible: false});
+  element.classList.add('block');
+  element.focus({focusVisible: false});
+};
+
+function hideThis(element) {
+  element.classList.add('animate-fadeOut');
+
+  setTimeout(() => {
+    element.classList.remove('animate-fadeOut');
+    element.classList.remove('block');
+    element.classList.add('hidden');
+  }, 500);
+};
+
+e_24.addEventListener('click', ()=> {
+  e_24Clicked = true;
+
+  showThis(e_2);
+  // e_2.classList.remove('hidden');
+  // e_2.classList.add('animate-slideInDown');
+
+  // e_2.addEventListener('animationend', ()=> {
+  //   e_2.classList.remove('animate-slideInDown');
+  // })
+  
+  // e_2.classList.add('block');
+  // e_2.focus({focusVisible: false});
 });
 
-e_2.addEventListener('blur', ()=> {
-  e_2.classList.add('animate-fadeOut');
+e_2.addEventListener('blur', (event)=> {
+  event.stopPropagation();
+  event.stopImmediatePropagation();
+  
+  // e_2.classList.add('animate-fadeOut');
 
-  e_2.addEventListener('animationend', ()=> {
-    e_2.classList.remove('animate-fadeOut');
-    e_2.classList.remove('show');
-    e_2.classList.add('hidden');
-  }, {once: true})
+  // e_2.addEventListener('animationend', ()=> {
+  //   e_2.classList.remove('animate-fadeOut');
+  //   e_2.classList.remove('block');
+  //   e_2.classList.add('hidden');
+  // }, {once: true})
+  hideThis(e_2);
+  e_24Clicked = false;
+});
+
+rightColumn.addEventListener("scroll", (event)=> {
+  event.stopPropagation();
+  event.stopImmediatePropagation();
+
+  // e_2.classList.add('animate-fadeOut');
+
+  // e_2.addEventListener('animationend', ()=> {
+  //   e_2.classList.remove('animate-fadeOut');
+  //   e_2.classList.remove('show');
+  //   e_2.classList.add('hidden');
+  // }, {once: true})
+  
+  e_24Clicked ? hideThis(e_2) : null;
+  e_24Clicked = false;
 });
 
 // clearing call logs
@@ -576,8 +626,6 @@ e_38.addEventListener('input', ()=> {
 })
 
 e_38.addEventListener('input', ()=> {
-  console.log('blur');
-
   if (e_38.value == '') {
   e_39.classList.remove('animate-hide-camera');
   e_39.classList.add('animate-show-camera');
@@ -705,7 +753,7 @@ if (intSettingBtn !== null) {
 
         function createSettingsPage() {
           var e_16 = document.createElement("header");
-          e_16.setAttribute("class", "bg-WATeal dark:bg-WADarkTeal p-4 md:py-6 md:px-7 flex items-center");
+          e_16.setAttribute("class", "sticky top-0 bg-WATeal dark:bg-WADarkTeal p-4 md:py-6 md:px-7 flex items-center");
           var e_17 = document.createElement("a");
           e_17.setAttribute("href", "../../index.html");
           e_17.setAttribute("class", "flex-center mr-2 invert-[1]");
@@ -1233,7 +1281,6 @@ if (intSettingBtn !== null) {
 }
 
 const messageBar = document.querySelector('input[placeholder="Message"]')
-//! Bug report!!! for Firefox, fixed anyways. I had to remove that `:has()` pseudo-selector because it is not supported by Firefox.
 const animeContainer = document.querySelector('#input-anime-container');
 const inputAreaMic = document.getElementById('input-area-mic');
 const inputAreaSendBtn = document.getElementById('input-area-send-btn');
