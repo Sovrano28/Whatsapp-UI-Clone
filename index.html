@@ -43,71 +43,75 @@
 </head>
 <body class="font-roboto w-full">
   <div class="md:flex md:flex-row">
-    <div id="column-1" class="relative w-full md:w-[45%] xl:w-2/5 h-screen overflow-y-scroll overflow-x-hidden">
+    <div id="column-1" class="relative w-full md:w-[45%] xl:w-2/5 h-screen overflow-y-scroll">
 
       <!--? search dropdown -->
-      <div id="search-dropdown" class="absolute bg-white shadow-md dark:bg-WADarkTeal px-4 py-2 w-full z-20 -translate-y-full transition-transform duration-500">
+      <div class="relative md:fixed w-full md:w-2/5">
+        <div id="search-dropdown" class="fixed md:absolute top-0 bg-white shadow-md dark:bg-WADarkTeal px-4 py-2 w-full z-20 -translate-y-full transition-transform duration-500">
 
-        <div class="flex py-3 border-b-2 dark:border-b-0 border-b-gray-200">
-          <div class="grid place-content-center">
-            <img id="search-back-btn" class="w-5 mr-4" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
+          <div class="flex py-3 border-b-2 dark:border-b-0 border-b-gray-200">
+            <div class="grid place-content-center">
+              <img id="search-back-btn" class="w-5 mr-4" src="https://img.icons8.com/android/96/null/left.png" alt="back icon"/>
+            </div>
+            <input class="grow bg-inherit focus:outline-none dark:text-white caret-WATeal" type="text" placeholder="Search...">
           </div>
-          <input class="grow bg-inherit focus:outline-none dark:text-white caret-WATeal" type="text" placeholder="Search...">
+          
+          <div class="flex flex-wrap whitespace-nowrap py-2">
+            <div class="search-item">
+              <div class="flex items-center space-x-1.5">
+                <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/material-sharp/96/null/image-gallery.png" alt="photos"/></div>
+                <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Photos</div>
+              </div>
+            </div>
+            <div class="search-item">
+              <div class="flex items-center space-x-1.5">
+                <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/64/null/external-video-ui-essentials-kmg-design-glyph-kmg-design.png" alt="video"/></div>
+                <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Video</div>
+              </div>
+            </div>
+            <div class="search-item">
+              <div class="flex items-center space-x-1.5">
+                <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/material-rounded/96/null/link--v1.png" alt="links"/></div>
+                <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Links</div>
+              </div>
+            </div>
+            <div class="search-item">
+              <div class="flex items-center space-x-1.5">
+                <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/ios-glyphs/90/null/attach-gif.png" alt="gifs"/></div>
+                <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Gifs</div>
+              </div>
+            </div>
+            <div class="search-item">
+              <div class="flex items-center space-x-1.5">
+                <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/100/null/external-headphone-network-and-communication-smashingstocks-glyph-smashing-stocks.png" alt="audio"/></div>
+                <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Audio</div>
+              </div>
+            </div>
+            <div class="search-item">
+              <div class="flex items-center space-x-1">
+                <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/96/null/external-documents-design-thinking-tanah-basah-glyph-tanah-basah.png" alt="documents"/></div>
+                <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Documents</div>
+              </div>
+            </div>
+          </div>
+  
         </div>
-        
-        <div class="flex flex-wrap whitespace-nowrap py-2">
-          <div class="search-item">
-            <div class="flex items-center space-x-1.5">
-              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/material-sharp/96/null/image-gallery.png" alt="photos"/></div>
-              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Photos</div>
-            </div>
-          </div>
-          <div class="search-item">
-            <div class="flex items-center space-x-1.5">
-              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/64/null/external-video-ui-essentials-kmg-design-glyph-kmg-design.png" alt="video"/></div>
-              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Video</div>
-            </div>
-          </div>
-          <div class="search-item">
-            <div class="flex items-center space-x-1.5">
-              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/material-rounded/96/null/link--v1.png" alt="links"/></div>
-              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Links</div>
-            </div>
-          </div>
-          <div class="search-item">
-            <div class="flex items-center space-x-1.5">
-              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/ios-glyphs/90/null/attach-gif.png" alt="gifs"/></div>
-              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Gifs</div>
-            </div>
-          </div>
-          <div class="search-item">
-            <div class="flex items-center space-x-1.5">
-              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/100/null/external-headphone-network-and-communication-smashingstocks-glyph-smashing-stocks.png" alt="audio"/></div>
-              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Audio</div>
-            </div>
-          </div>
-          <div class="search-item">
-            <div class="flex items-center space-x-1">
-              <div class="w-2 h-2 search-item-img"><img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/96/null/external-documents-design-thinking-tanah-basah-glyph-tanah-basah.png" alt="documents"/></div>
-              <div class="text-[10px] text-[#434f56] dark:text-[#c1d1db]">Documents</div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <!--? settings dropdown -->
-      <div id="settings" class="absolute top-0 right-0 animate-faster dark:bg-WADarkGreen dark:text-white focus:outline-none z-10 hidden w-3/5 text-black bg-white shadow-md" tabindex="-1">
-        <ul>
-          <li class="options">New Group</li>
-          <li class="options">New Broadcast</li>
-          <li class="options">Linked Device</li>
-          <li class="options">Starred Messages</li>
-          <li class="options status-option">Status privacy</li>
-          <li class="options call-option">Clear logs</li>
-          <a class="options-setting block md:hidden" href="public/pages/settings.html">Settings</a>
-          <li class="options-setting hidden md:block" id="int-setting-btn">Settings</li>
-        </ul>
+      <div class="relative md:fixed w-full md:w-2/5">
+        <div id="settings" class="fixed md:absolute top-0 right-0 animate-faster dark:bg-WADarkGreen dark:text-white focus:outline-none z-10 hidden w-3/5 text-black bg-white shadow-md" tabindex="-1">
+          <ul>
+            <li class="options">New Group</li>
+            <li class="options">New Broadcast</li>
+            <li class="options">Linked Device</li>
+            <li class="options">Starred Messages</li>
+            <li class="options status-option">Status privacy</li>
+            <li class="options call-option">Clear logs</li>
+            <a class="options-setting block md:hidden" href="public/pages/settings.html">Settings</a>
+            <li class="options-setting hidden md:block" id="int-setting-btn">Settings</li>
+          </ul>
+        </div>
       </div>
 
       <!--? top nav -->

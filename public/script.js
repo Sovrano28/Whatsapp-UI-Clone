@@ -69,7 +69,6 @@ if (searchBtn !== null) {
     searchDropdown.classList.add('-translate-y-full');
   });
 
-  //! this is still problematic.
   leftColumn.addEventListener('scroll', ()=> {
     searchDropdown.classList.add('-translate-y-full');
   });
@@ -77,7 +76,32 @@ if (searchBtn !== null) {
 
 // dropping down the settings options
 if (settingBtn !== null) {
+  let settingBtnClicked = false;
+  
+  function showAppOptions() {
+    appOptions.classList.remove('hidden');
+    appOptions.classList.add('animate-slideInDown');
+
+    setTimeout(() => {
+      appOptions.classList.remove('animate-slideInDown');
+    }, 500);
+    
+    appOptions.classList.add('show');
+    appOptions.focus({focusVisible: false});
+  };
+
+  function hideAppOptions() {
+    appOptions.classList.add('animate-fadeOut');
+  
+    setTimeout(() => {
+      appOptions.classList.remove('animate-fadeOut');
+      appOptions.classList.remove('show');
+      appOptions.classList.add('hidden');
+    }, 500);
+  };
+
   settingBtn.addEventListener('click', ()=> {
+    settingBtnClicked = true;
 
     // changing the options of the settings dropdown base on the active nav-item
     if (statusNav.classList.contains('active')) {
@@ -92,35 +116,26 @@ if (settingBtn !== null) {
     } else {}
     // end
     
-    appOptions.classList.toggle('hidden');
-    appOptions.classList.add('animate-slideInDown');
+    showAppOptions();
+  });
   
-    appOptions.addEventListener('animationend', ()=> {
-      appOptions.classList.remove('animate-slideInDown');
-    })
-    
-    appOptions.classList.toggle('show');
-    appOptions.focus({focusVisible: false});
-  })
+  appOptions.addEventListener('blur', (event)=> {  
+    event.stopPropagation();
+    event.stopImmediatePropagation();
 
-  function hideAppOptions() {
-    appOptions.classList.add('animate-fadeOut');
+    hideAppOptions();
+  });
 
-    appOptions.addEventListener('animationend', ()=> {
-      appOptions.classList.remove('animate-fadeOut');
-      appOptions.classList.remove('show');
-      appOptions.classList.add('hidden');
-    }, {once: true})
-  }
+  leftColumn.addEventListener('scroll', (event)=> {
+    event.stopPropagation();
+    event.stopImmediatePropagation();
 
-  appOptions.addEventListener('blur', hideAppOptions);
-  //! this down is giving me serious bug, will come back to it.
-  // leftColumn.addEventListener('scroll', ()=> {
-  //   appOptions.classList.remove('show');
-  //   appOptions.classList.add('hidden');
-  // });
+    settingBtnClicked ? hideAppOptions() : null;
+
+    settingBtnClicked = false;
+  });
 };
-
+  
 // swiping functionalities
 // initialising swiper.js externally
 document.addEventListener('DOMContentLoaded', function() {
@@ -180,7 +195,7 @@ var e_55 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 var e_56 = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 var e_57 = document.createElementNS('http://www.w3.org/2000/svg', 'metadata');
 var e_58 = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-var e_59 = document.createElementNS('http://www.w3.org/2000/svg', 'polygon'); //* just like I guessed, I needed to use createElementNS() method for polygon tag too.
+var e_59 = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
 
 function removeAllChildElements(parentElement) {
   while (parentElement.firstChild) {
@@ -368,7 +383,8 @@ myChats.forEach(chat => {
         e_31.appendChild(e_32);
         e_31.appendChild(e_38);
         // e_39 is created above
-        e_39.setAttribute("class", "mkl-auto flex");
+        e_39.setAttribute("id", "input-anime-container");
+        e_39.setAttribute("class", "ml-auto flex");
         var e_40 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         e_40.setAttribute("id", "input-area-hairpin");
         e_40.setAttribute("class", "w-6 h-6 mr-3");
@@ -541,9 +557,11 @@ e_2.addEventListener('blur', ()=> {
 const clearCallLogsBtn = document.querySelector('.options.call-option');
 const callLogs = document.querySelector('[aria-labelledby="calls"]');
 
-clearCallLogsBtn.addEventListener('click', ()=> {
-  callLogs.remove();
-});
+if (clearCallLogsBtn !== null) {
+  clearCallLogsBtn.addEventListener('click', ()=> {
+    callLogs.remove();
+  });
+};
 
 // event listeners for animations of the icons in the input section at md-and-above screens.
 e_38.addEventListener('input', ()=> {
@@ -1215,7 +1233,8 @@ if (intSettingBtn !== null) {
 }
 
 const messageBar = document.querySelector('input[placeholder="Message"]')
-const animeContainer = document.querySelector('.flex.ml-auto:has(#input-area-camera)')
+//! Bug report!!! for Firefox, fixed anyways. I had to remove that `:has()` pseudo-selector because it is not supported by Firefox.
+const animeContainer = document.querySelector('#input-anime-container');
 const inputAreaMic = document.getElementById('input-area-mic');
 const inputAreaSendBtn = document.getElementById('input-area-send-btn');
 
