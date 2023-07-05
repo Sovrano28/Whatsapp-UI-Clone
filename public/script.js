@@ -561,47 +561,27 @@ e_24.addEventListener('click', ()=> {
   e_24Clicked = true;
 
   showThis(e_2);
-  // e_2.classList.remove('hidden');
-  // e_2.classList.add('animate-slideInDown');
-
-  // e_2.addEventListener('animationend', ()=> {
-  //   e_2.classList.remove('animate-slideInDown');
-  // })
-  
-  // e_2.classList.add('block');
-  // e_2.focus({focusVisible: false});
 });
 
 e_2.addEventListener('blur', (event)=> {
   event.stopPropagation();
   event.stopImmediatePropagation();
-  
-  // e_2.classList.add('animate-fadeOut');
 
-  // e_2.addEventListener('animationend', ()=> {
-  //   e_2.classList.remove('animate-fadeOut');
-  //   e_2.classList.remove('block');
-  //   e_2.classList.add('hidden');
-  // }, {once: true})
   hideThis(e_2);
+
   e_24Clicked = false;
 });
 
-rightColumn.addEventListener("scroll", (event)=> {
-  event.stopPropagation();
-  event.stopImmediatePropagation();
+if (rightColumn) {
+  rightColumn.addEventListener("scroll", (event)=> {
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    
+    e_24Clicked ? hideThis(e_2) : null;
 
-  // e_2.classList.add('animate-fadeOut');
-
-  // e_2.addEventListener('animationend', ()=> {
-  //   e_2.classList.remove('animate-fadeOut');
-  //   e_2.classList.remove('show');
-  //   e_2.classList.add('hidden');
-  // }, {once: true})
-  
-  e_24Clicked ? hideThis(e_2) : null;
-  e_24Clicked = false;
-});
+    e_24Clicked = false;
+  });
+}
 
 // clearing call logs
 const clearCallLogsBtn = document.querySelector('.options.call-option');
@@ -1413,6 +1393,9 @@ function showModal() {
   bgExist.forEach(modalBg => {
     modalBg.classList.remove('invisible');
     modalBg.classList.remove('opacity-0');
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    screenWidth < 768 ? document.documentElement.classList.add('overflow-y-hidden') : null;
   });
 };
 
@@ -1424,6 +1407,7 @@ function hideModal() {
   bgExist.forEach(modalBg => {
     modalBg.classList.add('invisible');
   }, {once: true})
+  document.documentElement.classList.remove('overflow-y-hidden');
 }
 
 // showing the modal
