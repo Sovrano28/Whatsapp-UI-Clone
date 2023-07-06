@@ -46,10 +46,6 @@
   @apply text-white dark:text-WATeal after:opacity-100;
 }
 
-.show {
-  @apply block;
-}
-
 .options, .options-setting {
   @apply px-3 py-4 text-left cursor-pointer transition duration-300 hover:bg-gray-200 dark:hover:bg-WADarkestGreen;
 }

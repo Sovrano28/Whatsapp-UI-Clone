@@ -101,28 +101,6 @@ function hideThis(settingsDropdown) {
 // dropping down the settings options
 if (settingBtn !== null) {
   let settingBtnClicked = false;
-  
-  // function showAppOptions() {
-  //   appOptions.classList.remove('hidden');
-  //   appOptions.classList.add('animate-slideInDown');
-
-  //   setTimeout(() => {
-  //     appOptions.classList.remove('animate-slideInDown');
-  //   }, 500);
-    
-  //   appOptions.classList.add('show');
-  //   appOptions.focus({focusVisible: false});
-  // };
-
-  // function hideAppOptions() {
-  //   appOptions.classList.add('animate-fadeOut');
-  
-  //   setTimeout(() => {
-  //     appOptions.classList.remove('animate-fadeOut');
-  //     appOptions.classList.remove('show');
-  //     appOptions.classList.add('hidden');
-  //   }, 500);
-  // };
 
   settingBtn.addEventListener('click', ()=> {
     settingBtnClicked = true;
@@ -566,28 +544,6 @@ myChats.forEach(chat => {
 // END
 
 // event listeners for chat-option btn and chat-option at md-and-above screens.
-
-// function showThis(element, timeToRemoveAnimationClass = 500) {
-//   element.classList.remove('hidden');
-//   element.classList.add('animate-slideInDown');
-
-//   setTimeout(() => {
-//     element.classList.remove('animate-slideInDown');
-//   }, timeToRemoveAnimationClass);
-  
-//   element.focus({focusVisible: false});
-// };
-
-// function hideThis(element) {
-//   element.classList.add('animate-fadeOut');
-
-//   setTimeout(() => {
-//     element.classList.remove('animate-fadeOut');
-//     element.classList.remove('block');
-//     element.classList.add('hidden');
-//   }, 500);
-// };
-
 let e_24Clicked = false;
 
 e_24.addEventListener('click', ()=> {
