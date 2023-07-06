@@ -76,31 +76,53 @@ if (searchBtn !== null) {
   });
 };
 
+// project settingsDropdown events
+function showThis(settingsDropdown, timeToRemoveAnimationClass = 500) {
+  settingsDropdown.classList.remove('hidden');
+  settingsDropdown.classList.add('animate-slideInDown');
+
+  setTimeout(() => {
+    settingsDropdown.classList.remove('animate-slideInDown');
+  }, timeToRemoveAnimationClass);
+  
+  settingsDropdown.focus({focusVisible: false});
+};
+
+function hideThis(settingsDropdown) {
+  settingsDropdown.classList.add('animate-fadeOut');
+
+  setTimeout(() => {
+    settingsDropdown.classList.remove('animate-fadeOut');
+    settingsDropdown.classList.remove('block');
+    settingsDropdown.classList.add('hidden');
+  }, 500);
+};
+
 // dropping down the settings options
 if (settingBtn !== null) {
   let settingBtnClicked = false;
   
-  function showAppOptions() {
-    appOptions.classList.remove('hidden');
-    appOptions.classList.add('animate-slideInDown');
+  // function showAppOptions() {
+  //   appOptions.classList.remove('hidden');
+  //   appOptions.classList.add('animate-slideInDown');
 
-    setTimeout(() => {
-      appOptions.classList.remove('animate-slideInDown');
-    }, 500);
+  //   setTimeout(() => {
+  //     appOptions.classList.remove('animate-slideInDown');
+  //   }, 500);
     
-    appOptions.classList.add('show');
-    appOptions.focus({focusVisible: false});
-  };
+  //   appOptions.classList.add('show');
+  //   appOptions.focus({focusVisible: false});
+  // };
 
-  function hideAppOptions() {
-    appOptions.classList.add('animate-fadeOut');
+  // function hideAppOptions() {
+  //   appOptions.classList.add('animate-fadeOut');
   
-    setTimeout(() => {
-      appOptions.classList.remove('animate-fadeOut');
-      appOptions.classList.remove('show');
-      appOptions.classList.add('hidden');
-    }, 500);
-  };
+  //   setTimeout(() => {
+  //     appOptions.classList.remove('animate-fadeOut');
+  //     appOptions.classList.remove('show');
+  //     appOptions.classList.add('hidden');
+  //   }, 500);
+  // };
 
   settingBtn.addEventListener('click', ()=> {
     settingBtnClicked = true;
@@ -118,27 +140,29 @@ if (settingBtn !== null) {
     } else {}
     // end
     
-    showAppOptions();
+    showThis(appOptions);
   });
   
   appOptions.addEventListener('blur', (event)=> {  
     event.stopPropagation();
     event.stopImmediatePropagation();
 
-    hideAppOptions();
+    hideThis(appOptions);
+
+    settingBtnClicked = false;
   });
 
   leftColumn.addEventListener('scroll', (event)=> {
     event.stopPropagation();
     event.stopImmediatePropagation();
 
-    settingBtnClicked ? hideAppOptions() : null;
+    settingBtnClicked ? hideThis(appOptions) : null;
 
     settingBtnClicked = false;
   });
   
   slidesContainer.addEventListener('click', ()=> {
-    settingBtnClicked ? hideAppOptions() : null;
+    settingBtnClicked ? hideThis(appOptions) : null;
 
     settingBtnClicked = false;
   })
@@ -542,28 +566,29 @@ myChats.forEach(chat => {
 // END
 
 // event listeners for chat-option btn and chat-option at md-and-above screens.
-e_24Clicked = false;
 
-function showThis(element, timeToRemoveAnimationClass = 500) {
-  element.classList.remove('hidden');
-  element.classList.add('animate-slideInDown');
+// function showThis(element, timeToRemoveAnimationClass = 500) {
+//   element.classList.remove('hidden');
+//   element.classList.add('animate-slideInDown');
 
-  setTimeout(() => {
-    element.classList.remove('animate-slideInDown');
-  }, timeToRemoveAnimationClass);
+//   setTimeout(() => {
+//     element.classList.remove('animate-slideInDown');
+//   }, timeToRemoveAnimationClass);
   
-  element.focus({focusVisible: false});
-};
+//   element.focus({focusVisible: false});
+// };
 
-function hideThis(element) {
-  element.classList.add('animate-fadeOut');
+// function hideThis(element) {
+//   element.classList.add('animate-fadeOut');
 
-  setTimeout(() => {
-    element.classList.remove('animate-fadeOut');
-    element.classList.remove('block');
-    element.classList.add('hidden');
-  }, 500);
-};
+//   setTimeout(() => {
+//     element.classList.remove('animate-fadeOut');
+//     element.classList.remove('block');
+//     element.classList.add('hidden');
+//   }, 500);
+// };
+
+let e_24Clicked = false;
 
 e_24.addEventListener('click', ()=> {
   e_24Clicked = true;
@@ -636,35 +661,23 @@ const chatSettingBtn = document.getElementById('chat-setting-btn');
 const chatOptions = document.getElementById('chat-settings');
 
 if (chatOptions !== null) {
-  chatOptionsClicked = false;
+  let chatOptionsClicked = false;
 
   chatSettingBtn.addEventListener('click', ()=> {
     chatOptionsClicked = true;
+
     showThis(chatOptions, 900);
-    // chatOptions.classList.toggle('hidden');
-    // chatOptions.classList.add('animate-slideInDown');
-  
-    // chatOptions.addEventListener('animationend', ()=> {
-    //   chatOptions.classList.remove('animate-slideInDown');
-    // })
-    
-    // chatOptions.classList.toggle('show');
-    // chatOptions.focus({focusVisible: false});
   })
   
   chatOptions.addEventListener('blur', ()=> {
-    // chatOptions.classList.add('animate-fadeOut');
-  
-    // chatOptions.addEventListener('animationend', ()=> {
-    //   chatOptions.classList.remove('animate-fadeOut');
-    //   chatOptions.classList.remove('show');
-    //   chatOptions.classList.add('hidden');
-    // }, {once: true})
+    hideThis(chatOptions);
+
+    chatOptionsClicked = false;
   });
 
   document.addEventListener('scroll', ()=> {
-    console.log('you scrolled the page');
     chatOptionsClicked ? hideThis(chatOptions) : null;
+
     chatOptionsClicked = false;
   });
 };
