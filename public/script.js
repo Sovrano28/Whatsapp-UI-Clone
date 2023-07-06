@@ -51,6 +51,8 @@ const chatNav = document.querySelector('.nav-items:nth-child(1)');
 const statusNav = document.querySelector('.nav-items:nth-child(2)');
 const callNav = document.querySelector('.nav-items:nth-child(3)');
 
+const slidesContainer = document.querySelector("#slides-container");
+
 // dropping down the search bar
 if (searchBtn !== null) {
   searchBtn.addEventListener('click', ()=> {
@@ -134,6 +136,13 @@ if (settingBtn !== null) {
 
     settingBtnClicked = false;
   });
+  
+  slidesContainer.addEventListener('click', ()=> {
+    settingBtnClicked ? hideAppOptions() : null;
+
+    settingBtnClicked = false;
+  })
+
 };
   
 // swiping functionalities
@@ -535,15 +544,14 @@ myChats.forEach(chat => {
 // event listeners for chat-option btn and chat-option at md-and-above screens.
 e_24Clicked = false;
 
-function showThis(element) {
+function showThis(element, timeToRemoveAnimationClass = 500) {
   element.classList.remove('hidden');
   element.classList.add('animate-slideInDown');
 
   setTimeout(() => {
     element.classList.remove('animate-slideInDown');
-  }, 500);
+  }, timeToRemoveAnimationClass);
   
-  element.classList.add('block');
   element.focus({focusVisible: false});
 };
 
@@ -560,7 +568,7 @@ function hideThis(element) {
 e_24.addEventListener('click', ()=> {
   e_24Clicked = true;
 
-  showThis(e_2);
+  showThis(e_2, 900);
 });
 
 e_2.addEventListener('blur', (event)=> {
@@ -581,6 +589,12 @@ if (rightColumn) {
 
     e_24Clicked = false;
   });
+
+  slidesContainer.addEventListener('click', ()=> {
+    e_24Clicked ? hideThis(e_2) : null;
+
+    e_24Clicked = false;
+  })
 }
 
 // clearing call logs
@@ -622,29 +636,38 @@ const chatSettingBtn = document.getElementById('chat-setting-btn');
 const chatOptions = document.getElementById('chat-settings');
 
 if (chatOptions !== null) {
+  chatOptionsClicked = false;
 
   chatSettingBtn.addEventListener('click', ()=> {
-    chatOptions.classList.toggle('hidden');
-    chatOptions.classList.add('animate-slideInDown');
+    chatOptionsClicked = true;
+    showThis(chatOptions, 900);
+    // chatOptions.classList.toggle('hidden');
+    // chatOptions.classList.add('animate-slideInDown');
   
-    chatOptions.addEventListener('animationend', ()=> {
-      chatOptions.classList.remove('animate-slideInDown');
-    })
+    // chatOptions.addEventListener('animationend', ()=> {
+    //   chatOptions.classList.remove('animate-slideInDown');
+    // })
     
-    chatOptions.classList.toggle('show');
-    chatOptions.focus({focusVisible: false});
+    // chatOptions.classList.toggle('show');
+    // chatOptions.focus({focusVisible: false});
   })
   
   chatOptions.addEventListener('blur', ()=> {
-    chatOptions.classList.add('animate-fadeOut');
+    // chatOptions.classList.add('animate-fadeOut');
   
-    chatOptions.addEventListener('animationend', ()=> {
-      chatOptions.classList.remove('animate-fadeOut');
-      chatOptions.classList.remove('show');
-      chatOptions.classList.add('hidden');
-    }, {once: true})
+    // chatOptions.addEventListener('animationend', ()=> {
+    //   chatOptions.classList.remove('animate-fadeOut');
+    //   chatOptions.classList.remove('show');
+    //   chatOptions.classList.add('hidden');
+    // }, {once: true})
   });
-}
+
+  document.addEventListener('scroll', ()=> {
+    console.log('you scrolled the page');
+    chatOptionsClicked ? hideThis(chatOptions) : null;
+    chatOptionsClicked = false;
+  });
+};
 
 // settings page on md:screens
 const intSettingBtn = document.getElementById('int-setting-btn');
