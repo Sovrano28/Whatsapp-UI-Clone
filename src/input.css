@@ -81,3 +81,22 @@ a.chats, div.chats {
   @apply fixed transition-opacity duration-300 w-full h-screen top-0 left-0 grid place-items-center bg-black bg-opacity-10 backdrop-brightness-50
 md:bg-white md:dark:bg-WADarkTeal md:dark:bg-opacity-50 md:bg-opacity-70 md:backdrop-filter-none md:dark:backdrop-brightness-[30%];
 }
+
+.long-text {
+  max-width: calc(20ch + 17vw);
+}
+@media (min-width: 400px) {
+  .long-text {
+    max-width: calc(25ch + 20vw);
+  }
+}
+@media (min-width: 768px) {
+  .long-text {
+    max-width: calc(3ch + 20vw);
+  }
+}
+@media (min-width: 900px) {
+  .long-text {
+    max-width: calc(5ch + 20vw);
+  }
+}
