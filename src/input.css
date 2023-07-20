@@ -83,20 +83,40 @@ md:bg-white md:dark:bg-WADarkTeal md:dark:bg-opacity-50 md:bg-opacity-70 md:back
 }
 
 .long-text {
-  max-width: calc(20ch + 17vw);
+  max-width: calc(12ch);
+}
+.long-text-with-marks {
+  max-width: calc(12ch - 17px);
+}
+@media (min-width: 322px) {
+  .long-text {
+    max-width: calc(20ch + 17vw);
+  }
+  .long-text-with-marks {
+    max-width: calc(20ch + 15vw - 17px);
+  }
 }
 @media (min-width: 400px) {
   .long-text {
     max-width: calc(25ch + 20vw);
+  }
+  .long-text-with-marks {
+    max-width: calc(25ch + 20vw - 17px);
   }
 }
 @media (min-width: 768px) {
   .long-text {
     max-width: calc(3ch + 20vw);
   }
+  .long-text-with-marks {
+    max-width: calc(3ch + 20vw - 17px);
+  }
 }
 @media (min-width: 900px) {
   .long-text {
     max-width: calc(5ch + 20vw);
+  }
+  .long-text-with-marks {
+    max-width: calc(5ch + 20vw - 17px);
   }
 }
