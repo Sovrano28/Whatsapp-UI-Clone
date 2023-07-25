@@ -1028,6 +1028,10 @@ video {
   gap: 0.25rem;
 }
 
+.gap-y-1{
+  row-gap: 0.25rem;
+}
+
 .gap-x-0\.5{
   -moz-column-gap: 0.125rem;
        column-gap: 0.125rem;
@@ -1036,10 +1040,6 @@ video {
 .gap-x-0{
   -moz-column-gap: 0px;
        column-gap: 0px;
-}
-
-.gap-y-1{
-  row-gap: 0.25rem;
 }
 
 .space-x-1\.5 > :not([hidden]) ~ :not([hidden]){
