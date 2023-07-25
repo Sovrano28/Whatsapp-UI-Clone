@@ -976,6 +976,10 @@ video {
           animation: show-camera 0.5s forwards ease-out;
 }
 
+.cursor-default{
+  cursor: default;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -1052,12 +1056,6 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-3 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .space-x-3 > :not([hidden]) ~ :not([hidden]){
@@ -1263,10 +1261,6 @@ video {
 
 .pt-0{
   padding-top: 0px;
-}
-
-.pt-3{
-  padding-top: 0.75rem;
 }
 
 .pl-3{
@@ -1495,16 +1489,16 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-\[scale\]{
-  transition-property: scale;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition{
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[scale\]{
+  transition-property: scale;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1689,8 +1683,9 @@ video {
   background-color: hsl(203 32% 8% / var(--tw-bg-opacity));
 }
 
-a.chats,  div.chats{
+div.chats{
   display: flex;
+  cursor: default;
   align-items: center;
   justify-content: space-between;
   --tw-bg-opacity: 1;
@@ -1706,17 +1701,49 @@ a.chats,  div.chats{
   transition-duration: 150ms;
 }
 
-a.chats:hover,  div.chats:hover{
+div.chats:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.dark a.chats, .dark  div.chats{
+.dark div.chats{
   --tw-bg-opacity: 1;
   background-color: hsl(203 32% 10% / var(--tw-bg-opacity));
 }
 
-.dark a.chats:hover, .dark  div.chats:hover{
+.dark div.chats:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
+}
+
+div.recent-calls{
+  display: flex;
+  cursor: default;
+  justify-content: space-between;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+div.recent-calls:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.dark div.recent-calls{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 32% 10% / var(--tw-bg-opacity));
+}
+
+.dark div.recent-calls:hover{
   --tw-bg-opacity: 1;
   background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
 }
