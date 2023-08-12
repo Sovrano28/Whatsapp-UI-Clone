@@ -658,6 +658,14 @@ video {
   z-index: 50;
 }
 
+.m-1\.5{
+  margin: 0.375rem;
+}
+
+.m-1{
+  margin: 0.25rem;
+}
+
 .m-auto{
   margin: auto;
 }
@@ -1106,10 +1114,6 @@ video {
   border-radius: 50%;
 }
 
-.border-4{
-  border-width: 4px;
-}
-
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -1120,15 +1124,6 @@ video {
 
 .border-b{
   border-bottom-width: 1px;
-}
-
-.border-dashed{
-  border-style: dashed;
-}
-
-.border-green-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(34 197 94 / var(--tw-border-opacity));
 }
 
 .border-b-gray-200{
@@ -1380,14 +1375,14 @@ video {
   color: hsl(173 77% 31% / var(--tw-text-opacity));
 }
 
-.text-WABrightGreen{
-  --tw-text-opacity: 1;
-  color: hsl(142 70% 49% / var(--tw-text-opacity));
-}
-
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-WABrightGreen{
+  --tw-text-opacity: 1;
+  color: hsl(142 70% 49% / var(--tw-text-opacity));
 }
 
 .text-green-500{
@@ -1714,6 +1709,32 @@ div.chats:hover{
   background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
 }
 
+div.status{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+div.status:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.dark div.status{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 32% 10% / var(--tw-bg-opacity));
+}
+
+.dark div.status:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 25% 16% / var(--tw-bg-opacity));
+}
+
 div.recent-calls{
   display: flex;
   cursor: default;
@@ -1930,6 +1951,26 @@ div.recent-calls:hover{
     -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
             backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
+}
+
+.status-1 {
+  border-radius: 99px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='10 2' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.status-4 {
+  border-radius: 99px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='45 9' stroke-dashoffset='-9' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.status-9 {
+  border-radius: 99px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='15 9' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.status-21 {
+  border-radius: 99px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='1 9' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
 }
 
 .long-text {
