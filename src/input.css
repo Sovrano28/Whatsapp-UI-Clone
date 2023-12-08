@@ -95,19 +95,101 @@ md:bg-white md:dark:bg-WADarkTeal md:dark:bg-opacity-50 md:bg-opacity-70 md:back
   background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='10 2' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
 }
 
-.status-4 {
+/* .status-custom {
   border-radius: 99px;
-  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='45 9' stroke-dashoffset='-9' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-image: url("../public/imgs/status-custom.svg");
+} */
+
+.status-4 {
+  position: relative;
+  border-radius: 99px;
 }
 
-.status-9 {
+.status-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='45 9' stroke-dashoffset='-9' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: inherit;
+  background-size: cover;
+  rotate: -8deg;
+}
+
+/* .status-5 {
   border-radius: 99px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='30 10' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.status-6 {
+  border-radius: 99px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='25 10' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.status-7 {
+  border-radius: 99px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='15 15' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.status-8 {
+  border-radius: 99px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='15 10' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
+} */
+
+.status-9 {
+  position: relative;
+  border-radius: 99px;
+}
+
+.status-9::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='15 9' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: inherit;
+  background-size: cover;
+  rotate: 180deg;
+}
+
+.status-12 {
+  position: relative;
+  border-radius: 99px;
+}
+
+.status-12::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='9 9' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: inherit;
+  background-size: cover;
+  rotate: 180deg;
 }
 
 .status-21 {
+  position: relative;
   border-radius: 99px;
+}
+
+.status-21::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%' height='100%' fill='none' rx='100' ry='100' stroke='%2325D366' stroke-width='4' stroke-dasharray='1 9' stroke-dashoffset='-2' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: inherit;
+  background-size: cover;
+  rotate: 180deg;
 }
 
 .long-text {
