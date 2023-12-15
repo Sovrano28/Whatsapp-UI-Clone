@@ -152,6 +152,8 @@ if (settingBtn !== null) {
 document.addEventListener('DOMContentLoaded', function() {
   const swiper = new Swiper('.swiper', {
 
+    autoHeight: true,
+
     on: {
       slideChange: function () {
         const activeSlideIndex = this.activeIndex;
