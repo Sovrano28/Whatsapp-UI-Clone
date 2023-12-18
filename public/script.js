@@ -146,6 +146,12 @@ if (settingBtn !== null) {
   })
 
 };
+
+// App bottom-left floating icon change functionalities
+const chatsMessageIcon = document.querySelector('#chats-message-icon');
+const statusCameraIcon = document.querySelector('#status-camera-icon');
+const statusPenIcon = document.querySelector('#status-pen-icon');
+const callsAddCallIcon = document.querySelector('#calls-add-call-icon');
   
 // swiping functionalities
 // initialising swiper.js externally
@@ -164,6 +170,54 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const activeElement = document.querySelector(`.nav-items:nth-child(${activeSlideIndex + 1})`);
         activeElement.classList.add('active');
+
+        const showChatsMessageIcon = () => {
+          chatsMessageIcon.classList.remove('hidden');
+          chatsMessageIcon.classList.add('flex');
+        };
+
+        const hideChatsMessageIcon = () => {
+          chatsMessageIcon.classList.add('hidden');
+          chatsMessageIcon.classList.remove('flex');
+        };
+
+        const showStatusCameraIcon = () => {
+          statusCameraIcon.classList.remove('hidden');
+          statusCameraIcon.classList.add('flex');
+
+          statusPenIcon.classList.add('-translate-y-14');
+        };
+
+        const hideStatusCameraIcon = () => {
+          statusCameraIcon.classList.add('hidden');
+          statusCameraIcon.classList.remove('flex');
+
+          statusPenIcon.classList.remove('-translate-y-14');
+        };
+
+        const showCallsAddCallIcon = () => {
+          callsAddCallIcon.classList.remove('hidden');
+          callsAddCallIcon.classList.add('flex');
+        };
+
+        const hideCallsAddCallIcon = () => {
+          callsAddCallIcon.classList.add('hidden');
+          callsAddCallIcon.classList.remove('flex');
+        };
+
+        if (chatNav.classList.contains('active')) {
+          showChatsMessageIcon();
+          hideStatusCameraIcon();
+          hideCallsAddCallIcon();
+        } else if (statusNav.classList.contains('active')) {
+          hideChatsMessageIcon();
+          showStatusCameraIcon();
+          hideCallsAddCallIcon();
+        } else if (callNav.classList.contains('active')) {
+          hideChatsMessageIcon();
+          hideStatusCameraIcon();
+          showCallsAddCallIcon();
+        } else {}
       },
     },
   });

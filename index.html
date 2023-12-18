@@ -774,7 +774,72 @@
         </div>
       </div>
 
-      <div class="fixed right-5 md:right-[61.5%] bottom-5 z-[999] w-8 h-8 bg-grey-400"></div>
+      <div class="fixed right-5 md:right-[61.5%] bottom-5 z-[999] w-10 h-10 md:w-12 md:h-12 rounded-full bg-WABrightGreen flex items-center justify-center">
+
+        <div id="chats-message-icon" class="flex justify-center items-center">
+          <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px"
+            y="0px" enable-background="new 0 0 24 24" xml:space="preserve">
+            <path fill="#ffffff" enable-background="new"
+              d="M19.005,3.175H4.674C3.642,3.175,3,3.789,3,4.821V21.02 l3.544-3.514h12.461c1.033,0,2.064-1.06,2.064-2.093V4.821C21.068,3.789,20.037,3.175,19.005,3.175z M14.016,13.044H7.041V11.1 h6.975V13.044z M17.016,9.044H7.041V7.1h9.975V9.044z">
+            </path>
+          </svg>
+        </div>
+        
+        <div id="status-camera-icon" class="hidden relative top-[0.25%] justify-center items-center">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="16.000000pt" height="16.000000pt"
+            viewBox="0 0 96.000000 96.000000" preserveAspectRatio="xMidYMid meet">
+            <metadata>
+              Created by potrace 1.16, written by Peter Selinger 2001-2019
+            </metadata>
+            <g transform="translate(0.000000,96.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+              <path d="M315 840 c-39 -40 -39 -40 -117 -40 -124 0 -118 16 -118 -320 0 -267
+                    1 -281 20 -300 19 -19 33 -20 380 -20 347 0 361 1 380 20 19 19 20 33 20 300
+                    0 336 6 320 -118 320 -78 0 -78 0 -117 40 l-39 40 -126 0 -126 0 -39 -40z
+                    m253 -189 c67 -34 102 -93 102 -171 0 -111 -79 -190 -190 -190 -111 0 -190 79
+                    -190 190 0 111 77 189 188 190 33 0 67 -7 90 -19z" />
+              <path d="M394 566 c-30 -30 -34 -40 -34 -86 0 -46 4 -56 34 -86 30 -30 40 -34
+                    86 -34 46 0 56 4 86 34 30 30 34 40 34 86 0 46 -4 56 -34 86 -30 30 -40 34
+                    -86 34 -46 0 -56 -4 -86 -34z" 1>
+            </g>
+          </svg>
+        </div>
+
+        <div id="calls-add-call-icon" class="hidden relative top-[0.0625rem] right-[0.0625rem] justify-center items-center">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="16.000000pt" height="16.000000pt"
+            viewBox="0 0 96.000000 96.000000" preserveAspectRatio="xMidYMid meet">
+            <metadata>
+              Created by potrace 1.16, written by Peter Selinger 2001-2019
+            </metadata>
+            <g transform="translate(0.000000,96.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+              <path d="M140 820 c-58 -58 15 -316 130 -455 117 -141 320 -245 477 -245 77 0
+                    93 19 93 111 0 39 -4 79 -10 89 -13 25 -61 39 -142 42 l-67 3 -48 -47 -48 -46
+                    -50 33 c-58 38 -142 123 -178 180 l-25 40 46 48 47 48 -3 67 c-3 81 -17 129
+                    -42 142 -10 6 -50 10 -89 10 -58 0 -75 -4 -91 -20z" />
+              <path d="M647 834 c-4 -4 -7 -31 -7 -60 l0 -53 -57 -3 -58 -3 0 -35 0 -35 57
+                    -3 57 -3 3 -57 3 -57 35 0 35 0 3 57 3 57 57 3 57 3 0 35 0 35 -57 3 -57 3 -3
+                    57 c-3 55 -4 57 -33 60 -17 2 -34 0 -38 -4z" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- <div id="status-pen-icon" class="absolute z-10 w-7 h-7 rounded-full flex justify-center items-center bg-blue-100 transition-transform duration-500 ease-out">
+          <img width="67" height="67"
+            src="https://img.icons8.com/external-others-inmotus-design/67/000000/external-Pen-result-others-inmotus-design-5.png"
+            alt="external-Pen-result-others-inmotus-design-5" />
+        </div> -->
+      </div>
+
+      <div id="status-pen-icon"
+        class="fixed right-[1.625rem] md:right-[62.5%] bottom-[1.625rem] z-10 w-7 h-7 md:w-9 md:h-9 rounded-full flex justify-center items-center bg-blue-100 dark:bg-gray-600 transition-transform duration-500 ease-out">
+        <img width="100" height="100"
+          class="dark:hidden"
+          src="https://img.icons8.com/external-others-inmotus-design/100/000000/external-Pen-result-others-inmotus-design-5.png"
+          alt="external-Pen-result-others-inmotus-design-5" />
+        <img width="100" height="100"
+          class="hidden dark:block"
+          src="https://i.postimg.cc/Xp15YWgQ/icons8-pen-100-whatsapp-darkmode-status-pen-icon-white.png"
+          alt="icons8-pen-100-whatsapp-dark-mode-status-pen-icon-white" />
+      </div>
     </div>
     
     <div id="column-2" class="hidden md:block md:w-[65%] xl:w-3/5 h-screen overflow-y-auto ">
