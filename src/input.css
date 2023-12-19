@@ -211,3 +211,9 @@ md:bg-white md:dark:bg-WADarkTeal md:dark:bg-opacity-50 md:bg-opacity-70 md:back
     right: calc(61.5% + 0.365rem);
   }
 }
+
+@media (min-width: 1280px) {
+  #status-pen-icon {
+    right: calc(63% + 0.365rem);
+  }
+}

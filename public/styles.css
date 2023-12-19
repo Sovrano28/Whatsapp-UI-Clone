@@ -814,10 +814,6 @@ video {
   height: 1.5rem;
 }
 
-.h-10{
-  height: 2.5rem;
-}
-
 .h-7{
   height: 1.75rem;
 }
@@ -866,20 +862,16 @@ video {
   width: 3rem;
 }
 
-.w-10{
-  width: 2.5rem;
-}
-
 .w-7{
   width: 1.75rem;
 }
 
-.w-3{
-  width: 0.75rem;
-}
-
 .w-9{
   width: 2.25rem;
+}
+
+.w-3{
+  width: 0.75rem;
 }
 
 .w-80{
@@ -921,6 +913,21 @@ video {
 
 .-translate-y-14{
   --tw-translate-y: -3.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-28{
+  --tw-translate-y: -7rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-24{
+  --tw-translate-y: -6rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-20{
+  --tw-translate-y: -5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2142,6 +2149,12 @@ div.recent-calls:hover{
   }
 }
 
+@media (min-width: 1280px) {
+  #status-pen-icon {
+    right: calc(63% + 0.365rem);
+  }
+}
+
 .hover\:bg-gray-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -2297,28 +2310,12 @@ div.recent-calls:hover{
     display: none;
   }
 
-  .md\:h-12{
-    height: 3rem;
-  }
-
-  .md\:h-9{
-    height: 2.25rem;
-  }
-
   .md\:w-\[45\%\]{
     width: 45%;
   }
 
   .md\:w-2\/5{
     width: 40%;
-  }
-
-  .md\:w-12{
-    width: 3rem;
-  }
-
-  .md\:w-9{
-    width: 2.25rem;
   }
 
   .md\:w-\[65\%\]{
@@ -2432,8 +2429,28 @@ div.recent-calls:hover{
 }
 
 @media (min-width: 1280px){
+  .xl\:right-\[63\%\]{
+    right: 63%;
+  }
+
+  .xl\:h-14{
+    height: 3.5rem;
+  }
+
+  .xl\:h-11{
+    height: 2.75rem;
+  }
+
   .xl\:w-2\/5{
     width: 40%;
+  }
+
+  .xl\:w-14{
+    width: 3.5rem;
+  }
+
+  .xl\:w-11{
+    width: 2.75rem;
   }
 
   .xl\:w-3\/5{
