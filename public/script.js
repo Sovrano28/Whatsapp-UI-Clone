@@ -152,6 +152,8 @@ const chatsMessageIcon = document.querySelector('#chats-message-icon');
 const statusCameraIcon = document.querySelector('#status-camera-icon');
 const statusPenIcon = document.querySelector('#status-pen-icon');
 const callsAddCallIcon = document.querySelector('#calls-add-call-icon');
+
+const statusUpdateNotification = document.querySelector('#status-update-notification');
   
 // swiping functionalities
 // initialising swiper.js externally
@@ -213,6 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
           hideChatsMessageIcon();
           showStatusCameraIcon();
           hideCallsAddCallIcon();
+
+          statusUpdateNotification.classList.add('hidden');
         } else if (callNav.classList.contains('active')) {
           hideChatsMessageIcon();
           hideStatusCameraIcon();
