@@ -162,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     on: {
       slideChange: function () {
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth;
         const activeSlideIndex = this.activeIndex;
         
         navItems.forEach((navItem) => {
@@ -185,23 +184,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const showStatusCameraIcon = () => {
           statusCameraIcon.classList.remove('hidden');
           statusCameraIcon.classList.add('flex');
-
-          screenWidth < 1280 ? (
-            statusPenIcon.classList.add('-translate-y-14')
-          ) : (
-            statusPenIcon.classList.add('-translate-y-20')
-          );
+           
+          statusPenIcon.classList.add('-translate-y-20')
         };
 
         const hideStatusCameraIcon = () => {
           statusCameraIcon.classList.add('hidden');
           statusCameraIcon.classList.remove('flex');
 
-          screenWidth < 1280 ? (
-            statusPenIcon.classList.remove('-translate-y-14')
-          ) : (
-            statusPenIcon.classList.remove('-translate-y-20')
-          );
+          statusPenIcon.classList.remove('-translate-y-20');
         };
 
         const showCallsAddCallIcon = () => {
