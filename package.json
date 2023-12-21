@@ -1,7 +1,7 @@
 {
   "name": "whatsapp-clone",
   "version": "1.0.0",
-  "description": "Design and development of Whatsapp UI.",
+  "description": "Design and development of WhatsApp UI clone.",
   "main": "index.js",
   "scripts": {
     "build": "tailwindcss -i src/input.css -o public/styles.css",

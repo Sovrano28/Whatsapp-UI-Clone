@@ -1,6 +1,6 @@
-# Whatsapp UI Clone
+# WhatsApp UI Clone
 
-This project is an interactive clone of the WhatsApp user interface built with only HTML, TailwindCSS, and vanilla JavaScript. The app has light and dark mode features and can be changed by going to settings just like in your regular whatsapp for desktop or mobile.
+This project is an interactive clone of the WhatsApp user interface built with only HTML, TailwindCSS, and vanilla JavaScript. The app has light and dark mode features and can be changed by going to settings just like in your regular WhatsApp for desktop or mobile.
 
 
 ## Responsive Design
@@ -18,9 +18,6 @@ This WhatsApp UI clone is designed to be fully responsive, ensuring optimal user
 ### Acknowledgments
 
 This project was inspired by the WhatsApp application. I would like to thank the creators of WhatsApp for their excellent work.
-
-
-Kindly note that this project is still under construction 🚨🚧🚧🚧⛔
 
 Live project link here 😁👇🏾
 
