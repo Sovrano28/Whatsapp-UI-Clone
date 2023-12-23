@@ -5,10 +5,20 @@
 </p>
 
 ## Overview
-This project is an interactive clone of the WhatsApp user interface built with only HTML, TailwindCSS, and vanilla JavaScript.
+
+The is an interactive web application that faithfully replicates the user interface of the popular messaging platform, WhatsApp. It has been developed using HTML, TailwindCSS, and vanilla JavaScript.
+
+With this clone, you can experience the familiar look and feel of WhatsApp, including its iconic logo and color scheme. The app features both light and dark themes, allowing users to switch between them seamlessly, just like in the original WhatsApp application.
+
+It is designed to be fully responsive, ensuring optimal user experience on various devices, including mobile phones, tablets, and desktop computers. The layout, elements, and components have been carefully crafted to adapt seamlessly to different screen sizes, providing a consistent and enjoyable user experience across platforms.
+
+In addition to its visual fidelity, the WhatsApp UI Clone also aims to replicate the core visual elements and navigation of WhatsApp. Users can explore the various sections of the app, such as `Chats`, `Status`, `Calls` and `Settings`, and get a sense of how the original WhatsApp interface functions.
+
+The WhatsApp UI Clone showcases my ability to design and develop a visually appealing user interface. While it does not include the messaging feature, it demonstrates my proficiency in UI design principles and front-end development techniques used in popular messaging applications like WhatsApp. By exploring this clone, you can see my attention to detail and my commitment to creating a seamless and enjoyable user experience.
 
 ## Light and Dark themes
-The app has light and dark mode features and can be changed by going to settings just like in your regular WhatsApp for desktop or mobile.
+
+The app has light and dark mode features and can be changed by going to `Settings` just like in your regular WhatsApp for desktop or mobile.
 <p align="center">
   <img src="https://i.postimg.cc/qv0KyHkZ/readme-app-nav-slides-light-mode.png"/>
   <img src="https://i.postimg.cc/259LsqnP/readme-app-nav-slides-dark-mode.png"/>
