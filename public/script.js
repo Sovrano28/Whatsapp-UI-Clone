@@ -787,7 +787,7 @@ if (intSettingBtn !== null) {
           var e_16 = document.createElement("header");
           e_16.setAttribute("class", "sticky top-0 bg-WATeal dark:bg-WADarkTeal p-4 md:py-6 md:px-7 flex items-center");
           var e_17 = document.createElement("a");
-          e_17.setAttribute("href", "../../index.html");
+          e_17.setAttribute("href", "/Whatsapp-UI-Clone/index.html");
           e_17.setAttribute("class", "flex-center mr-2 invert-[1]");
           var e_18 = document.createElement("img");
           e_18.setAttribute("class", "w-5");
